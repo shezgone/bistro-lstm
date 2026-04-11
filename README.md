@@ -76,7 +76,7 @@ python causal_narrative.py
 # Ablation Study
 python ablation_study.py
 
-# 대시보드 (11개 탭)
+# 대시보드 (9개 탭)
 streamlit run app.py
 ```
 
@@ -110,7 +110,7 @@ bistro-lstm/
 ├── train_and_evaluate.py   — Main training entry point
 ├── comparison.py           — BISTRO vs LSTM comparison
 ├── transformer_model.py    — Task-specific Transformer (170K)
-├── app.py                  — Streamlit dashboard (11 tabs)
+├── app.py                  — Streamlit dashboard (9 tabs)
 ├── export_pdf.py           — PDF report generator
 ├── data_collector.py       — FRED API data collection
 ├── preprocessing_util.py   — Monthly panel preprocessing (z-score, splits)
