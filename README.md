@@ -82,7 +82,7 @@ streamlit run app.py
 
 ## Dashboard
 
-11개 탭으로 구성된 Streamlit 대시보드:
+9개 탭으로 구성된 Streamlit 대시보드:
 
 | Tab | 내용 |
 |-----|------|
@@ -93,8 +93,6 @@ streamlit run app.py
 | Forecast Results | 2023 OOS 예측 차트 |
 | Variable Importance | Cross-variate attention matrix |
 | Temporal Patterns | Decoder temporal attention |
-| Feature Selection | Stage 1 변수 랭킹 |
-| Ablation & Incremental | Leave-one-out + 순차 추가 |
 | BISTRO Comparison | LSTM vs BISTRO 상세 비교 |
 | **Economic Narrative** | **CF + Jacobian + 경로분해 + 자동 서사** |
 

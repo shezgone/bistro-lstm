@@ -17,8 +17,7 @@ from plotly.subplots import make_subplots
 
 from lstm_core import (
     LSTMConfig, ImportanceAnalyzer, TIER_LABELS,
-    results_available, load_inference_results, load_ablation_results,
-    load_stage1_screening, load_narrative_results,
+    results_available, load_inference_results, load_narrative_results,
 )
 from comparison import load_bistro_results, load_bistro_ablation
 from causal_narrative import MEDIATOR_CHANNELS, CHANNEL_ORDER, get_variable_channel
@@ -46,11 +45,6 @@ def load_all_data():
     data = {}
     if results_available("lstm_inference_results.npz"):
         data["lstm"] = load_inference_results()
-    if results_available("lstm_ablation_results.npz"):
-        data["lstm_abl"] = load_ablation_results()
-    if results_available("lstm_stage1_screening.npz"):
-        data["lstm_s1"] = load_stage1_screening()
-
     narrative = load_narrative_results()
     if narrative is not None:
         data["narrative"] = narrative
@@ -152,17 +146,15 @@ if not data:
 # ============================================================
 
 tabs = st.tabs([
-    "Key Findings",
-    "LSTM vs Transformer",
-    "2024 Forecast",
-    "Training Process",
-    "Forecast Results",
-    "Variable Importance",
-    "Temporal Patterns",
-    "Feature Selection",
-    "Ablation & Incremental",
-    "BISTRO Comparison",
-    "Economic Narrative",
+    "Key Findings",          # 0
+    "LSTM vs Transformer",   # 1
+    "2024 Forecast",         # 2
+    "Training Process",      # 3
+    "Forecast Results",      # 4
+    "Variable Importance",   # 5
+    "Temporal Patterns",     # 6
+    "BISTRO Comparison",     # 7
+    "Economic Narrative",    # 8
 ])
 
 
@@ -1263,84 +1255,10 @@ with tabs[6]:
 
 
 # ============================================================
-# Tab 6: Feature Selection
+# Tab 7: BISTRO Comparison
 # ============================================================
 
 with tabs[7]:
-    st.header("Feature Selection — Stage 1 Screening")
-
-    if "lstm_s1" not in data:
-        st.warning("Stage 1 스크리닝 결과가 없습니다.")
-    else:
-        s1 = data["lstm_s1"]
-        ranking_vars = s1["ranking_vars"]
-        ranking_scores = s1["ranking_scores"]
-
-        if ranking_vars is not None and ranking_scores is not None:
-            n_show = min(len(ranking_vars), 20)
-
-            fig = go.Figure(go.Bar(
-                x=ranking_scores[:n_show][::-1],
-                y=ranking_vars[:n_show][::-1],
-                orientation="h",
-                marker_color=["#2196F3" if i < 10 else "#E0E0E0"
-                              for i in range(n_show)][::-1],
-            ))
-            fig.update_layout(title="Variable Importance Ranking (Ensemble Score)",
-                              xaxis_title="Importance Score",
-                              template="plotly_white", height=500)
-            st.plotly_chart(fig, use_container_width=True)
-
-            st.subheader("Top-10 Selected Variables")
-            for i, var in enumerate(ranking_vars[:10]):
-                tier = TIER_LABELS.get(var, "?")
-                score = ranking_scores[i]
-                st.write(f"**{i+1}.** {var} ({tier}) — score: {score:.4f}")
-
-
-# ============================================================
-# Tab 7: Ablation & Incremental
-# ============================================================
-
-with tabs[8]:
-    st.header("Ablation & Incremental Analysis")
-
-    if "lstm_abl" not in data:
-        st.warning("Ablation 결과가 없습니다. `python ablation_study.py`를 실행하세요.")
-    else:
-        abl = data["lstm_abl"]
-        st.metric("Baseline RMSE (all vars)", f"{abl['baseline_rmse']:.4f}pp")
-
-        sorted_idx = np.argsort(-abl["abl_delta_rmse"])
-        vars_sorted = [abl["abl_vars"][i] for i in sorted_idx]
-        delta_sorted = abl["abl_delta_rmse"][sorted_idx]
-        colors = ["#4CAF50" if d > 0 else "#F44336" for d in delta_sorted]
-
-        fig = go.Figure(go.Bar(x=delta_sorted, y=vars_sorted, orientation="h",
-                               marker_color=colors))
-        fig.add_vline(x=0, line_dash="dash", line_color="gray")
-        fig.update_layout(title="Ablation ΔRMSE (positive = variable helps prediction)",
-                          xaxis_title="ΔRMSE (pp)", template="plotly_white", height=500)
-        st.plotly_chart(fig, use_container_width=True)
-
-        if "inc_rmse" in abl:
-            fig2 = go.Figure()
-            fig2.add_trace(go.Scatter(
-                x=abl["inc_n_vars"], y=abl["inc_rmse"],
-                mode="lines+markers", name="RMSE", line=dict(color="#2196F3"),
-                text=abl["inc_labels"], hovertemplate="%{text}<br>RMSE: %{y:.4f}pp",
-            ))
-            fig2.update_layout(title="Incremental Variable Addition — RMSE Curve",
-                               xaxis_title="Number of Variables", yaxis_title="RMSE (pp)",
-                               template="plotly_white", height=400)
-            st.plotly_chart(fig2, use_container_width=True)
-
-
-# ============================================================
-# Tab 8: BISTRO Comparison
-# ============================================================
-
-with tabs[9]:
     st.header("BISTRO (Transformer) vs LSTM Comparison")
 
     if "bistro" not in data or "lstm" not in data:
@@ -1441,7 +1359,7 @@ with tabs[9]:
 # Tab 10: Economic Narrative
 # ============================================================
 
-with tabs[10]:
+with tabs[8]:
     st.header("Economic Narrative — 경제적 서사 분석")
 
     if "narrative" not in data:
