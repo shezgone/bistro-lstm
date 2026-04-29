@@ -1,0 +1,107 @@
+{
+  "targets": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "actuals": {
+    "2025-05": 1.90184,
+    "2025-06": 2.169712,
+    "2025-07": 2.094103,
+    "2025-08": 1.66754,
+    "2025-09": 2.10205,
+    "2025-10": 2.38033,
+    "2025-11": 2.447552,
+    "2025-12": 2.314855
+  },
+  "forecasts": {
+    "2025-06": [
+      2.1,
+      2.1,
+      2.1,
+      2.0,
+      2.1
+    ],
+    "2025-05": [
+      2.1,
+      2.1,
+      2.1,
+      2.05,
+      2.0
+    ],
+    "2025-07": [
+      2.3,
+      2.3,
+      2.3,
+      2.3,
+      2.3
+    ],
+    "2025-08": [
+      2.3,
+      2.2,
+      2.2,
+      2.2,
+      2.3
+    ],
+    "2025-10": [
+      2.3,
+      2.2,
+      2.15,
+      2.15,
+      2.15
+    ],
+    "2025-09": [
+      2.3,
+      1.8,
+      1.8,
+      1.8,
+      2.1
+    ],
+    "2025-12": [
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5
+    ],
+    "2025-11": [
+      2.4,
+      2.4,
+      2.4,
+      2.3,
+      2.4
+    ]
+  },
+  "rationales_first_seed": {
+    "2025-06": "BoK_CSI rose from 93.6 (2025-04) to 101.7 (2025-05), signaling improving household optimism and rising inflation expectations. This demand-side pressure offsets May's CPI slowdown (2.079%→1.902%) and aligns with elevated commodity prices (Pork: 85.02→87.37). Base effect remains favorable (May 2024 CPI: 1.25%). Balancing leading BoK_CSI strength (30% weight), commodity cost-push (25%), and moderating base effect (45%), June CPI YoY is forecast at 2.1%.",
+    "2025-05": "BoK_CSI rose from 93.2 (2025-03) to 93.6 (2025-04), indicating modestly improving but still cautious household sentiment (below 100=neutral). This implies subdued demand-side inflation pressure. Traditional factors show base effect tailing off (May 2024 CPI=1.934 vs April 2025=2.079) and stable commodity prices (Pork=85.024 in 2025-04). Balancing BoK_CSI-driven demand restraint against minor upward momentum in CPI YoY (March-April +0.025), forecast is 2.1%.",
+    "2025-07": "BoK_CSI rose from 93.6 (2025-04) to 108.6 (2025-06), signaling improving household optimism and rising demand-side inflation pressures. Traditional covariates (June 2025 CPI at 2.17%, base effect from July 2024 CPI at 1.934%) provide moderate upward momentum. Weighting BoK_CSI (60% influence) against macro factors (40%) yields a 2.3% YoY forecast for July 2025.",
+    "2025-08": "BoK_CSI rose from 93.6 (2025-04) to 110.7 (2025-07), signaling improving household optimism and stronger demand-side inflation pressures. This directional break aligns with upward inflation risks. Traditional covariates show muted commodity price growth (PPI_CopperNickel: 105.67 in 2025-07 vs 100.55 in 2025-06) and stable FX, but the base effect from 2024-08 CPI (2.013%) provides modest upward momentum. Weighting BoK_CSI's leading signal (≈60% influence) against moderate traditional pressures yields a 2.3% forecast, balancing sentiment-driven demand and lagged input costs.",
+    "2025-10": "BoK_CSI rose from 93.6 (2025-04) to 111.2 (2025-08), signaling strong household optimism and rising demand-side inflation pressure. Despite a slight dip to 110.0 in 2025-09, sentiment remains well above neutral (100). Traditional covariates (commodity prices, FX) show muted pressure, and base effect from 2024-10 CPI (1.25%) supports modest inflation uplift. Balancing BoK_CSI-driven demand optimism (weight 60%) against stable traditional factors (40%) yields 2.3% YoY for 2025-10.",
+    "2025-09": "BoK_CSI rose sharply from 93.6 (2025-04) to 111.2 (2025-08), signaling strong optimist dispatch. This implies rising demand-driven inflation pressures as households anticipate higher spending. Traditional covariates show mixed signals: base effect from 2024-09 CPI of 1.595% (favorable), but recent CPI YoY slowed to 1.668% (2025-08). Commodity prices (Pork: 105.1) and FX (THB_USD: 1.66) neutral. BoK_CSI momentum dominates, outweighing temporary headwinds, yielding a 2.3% forecast.",
+    "2025-12": "BoK_CSI rose from 108.6 (2025-06) to 112.3 (2025-11), signaling improving household optimism and rising demand-side inflation pressures. Cross-checking, CPI_KR_YoY increased from 2.102 (2025-09) to 2.448 (2025-11), with favorable base effects (last year's 2024-12: 1.934) and stable macro covariates (BoK rate: KC_FSI 83.8, FX: THB_USD 32.3). Weighing BoK_CSI's strong leading signal (112.3) against moderate traditional factors, the 2.5% forecast reflects sustained upward momentum.",
+    "2025-11": "BoK_CSI rose from 101.7 (2025-05) to 111.2 (2025-08) then eased to 109.6 (2025-10), remaining optimistic (>100). This implies sustained demand-side inflation pressures. Cross-checking, October 2025 CPI YoY was 2.38 (base effect from 1.254 in 2024-10), with BoK rate stable and commodity prices mixed. Weighting BoK_CSI's leading signal (90%) and traditional factors (10%) supports a modest upward trend, yielding 2.4% for 2025-11."
+  },
+  "n_seeds": 5,
+  "temperature": 0.7,
+  "ctx_len": 36,
+  "forced_per_seed_rmse": [
+    0.2666231774157114,
+    0.25747022883286913,
+    0.26240720976232723,
+    0.2685603167544491,
+    0.2613642931527755
+  ],
+  "base_per_seed_rmse": [
+    0.2779180521938977,
+    0.3055764122690919,
+    0.2839104898295412,
+    0.3228916904091061,
+    0.3103085057410609
+  ]
+}

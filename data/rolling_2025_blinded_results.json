@@ -1,0 +1,98 @@
+{
+  "targets": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "actuals": {
+    "2025-05": 1.90184,
+    "2025-06": 2.169712,
+    "2025-07": 2.094103,
+    "2025-08": 1.66754,
+    "2025-09": 2.10205,
+    "2025-10": 2.38033,
+    "2025-11": 2.447552,
+    "2025-12": 2.314855
+  },
+  "forecasts": {
+    "2025-05": [
+      2.1,
+      2.09,
+      2.09,
+      2.11,
+      2.1
+    ],
+    "2025-07": [
+      2.25,
+      2.25,
+      2.25,
+      2.25,
+      2.44
+    ],
+    "2025-06": [
+      1.8,
+      1.85,
+      1.8,
+      1.85,
+      1.8
+    ],
+    "2025-08": [
+      2.05,
+      2.05,
+      2.05,
+      2.05
+    ],
+    "2025-09": [
+      1.55,
+      1.5,
+      1.5,
+      1.5,
+      1.45
+    ],
+    "2025-10": [
+      2.15,
+      2.15,
+      2.25,
+      2.15,
+      2.15
+    ],
+    "2025-11": [
+      2.66,
+      2.5,
+      2.45,
+      2.58,
+      2.5
+    ],
+    "2025-12": [
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.51
+    ]
+  },
+  "rationales_first_seed": {
+    "2025-05": "var_1 rose from 2.054 at t=35 to 2.079 at t=36. var_5 (73.47→75.81) and var_16 (5.84→5.903) both increased in the last timestep, aligning with var_1's upward trend. Their recent gains imply continued momentum for var_1, forecasting 2.10 at t=37.",
+    "2025-07": "var_1 rose from 1.902 (t=35) to 2.17 (t=36), a +0.268 jump. var_2 and var_20 co-moved: var_2 increased from 0.644 (t=35) to 0.65 (t=36), and var_20 surged from 101.7 (t=35) to 108.6 (t=36). Their upward momentum implies continued support for var_1, forecasting a moderate extension to 2.25.",
+    "2025-06": "var_1 decreased from 2.079 (t=35) to 1.902 (t=36). var_3 co-moved downward (2.02 at t=35 to 1.83 at t=36), suggesting a lagging relationship. var_10 rose from 85.024 (t=35) to 87.374 (t=36), implying inverse dynamics. Both covariates' recent directions align with var_1's decline, supporting a continued drop to 1.8.",
+    "2025-08": "var_1 decreased from 2.17 (t=35) to 2.094 (t=36). var_20 rose from 108.6 (t=35) to 110.7 (t=36), suggesting bearish pressure on var_1. var_16 fell from 5.96 (t=35) to 5.863 (t=36), aligning with var_1's downtrend. Covariates' recent directions imply continued weakening for var_1, forecasting 2.05 for t=37.",
+    "2025-09": "var_1 declined from 2.094 (t=35) to 1.668 (t=36). var_3 (1.78→1.66) and var_16 (5.863→5.734) both decreased in the last 3 timesteps, implying downward momentum. Forecast extends this trend.",
+    "2025-10": "var_1 rose from 1.668 at t=35 to 2.102 at t=36, paralleling var_19's sharp increase (3.239→3.87) and var_2's steady climb (0.65→0.659). These co-moves imply sustained momentum, forecasting var_1 at 2.15 for t=37.",
+    "2025-11": "var_1 rose from 2.102 (t=35) to 2.38 (t=36). Covariates var_10 (93.919 at t=36, down from 101.591 at t=35) and var_16 (5.5 at t=36, down from 5.513 at t=35) both declined, aligning with var_1's upward trend. Their recent downward momentum suggests continued support for var_1's increase, forecasting 2.66 for t=37.",
+    "2025-12": "var_1 rose from 2.102 (t=34) to 2.448 (t=36), with var_4 and var_20 co-moving upward (var_4: 4.4→4.5; var_20: 109.6→112.3 at t=36). Their recent increases imply sustained momentum, forecasting var_1 to rise further by ~0.05 to 2.5."
+  },
+  "n_seeds": 5,
+  "temperature": 0.7,
+  "ctx_len": 36,
+  "blinded_per_seed_rmse": [
+    0.31300116011805773,
+    0.3083717419531984,
+    0.30749094496464446,
+    0.3129423129512051
+  ]
+}

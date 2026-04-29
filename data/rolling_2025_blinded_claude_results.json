@@ -1,0 +1,141 @@
+{
+  "actuals": {
+    "2025-05": 1.90184,
+    "2025-06": 2.169712,
+    "2025-07": 2.094103,
+    "2025-08": 1.66754,
+    "2025-09": 2.10205,
+    "2025-10": 2.38033,
+    "2025-11": 2.447552,
+    "2025-12": 2.314855
+  },
+  "n_seeds": 5,
+  "results": {
+    "claude-opus-4-7": {
+      "label": "Opus 4.7 (cutoff 2026-01)",
+      "forecasts": {
+        "2025-05": [
+          2.15,
+          2.12,
+          2.1,
+          2.15,
+          2.13
+        ],
+        "2025-06": [
+          1.85,
+          1.85,
+          1.85,
+          1.85
+        ],
+        "2025-07": [
+          2.15,
+          2.15
+        ],
+        "2025-08": [
+          2.05,
+          2.05,
+          2.05
+        ],
+        "2025-09": [
+          1.75
+        ],
+        "2025-10": [
+          1.95
+        ],
+        "2025-11": [
+          2.25,
+          2.15,
+          2.15,
+          2.15,
+          2.15
+        ],
+        "2025-12": [
+          2.5,
+          2.42,
+          2.45,
+          2.42,
+          2.55
+        ]
+      },
+      "rationale_first_seed": {
+        "2025-05": "Step 1: var_1 trajectory t=31-36: 1.526, 1.934, 2.244, 2.021, 2.054, 2.079 — recovered from a low at t=30 (1.254) and stabilized around 2.0-2.2. Step 2: var_3 co-moves with var_1 (t=31-36: 2.04, 2.00, 1.94, 1.99, 2.14, 2.02 — similar leveling pattern). var_2 inversely correlates (declining 0.653->0.628 as var_1 stabilized low). var_17 has been rising (4.416->4.576) suggesting mild upward pressure. Step 3: var_3 ticked down slightly (2.14->2.02) and var_2 continues to drop, suggesting var_1 stays near current level with a slight upward bias from var_17 increase and var_5 increase (73.47->75.81). Step 4: Combining slight upward momentum with stabilization, forecast ~2.15.",
+        "2025-06": "Step 1: var_1 trajectory t=31-36: 1.934, 2.244, 2.021, 2.054, 2.079, 1.902 — oscillating around 2.0 with a slight downward tilt at t=36. Step 2: var_3 co-moves closely with var_1 (t=31-36: 2.0, 1.94, 1.99, 2.14, 2.02, 1.83 — also dropped at t=36). var_2 inversely correlates somewhat (rising at t=36 to 0.644). var_5 has been rising recently (73.47, 75.81, 74.5) which historically aligns with weakness in var_1. var_6 has surged (0.386→0.775) coinciding with var_1 staying suppressed. Step 3: var_3's drop to 1.83 at t=36 and var_6 remaining elevated, plus var_2 ticking up, suggest continued mild downward pressure on var_1. Step 4: Combining the slight downtrend at t=36 (1.902) with the supporting covariate signals, I forecast var_1 ≈ 1.85.",
+        "2025-07": "Step 1: var_1 from t=31 to t=36: 2.244, 2.021, 2.054, 2.079, 1.902, 2.170 — oscillating around 2.0-2.2 with a slight rebound at t=36. Step 2: var_3 co-moves with var_1 (declining: 1.94, 1.99, 2.14, 2.02, 1.83, 1.79); var_5 also co-moves (71.35, 72.6, 73.47, 75.81, 74.5, 73.69); var_6 rose sharply (0.767→0.773) and tends to be inversely correlated with var_1's longer-term level. var_10 jumped to 100.555 at t=36 from 87.374, similar to earlier instances (t=12-13) preceding small dips. Step 3: var_3 still declining and var_6 high suggest continued suppression of var_1, but the recent t=36 uptick to 2.17 with var_5 easing slightly suggests near-term stability. Step 4: Expect var_1 near recent mean ~2.05-2.20, slight pullback from 2.17 toward 2.15.",
+        "2025-08": "Step 1: var_1 over t=31-36: 2.021, 2.054, 2.079, 1.902, 2.170, 2.094 — oscillating in a tight range around 2.0-2.1, essentially flat with mild mean reversion. Step 2: var_3 co-moves with var_1 (both declining from earlier highs to current lows: var_3 went 1.99,2.14,2.02,1.83,1.79,1.78 over t=31-36, mirroring var_1's stabilization). var_5 also co-moves loosely (72.6,73.47,75.81,74.5,73.69,72.22). var_6 has plateaued near 0.77-0.79 (t=30-36), suggesting regime stability. Step 3: var_3 still declining slightly while var_1 ticked down from 2.170 to 2.094; var_6 flat indicates no regime shift. Mean of last 6 var_1 values is ~2.053, recent values cluster near 2.05-2.10. Expect slight reversion toward the recent mean. Step 4: Forecast ~2.05.",
+        "2025-09": "Step 1: var_1 over t=31-36 is 2.054, 2.079, 1.902, 2.170, 2.094, 1.668, showing a recent downward move with a sharp drop at t=36. Step 2: var_3 co-moves strongly with var_1 (t=31-36: 2.14, 2.02, 1.83, 1.79, 1.78, 1.66 - declining trend matches). var_5 also tracks loosely (75.81 down to 72.11). var_8 has turned more negative (-0.624, -0.740, -0.817 at t=34-36), which historically aligns with var_1 weakness. Step 3: var_3 continues falling, var_8 deepening negative, var_20 rising (108.6, 110.7, 111.2) suggests continued pressure. These imply var_1 stays low or drifts slightly lower from 1.668. Step 4: Combining the downward momentum with mild mean reversion from the sharp t=36 drop, forecast ~1.75.",
+        "2025-10": "Step 1: var_1 over t=31-36: 2.079, 1.902, 2.170, 2.094, 1.668, 2.102. It's been oscillating around ~2.0 with a slight downward trajectory from earlier highs. Step 2: var_3 co-moves with var_1 — both have been declining (var_3: 2.02, 1.83, 1.79, 1.78, 1.66, 1.68 over t=31-36). var_13 also co-moves down (33.72 -> 31.973). var_8 has trended more negative (0.09 -> -0.846), which has historically aligned with weaker var_1. var_5 (71.53) declining slightly aligns with downward pressure. Step 3: var_3 ticked up slightly (1.66->1.68), var_8 still very negative, var_13 still falling. Mixed but suggests var_1 stays in the 1.9-2.1 range, likely a small mean reversion after the t=35 dip and t=36 bounce. Step 4: Average of recent values ~1.99; with slight upward tick in var_3 and recent bounce, forecast ~1.95.",
+        "2025-11": "Step 1: var_1 from t=31-36: 1.902, 2.170, 2.094, 1.668, 2.102, 2.380 — oscillating around 2.0 with recent upward momentum (last two prints 2.102 → 2.380). Step 2: var_3 co-moves positively with var_1 (both declined from ~2.9 at t=3 down to ~1.7 by t=36; recent values 1.83, 1.79, 1.78, 1.66, 1.68, 1.69 — stabilizing). var_5 also co-moves (declining trend 75.21→70.56). var_8 tends to lead inversely; t=34-36 values -0.817, -0.846, -0.547 (rising back toward zero) suggests var_1 strength. Step 3: var_3 stabilizing/slightly up, var_8 rebounding upward, and recent var_1 momentum (1.668→2.102→2.380) imply continued modest positive drift but with mean-reversion pull toward ~2.1. Step 4: Combining momentum (+) and mean reversion, forecast ~2.25.",
+        "2025-12": "Step 1: var_1 over t=31-36: 2.170, 2.094, 1.668, 2.102, 2.380, 2.448 — after dipping at t=33, it has risen for three consecutive steps with momentum. Step 2: var_3 co-moves with var_1 (declining trend: 1.79, 1.78, 1.66, 1.68, 1.69, 1.66 — leveling off). var_5 also co-moves on a slow downtrend (73.69→69.4). var_18 has been rising (2.628, 2.413, 3.239, 3.87, 3.87, 3.293), suggesting recovery momentum that has accompanied var_1's bounce. var_17 stable around 4.5-4.7. Step 3: The 3-step rising sequence in var_1 (1.668→2.102→2.380→2.448), combined with var_18 still elevated and var_3 stabilizing, suggests continued mild upward drift, though deceleration is likely (last increment was only +0.068 vs prior +0.278). Step 4: Extrapolating modest continued rise gives ~2.50."
+      },
+      "rmse_mean_curve": 0.298597657785941,
+      "per_seed_rmse": [
+        0.29487875683956954
+      ]
+    },
+    "claude-sonnet-4-5": {
+      "label": "Sonnet 4.5 (cutoff 2024-04, clean control)",
+      "forecasts": {
+        "2025-05": [
+          2.15,
+          2.15,
+          2.15,
+          2.11,
+          2.11
+        ],
+        "2025-06": [
+          1.75,
+          1.75,
+          1.75,
+          1.75,
+          2.05
+        ],
+        "2025-07": [
+          2.35,
+          2.28,
+          2.28,
+          2.35
+        ],
+        "2025-08": [
+          2.15,
+          2.15,
+          2.15
+        ],
+        "2025-09": [
+          1.52,
+          1.52,
+          1.52
+        ],
+        "2025-10": [
+          2.25,
+          2.15
+        ],
+        "2025-11": [
+          2.45,
+          2.52
+        ],
+        "2025-12": [
+          2.52,
+          2.31,
+          2.52,
+          2.52,
+          2.52
+        ]
+      },
+      "rationale_first_seed": {
+        "2025-05": "Step 1: var_1 trajectory over last 6 timesteps shows: t=31: 1.526, t=32: 1.934, t=33: 2.244, t=34: 2.021, t=35: 2.054, t=36: 2.079. After reaching a low of 1.254 at t=30, var_1 rebounded to 2.244 at t=33, then stabilized around 2.02-2.08 for the last three timesteps, suggesting a plateau near 2.05-2.08.\n\nStep 2: Key covariates identified: (a) var_6 shows strong leading behavior - it increased from 0.362 at t=31 to peak at 0.821 at t=35, then declined slightly to 0.784 at t=36. This decline at t=35-36 may signal var_1's stabilization/slight uptick. (b) var_16 peaked at 6.17 at t=33 when var_1 was 2.244, then declined to 6.056 at t=34, 5.84 at t=35, and 5.903 at t=36. The slight uptick in var_16 from 5.84 to 5.903 aligns with var_1's stability. (c) var_8 shifted from negative values (-0.767 at t=32, -0.783 at t=33, -0.808 at t=34, -0.567 at t=35) to positive 0.09 at t=36, indicating potential momentum shift.\n\nStep 3: var_6's slight decline from 0.821 to 0.784 suggests var_1 won't surge dramatically. var_16's uptick (5.84→5.903) and var_8's turn positive (0.09) suggest modest upward pressure. The recent stabilization pattern (2.021, 2.054, 2.079) shows incremental gains of ~0.025 per step.\n\nStep 4: Combining stabilization trend with covariate signals (var_8 turning positive, var_16 slight recovery), forecast var_1 at t=37 as 2.15, representing modest continuation of the upward drift.",
+        "2025-06": "Step 1: var_1 trajectory over last 6 timesteps shows: t=31: 1.934, t=32: 2.244, t=33: 2.021, t=34: 2.054, t=35: 2.079, t=36: 1.902. The series peaked at t=32 (2.244) then stabilized around 2.0-2.08 before dropping to 1.902 at t=36, suggesting downward momentum.\n\nStep 2: Key covariates identified: (a) var_6 shows strong upward trend leading var_1 changes - it rose from 0.386 at t=31 to peak at 0.821 at t=34, then declined to 0.775 at t=36. This leading indicator peaked before var_1's recent decline. (b) var_3 shows negative correlation - it decreased from 2.0 at t=31 to 1.83 at t=36 (lowest in series), while var_1 remained elevated but declining. (c) var_16 shows co-movement - it was 5.942 at t=31, rose to 6.17 at t=32 (when var_1 peaked at 2.244), then declined to 5.948 at t=36, tracking var_1's recent softening.\n\nStep 3: var_6's decline from peak (0.821→0.775) suggests continued weakness in var_1. var_3 hitting series low (1.83) with negative correlation implies further downside. var_16's stabilization around 5.9-6.0 suggests var_1 settling lower. The momentum from t=35 to t=36 shows a -0.177 decline, indicating continuation of downward trend.\n\nStep 4: Combining the leading indicator weakness (var_6 declining), inverse relationship pressure (var_3 at lows), and recent negative momentum, forecast var_1 at t=37 = 1.75, representing continued modest decline from t=36's 1.902.",
+        "2025-07": "Step 1: var_1 trajectory over last 6 timesteps shows: t=31: 2.244, t=32: 2.021, t=33: 2.054, t=34: 2.079, t=35: 1.902, t=36: 2.17. The series oscillates in a range of 1.9-2.25 with a slight uptick from 1.902 to 2.17 in the most recent step. Step 2: Key covariates identified: (a) var_6 shows strong positive trend from 0.767 (t=31) to 0.792 (t=32) to 0.821 (t=33), then stabilizes around 0.773-0.784 (t=34-36). This leading indicator peaked at t=33 before var_1's recent movements. (b) var_10 shows increase from 80.186 (t=31) to 87.374 (t=35) to 100.555 (t=36), suggesting upward momentum. (c) var_20 increases sharply from 93.6 (t=34) to 101.7 (t=35) to 108.6 (t=36), indicating strengthening trend. Step 3: var_6 has stabilized at high levels (0.773-0.784 range t=34-36), suggesting consolidation rather than further decline in var_1. var_10's sharp rise to 100.555 and var_20's acceleration to 108.6 both suggest positive momentum for var_1. The recent uptick from 1.902 to 2.17 aligns with these covariate signals. Step 4: Given the stabilization in var_6, strong upward momentum in var_10 and var_20, and the recent recovery in var_1, forecast a continued modest increase to approximately 2.35 at t=37.",
+        "2025-08": "Step 1: var_1 trajectory over last 6 timesteps shows: t=31: 2.021, t=32: 2.054, t=33: 2.079, t=34: 1.902, t=35: 2.17, t=36: 2.094. The series fluctuates in a narrow range (1.90-2.17) with a slight dip at t=34 followed by recovery, then marginal decline to 2.094 at t=36.\n\nStep 2: Key covariates identified: (a) var_10 shows strong inverse relationship with var_1. From t=31 to t=36, var_10 increases from 86.308→87.198→85.024→87.374→100.555→105.674, with sharp rises at t=35 (100.555) and t=36 (105.674) coinciding with var_1 stabilization around 2.09-2.17. (b) var_3 exhibits declining trend: t=31: 1.99, t=32: 2.14, t=33: 2.02, t=34: 1.83, t=35: 1.79, t=36: 1.78, reaching its lowest observed value, which historically precedes var_1 stabilization. (c) var_20 rises sharply: t=31: 95.0, t=32: 93.2, t=33: 93.6, t=34: 101.7, t=35: 108.6, t=36: 110.7, showing strong upward momentum in last 3 steps.\n\nStep 3: var_10's continued rise to 105.674 and var_3's bottoming at 1.78 suggest var_1 has limited downside. var_20's acceleration (101.7→108.6→110.7) in last 3 steps typically co-moves with var_1 stabilization or slight increase. The pattern suggests var_1 will maintain current level with modest upward bias.\n\nStep 4: Combining these signals with var_1's recent range-bound behavior around 2.0-2.1, forecast for t=37 is 2.15.",
+        "2025-09": "Step 1: var_1 trajectory over last 6 timesteps shows: t=31: 2.054, t=32: 2.079, t=33: 1.902, t=34: 2.17, t=35: 2.094, t=36: 1.668. The series peaked at t=34 (2.17) then declined sharply to 1.668 at t=36, showing a downward trend in recent timesteps.\n\nStep 2: Key correlated covariates identified:\n- var_3: Shows strong inverse relationship with var_1. From t=31 to t=36: 2.14→2.02→1.83→1.79→1.78→1.66, declining consistently as var_1 fluctuated then dropped.\n- var_10: Appears to lead var_1 inversely. Values t=31-36: 87.198→85.024→87.374→100.555→105.674→105.091. Sharp increases at t=34-36 (100.555→105.674→105.091) preceded/coincided with var_1's decline.\n- var_20: Recent surge from t=33-36: 101.7→108.6→110.7→111.2, accelerating upward while var_1 declined, suggesting negative correlation at current levels.\n\nStep 3: Covariate implications for t=37:\n- var_3 at historic low (1.66) suggests continued pressure on var_1\n- var_10 elevated and stable around 105, maintaining downward pressure\n- var_20 at peak (111.2) with strong momentum indicates var_1 likely to remain suppressed\nAll three covariates suggest var_1 will continue declining or stabilize at lower levels.\n\nStep 4: Given the sharp drop from 2.094 to 1.668 (decline of 0.426), and covariate signals indicating continued weakness, forecast var_1 at t=37 to continue modest decline to approximately 1.52.",
+        "2025-10": "Step 1: var_1 trajectory over last 6 timesteps: t=31: 2.079, t=32: 1.902, t=33: 2.17, t=34: 2.094, t=35: 1.668, t=36: 2.102. The series shows volatility around 2.0, with a sharp drop to 1.668 at t=35 followed by recovery to 2.102 at t=36. Step 2: Key covariates identified: (a) var_10 shows strong co-movement - it increased from 85.024 (t=31) to peak at 105.674 (t=34), then declined to 105.091 (t=35) and 101.591 (t=36). This decline coincides with var_1's drop and recovery pattern. (b) var_3 shows a leading relationship - it decreased from 2.02 (t=31) to 1.66 (t=35) then stabilized at 1.68 (t=36), preceding var_1's movements. (c) var_20 increased from 93.6 (t=31) to 111.2 (t=35) and slightly declined to 110.0 (t=36), showing inverse correlation with var_1 in recent steps. Step 3: var_10's continued decline from 105.674 to 101.591 suggests downward pressure is easing. var_3 has stabilized at 1.68 (t=35-36), suggesting var_1 should stabilize. var_20's slight decline from 111.2 to 110.0 suggests potential modest upward movement in var_1. Step 4: Given the stabilization signals from var_3, moderating decline in var_10, and var_1's recovery from 1.668 to 2.102, I forecast a slight increase to 2.25, continuing the recovery trend but remaining within the recent 1.9-2.2 range.",
+        "2025-11": "Step 1: var_1 trajectory over last 6 timesteps: t=31: 1.902, t=32: 2.17, t=33: 2.094, t=34: 1.668, t=35: 2.102, t=36: 2.38. The series shows volatility with a drop at t=34 (1.668) followed by recovery to 2.38 at t=36, suggesting upward momentum.\n\nStep 2: Key covariates identified:\n- var_10: Shows strong correlation with var_1. At t=31-36: 87.374→100.555→105.674→105.091→101.591→93.919. The recent decline from 105.674 (t=33) to 93.919 (t=36) corresponds with var_1's pattern, but var_1 is rising while var_10 is falling, suggesting var_10 may lag var_1.\n- var_3: Shows inverse relationship with var_1. At t=31-36: 1.83→1.79→1.78→1.66→1.68→1.69. Low and stable values with slight uptick at t=35-36, which aligns with var_1's increase.\n- var_6: At t=31-36: 0.775→0.773→0.773→0.773→0.818→0.809. Relatively stable around 0.77-0.82, with slight increase at t=35, correlating with var_1's rise.\n\nStep 3: var_3 remains low and stable (1.69), var_6 is elevated (0.809), and var_10's decline appears to be stabilizing. The momentum in var_1 from t=34 (1.668) through t=36 (2.38) suggests continued modest increase.\n\nStep 4: Given the recovery pattern and covariate signals, forecasting a continuation of the upward trend to approximately 2.45 at t=37.",
+        "2025-12": "var_1 shows upward momentum from t=34 to t=36 (2.102→2.380→2.448). var_10 declined from 105.674 at t=32 to 83.799 at t=36, showing inverse correlation with var_1's recent rise. var_3 remains stable at low levels (1.66 at t=36), consistent with var_1 staying in 2-2.5 range. var_20 increased to 112.3 at t=36, supporting slight upward continuation. The momentum (+0.068 from t=35 to t=36) and covariate patterns suggest modest increase to 2.52."
+      },
+      "rmse_mean_curve": 0.3286666015664657,
+      "per_seed_rmse": [
+        0.34165974482699896,
+        0.3358149211027557
+      ]
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "forecasts": {
+    "2023": [
+      [
+        5.1,
+        5.15,
+        5.2,
+        5.25,
+        5.3,
+        5.35,
+        5.4,
+        5.45,
+        5.5,
+        5.55,
+        5.6,
+        5.65
+      ],
+      [
+        5.1,
+        5.15,
+        5.2,
+        5.25,
+        5.3,
+        5.35,
+        5.4,
+        5.45,
+        5.5,
+        5.55,
+        5.6,
+        5.65
+      ],
+      [
+        5.1,
+        5.15,
+        5.2,
+        5.25,
+        5.3,
+        5.28,
+        5.3,
+        5.32,
+        5.35,
+        5.3,
+        5.25,
+        5.2
+      ],
+      [
+        5.1,
+        5.15,
+        5.2,
+        5.25,
+        5.3,
+        5.35,
+        5.4,
+        5.45,
+        5.5,
+        5.55,
+        5.6,
+        5.65
+      ],
+      [
+        5.05,
+        5.0,
+        4.95,
+        4.9,
+        4.85,
+        4.8,
+        4.75,
+        4.7,
+        4.65,
+        4.6,
+        4.55,
+        4.5
+      ]
+    ],
+    "2024": [
+      [
+        3.13,
+        3.08,
+        3.03,
+        2.98,
+        2.93,
+        2.88,
+        2.83,
+        2.78,
+        2.73,
+        2.68,
+        2.63,
+        2.58
+      ],
+      [
+        3.15,
+        3.2,
+        3.25,
+        3.28,
+        3.33,
+        3.35,
+        3.38,
+        3.4,
+        3.43,
+        3.45,
+        3.48,
+        3.5
+      ],
+      [
+        3.126,
+        3.076,
+        3.026,
+        2.976,
+        2.926,
+        2.876,
+        2.826,
+        2.776,
+        2.726,
+        2.676,
+        2.626,
+        2.576
+      ],
+      [
+        3.25,
+        3.3,
+        3.35,
+        3.4,
+        3.45,
+        3.5,
+        3.5,
+        3.55,
+        3.6,
+        3.6,
+        3.65,
+        3.7
+      ],
+      [
+        3.23,
+        3.28,
+        3.33,
+        3.38,
+        3.43,
+        3.48,
+        3.53,
+        3.58,
+        3.63,
+        3.68,
+        3.73,
+        3.78
+      ]
+    ]
+  },
+  "actuals": {
+    "2023": [
+      4.978541,
+      4.657559999999999,
+      4.165881,
+      3.688103,
+      3.376744,
+      2.726181,
+      2.354456,
+      3.360029,
+      3.703363,
+      3.765115,
+      3.309801,
+      3.175911
+    ],
+    "2024": [
+      2.81639,
+      3.126983,
+      3.103511,
+      2.92498,
+      2.672546,
+      2.410939,
+      2.551891,
+      2.012825,
+      1.595038,
+      1.253642,
+      1.526447,
+      1.933824
+    ]
+  },
+  "rationales": {
+    "2023": [
+      "var_1 stabilized near 5.0 from t=35-36. var_2 (0.675) and var_16 (5.664) co-moved inversely with var_1's prior peaks, suggesting their declining values now signal a rebound. Projecting gradual upward momentum.",
+      "var_1 rose from 3.771 (t=25) to 6.327 (t=31), then declined to 5.017 (t=36). var_10 and var_13 co-moved with var_1's peak/decline. var_10's sharp drop (t=35:86.19→t=36:79.587) may signal stabilization. Projecting a moderate upward trend from current 5.0, influenced by covariate momentum and base effects.",
+      "var_1 rose from 3.771 (t=25) to 6.327 (t=31), then declined to 5.017 (t=36). Recent stabilization around 5.0 suggests momentum. var_16 and var_17 co-moved with var_1, peaking near t=31-34, implying delayed signaling. Projected values balance base stabilization (5.0) with modest upward momentum and covariate lag effects, avoiding sharp swings.",
+      "var_1 stabilized near 5.0 in recent timesteps (t=35:5.006, t=36:5.017). Var_5 and var_15 showed co-moving patterns with var_1, suggesting positive momentum. Projecting a gradual rise from 5.0, considering covariate signals and base effects.",
+      "var_1 declined from 6.327 (t=31) to 5.017 (t=36), with var_10 showing decreasing co-movement. Projecting a gradual downward trend, factoring recent momentum and covariate signals."
+    ],
+    "2024": [
+      "var_1 declined from 3.765 (t=34) to 3.176 (t=36), showing downward momentum. var_3 rose steadily (2.73 to 3.02) inversely mirroring var_1's drop, suggesting a leading relationship. var_7's persistent -0.999 post-t=33 may signal stabilized negativity. Forecast assumes continued gradual decline, dampened by var_3's upward trend opposing further drops.",
+      "var_1 rose from 2.726 (t=30) to 3.765 (t=34), then dipped to 3.176 (t=36). var_3 and var_15 co-moved: var_3 increased steadily (2.81→3.02) and var_15 peaked at t=34 (6.887) then fell. Projecting momentum from var_3's uptrend and moderated recovery post-dip, with base effect from recent peak.",
+      "var_1 declined from 3.765 (t=34) to 3.176 (t=36), with covariates var_12 and var_17 showing parallel downward trends. Projecting a gradual decline based on recent momentum and covariate signals, assuming sustained negative drift.",
+      "var_1 declined from 3.765 (t=34) to 3.176 (t=36), then slightly rebounded. var_4 and var_12 co-moved with var_1's recent uptick (t=32-34). Projecting moderated growth, leveraging var_4's steady rise and var_12's stability, with momentum from t=36's partial recovery.",
+      "var_1 rose from 2.354 (t=31) to 3.765 (t=34), then dipped to 3.176 (t=36). var_3 and var_17 co-moved with var_1, peaking at t=34 then declining. Projecting momentum (recent dip), base stabilization (post-peak correction), and covariate recovery (var_3 climbing at t=36), a gradual 0.05/month uptrend is forecast."
+    ]
+  },
+  "n_seeds": 5,
+  "temperature": 0.7
+}

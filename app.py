@@ -131,6 +131,54 @@ def load_all_data():
             "name": "Transformer (Ours)", "params": "170K",
         }
 
+    # Opus reasoning forecast (univariate context, no training)
+    opus_path = os.path.join(os.path.dirname(__file__), "data", "opus_reasoning_result.npz")
+    if os.path.exists(opus_path):
+        op = np.load(opus_path, allow_pickle=True)
+        data["opus"] = {
+            "forecast_med": op["forecast_med"],
+            "forecast_ci_lo": op["forecast_ci_lo"],
+            "forecast_ci_hi": op["forecast_ci_hi"],
+            "rmse": float(op["rmse"]),
+            "name": "Claude Opus (univar)", "params": "in-ctx",
+        }
+
+    # Opus-covariate forecast (18 covariates in context, no training)
+    opusc_path = os.path.join(os.path.dirname(__file__), "data", "opus_covariate_result.npz")
+    if os.path.exists(opusc_path):
+        oc = np.load(opusc_path, allow_pickle=True)
+        data["opus_cov"] = {
+            "forecast_med": oc["forecast_med"],
+            "forecast_ci_lo": oc["forecast_ci_lo"],
+            "forecast_ci_hi": oc["forecast_ci_hi"],
+            "rmse": float(oc["rmse"]),
+            "name": "Claude Opus (+18cov)", "params": "in-ctx",
+        }
+
+    # HCX-32B-Think with 18 covariates context (2023)
+    hcx_path = os.path.join(os.path.dirname(__file__), "data", "hcx32_covariate_result.npz")
+    if os.path.exists(hcx_path):
+        hx = np.load(hcx_path, allow_pickle=True)
+        data["hcx32"] = {
+            "forecast_med": hx["forecast_med"],
+            "forecast_ci_lo": hx["forecast_ci_lo"],
+            "forecast_ci_hi": hx["forecast_ci_hi"],
+            "rmse": float(hx["rmse"]),
+            "name": "HCX-32B-Think (+18cov)", "params": "32B in-ctx",
+        }
+
+    # HCX-32B-Think with 18 covariates context (2024)
+    hcx24_path = os.path.join(os.path.dirname(__file__), "data", "hcx32_covariate_2024_result.npz")
+    if os.path.exists(hcx24_path):
+        hx24 = np.load(hcx24_path, allow_pickle=True)
+        data["hcx32_2024"] = {
+            "forecast_med": hx24["forecast_med"],
+            "forecast_ci_lo": hx24["forecast_ci_lo"],
+            "forecast_ci_hi": hx24["forecast_ci_hi"],
+            "rmse": float(hx24["rmse"]),
+            "name": "HCX-32B-Think (+18cov)",
+        }
+
     return data
 
 
@@ -325,6 +373,36 @@ with tabs[0]:
                 hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
             ))
 
+        # Claude Opus (univariate in-context)
+        if "opus" in data:
+            fig.add_trace(go.Scatter(
+                x=fc_dates, y=data["opus"]["forecast_med"],
+                mode="lines+markers", line=dict(color="#D4A017", width=2.5, dash="dot"),
+                marker=dict(size=9, symbol="star-diamond"),
+                name=f"Claude Opus univar ({data['opus']['params']})",
+                hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+            ))
+
+        # Claude Opus (+18 covariates in-context)
+        if "opus_cov" in data:
+            fig.add_trace(go.Scatter(
+                x=fc_dates, y=data["opus_cov"]["forecast_med"],
+                mode="lines+markers", line=dict(color="#B8860B", width=3),
+                marker=dict(size=11, symbol="star"),
+                name=f"Claude Opus +18cov ({data['opus_cov']['params']})",
+                hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+            ))
+
+        # HCX-32B-Think (+18 covariates in-context)
+        if "hcx32" in data:
+            fig.add_trace(go.Scatter(
+                x=fc_dates, y=data["hcx32"]["forecast_med"],
+                mode="lines+markers", line=dict(color="#00C853", width=3),
+                marker=dict(size=11, symbol="diamond-tall"),
+                name=f"HCX-32B-Think +18cov ({data['hcx32']['params']})",
+                hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+            ))
+
         # Forecast 시작선
         fig.add_vline(
             x=fc_dates[0].timestamp() * 1000,
@@ -356,6 +434,12 @@ with tabs[0]:
             fm_rmses["TimesFM"] = data["timesfm"]["rmse"]
         if "sundial" in data:
             fm_rmses["Sundial"] = data["sundial"]["rmse"]
+        if "opus" in data:
+            fm_rmses["Opus univ"] = data["opus"]["rmse"]
+        if "opus_cov" in data:
+            fm_rmses["Opus +18cov"] = data["opus_cov"]["rmse"]
+        if "hcx32" in data:
+            fm_rmses["HCX-32B +18cov"] = data["hcx32"]["rmse"]
 
         cols = st.columns(4 + len(fm_rmses))
         cols[0].metric("LSTM RMSE", f"{l_rmse:.4f}pp", delta=f"{improvement:+.1f}% vs BISTRO", delta_color="inverse")
@@ -643,7 +727,86 @@ with tabs[2]:
     st.header("2024 Forecast — Covariate Models Comparison")
 
     if "forecast_2024" not in data:
-        st.warning("2024 예측 결과가 없습니다. `python run_foundation_models.py`를 실행하세요.")
+        st.warning("학습 모델(LSTM/Transformer/BISTRO/Chronos-2)의 2024 예측 결과 npz가 없습니다. `python run_foundation_models.py` 실행 시 추가됩니다.")
+
+        # 그래도 HCX 2024 단독으로 표시
+        if "hcx32_2024" in data:
+            st.subheader("HCX-32B-Think (+18cov) — 2024 OOS (단독 표시)")
+            _panel_path = os.path.join(os.path.dirname(__file__), "data", "macro_panel_optimal18.csv")
+            _panel_cpi = pd.read_csv(_panel_path, index_col=0, parse_dates=True)["CPI_KR_YoY"]
+            _cpi_m = _panel_cpi.resample("MS").last().dropna()
+            _cpi_before = _cpi_m.loc["2021-01":"2023-12"]
+            _cpi_fc = _cpi_m.loc["2024-01":"2024-12"]
+            _cpi_after = _cpi_m.loc["2025-01":]
+            fc_dates24 = _cpi_fc.index
+
+            hx24 = data["hcx32_2024"]
+            fig24h = go.Figure()
+            fig24h.add_trace(go.Scatter(
+                x=_cpi_before.index, y=_cpi_before.values,
+                mode="lines", line=dict(color="#333333", width=2.5), name="Actual CPI (history)",
+                hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+            ))
+            _x = [_cpi_before.index[-1]] + list(fc_dates24)
+            _y = [_cpi_before.values[-1]] + list(_cpi_fc.values)
+            fig24h.add_trace(go.Scatter(
+                x=_x, y=_y, mode="lines+markers",
+                line=dict(color="#000000", width=4),
+                marker=dict(size=10, symbol="square", color="#D62728", line=dict(width=2, color="#000000")),
+                name="Actual (2024 forecast period)",
+                hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+            ))
+            if len(_cpi_after) > 0:
+                fig24h.add_trace(go.Scatter(
+                    x=[fc_dates24[-1]] + list(_cpi_after.index),
+                    y=[_cpi_fc.values[-1]] + list(_cpi_after.values),
+                    mode="lines", line=dict(color="#000000", width=3),
+                    showlegend=False,
+                    hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+                ))
+            # HCX CI
+            fig24h.add_trace(go.Scatter(
+                x=list(fc_dates24) + list(fc_dates24[::-1]),
+                y=list(hx24["forecast_ci_hi"]) + list(hx24["forecast_ci_lo"][::-1]),
+                fill="toself", fillcolor="rgba(0,200,83,0.18)",
+                line=dict(color="rgba(0,200,83,0)"), hoverinfo="skip",
+                showlegend=True, name="HCX 80% CI",
+            ))
+            fig24h.add_trace(go.Scatter(
+                x=fc_dates24, y=hx24["forecast_med"],
+                mode="lines+markers", line=dict(color="#00C853", width=3),
+                marker=dict(size=10, symbol="diamond-tall"),
+                name=f"HCX-32B-Think +18cov (RMSE {hx24['rmse']:.4f})",
+                hovertemplate="%{x|%Y-%m}: <b>%{y:.2f}%</b><extra></extra>",
+            ))
+            fig24h.add_vline(
+                x=fc_dates24[0].timestamp() * 1000,
+                line_dash="dash", line_color="rgba(100,100,100,0.6)",
+                annotation_text="2024 forecast", annotation_position="top right",
+                annotation_font_size=13,
+            )
+            fig24h.update_layout(
+                yaxis_title="CPI YoY (%)", xaxis_title="", height=500,
+                legend=dict(x=0.01, y=0.99, font=dict(size=12)),
+                margin=dict(t=30, b=50), hovermode="x unified",
+            )
+            st.plotly_chart(fig24h, use_container_width=True)
+
+            # Report 비교
+            st.subheader("2023 vs 2024 일관성 (보고서 v1 + HCX)")
+            consistency_df = pd.DataFrame({
+                "Model": ["HCX-32B-Think (+18cov)", "Transformer (170K)", "LSTM (327K)", "BISTRO (91M)", "Chronos-2 (120M)"],
+                "2023 RMSE": [
+                    f"{data['hcx32']['rmse']:.4f}" if "hcx32" in data else "—",
+                    "0.5562", "0.6895", "1.1610", "0.5362",
+                ],
+                "2024 RMSE": [
+                    f"{hx24['rmse']:.4f}", "0.5564", "0.7174", "0.8113", "1.3270",
+                ],
+                "Consistency": ["Stable ✓", "Stable", "Stable", "Improved", "Collapsed"],
+                "Type": ["zero-train, in-ctx reasoning", "task-spec", "task-spec", "pre-train", "zero-shot"],
+            })
+            st.table(consistency_df)
     else:
         f24 = data["forecast_2024"]
         dates24 = [str(d) for d in f24["forecast_date"]]

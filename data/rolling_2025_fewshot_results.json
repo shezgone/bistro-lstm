@@ -1,0 +1,100 @@
+{
+  "targets": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "actuals": {
+    "2025-05": 1.90184,
+    "2025-06": 2.169712,
+    "2025-07": 2.094103,
+    "2025-08": 1.66754,
+    "2025-09": 2.10205,
+    "2025-10": 2.38033,
+    "2025-11": 2.447552,
+    "2025-12": 2.314855
+  },
+  "forecasts": {
+    "2025-05": [
+      2.1,
+      2.1,
+      2.1,
+      2.1,
+      2.1
+    ],
+    "2025-06": [
+      1.95,
+      1.95,
+      1.8,
+      1.9,
+      1.85
+    ],
+    "2025-07": [
+      2.25,
+      2.25,
+      2.2,
+      2.25,
+      2.3
+    ],
+    "2025-08": [
+      2.15,
+      2.15,
+      2.1,
+      2.15,
+      2.15
+    ],
+    "2025-09": [
+      1.7,
+      1.4,
+      2.1,
+      1.85,
+      2.0
+    ],
+    "2025-10": [
+      2.15,
+      2.05,
+      2.05,
+      2.15,
+      2.05
+    ],
+    "2025-11": [
+      2.45,
+      2.5,
+      2.55,
+      2.4,
+      2.3
+    ],
+    "2025-12": [
+      2.5,
+      2.5,
+      2.55,
+      2.5,
+      2.5
+    ]
+  },
+  "rationales_first_seed": {
+    "2025-05": "BoK_CSI 트렌드: 직전 6개월(2024-10 to 2025-04) 값은 101.6, 100.6, 98.2, 100.7, 103.6, 91.0, 95.0, 93.6로, 3월 급락 후 4월 소폭 회복세. 방향성은 소비심리 약세 지속이나 최근 안정화 신호. 인플레이션 압력은 완만하며, 소비 회복이 제한적이나 원자재 가격(33.72)과 미 고용지표(108.0)가 상방 압력. 매크로 변수: 기준금리 동결 기조, 원/달러 약세(0.628)로 수입물가 부담, base effect 약화(작년 4월 2.079). 종합: CPI YoY는 2.10로 전망. 가중치는 BoK_CSI 40% (소비심리 회복 기대), 원자재/고용 30%, base effect 30%.",
+    "2025-06": "BoK_CSI rose to 101.7 in May 2025, signaling improving consumer sentiment and potential inflation pressures. Despite a recent CPI YoY dip to 1.902 (May), upward CSI momentum suggests demand-driven inflation. Base effects may stabilize as YoY comparisons shift to lower 2024 inflation months. Weight: 60% CSI, 30% commodity prices (Pork↑), 10% macro cross-check (modest PPI↓, KR_MfgProd volatility).",
+    "2025-07": "BoK_CSI 트렌드: 최근 6개월(2025.05-2025.06) 값은 101.7, 108.6로 상승 추세. CSI 방향성 → 소비자 낙관 강화로 인플레 압력 상승. 매크로 cross-check: BoK 금리 안정(0.77-0.82), 원자재/FX 약세(THB_USD 2.628)로 수입 물가 상승, base effect(6월 2.17 vs 2024.06 2.054) 중립. 종합 → BoK_CSI(40%)와 FX(30%) 가중치로 2.25% 전망.",
+    "2025-08": "BoK_CSI rose from 95.0 (2025-02) to 110.7 (2025-07), signaling strengthening consumer optimism. This upward trend (weighted 40%) suggests demand-pull inflation. Pork prices (105.674 in 2025-07, +20% YoY) add inflationary pressure, while lower PPI_CopperNickel (32.441, -7% YoY) offsets partially. US_NFP (64.0 in 2025-07, +3.1% MoM) supports wage growth (20% weight). Base effect from August 2024 CPI_KR_YoY at 2.013 (20% weight) moderates YoY acceleration. Net: 2.15, balancing CSI-driven demand and cost-mix factors.",
+    "2025-09": "BoK_CSI rose from 93.6 (May) to 111.2 (Aug), signaling improved consumer optimism and potential inflation pressure. However, US_NFP turned sharply negative (-70 in Aug), and PPI_CopperNickel eased to 32.4, suggesting weakening demand. August CPI YoY dropped to 1.668 from July's 2.094, reflecting base effects and softening momentum. Balancing rising sentiment (50% weight) against macro headwinds (30%) and prior month's decline (20%), a moderated inflation forecast of 1.7 is calibrated.",
+    "2025-10": "BoK_CSI rose from 93.6 (Apr) to 110.0 (Sep), signaling strong consumer optimism. This supports inflationary pressures via heightened demand. Cross-checking: recent CPI_KR_YoY rebounded to 2.102 (Sep) after August's dip, suggesting persistent underlying inflation. Base effect benefits as September 2024 CPI was lower (1.668). FX (THB_USD stable) and commodity prices (PPI_CopperNickel down) offset slightly. Weights: BoK_CSI (40%), CPI trend (30%), base effect (20%), others (10%).",
+    "2025-11": "BoK_CSI (Oct: 109.6, Sep: 110.0) shows slight optimism decline but remains above 109. Direction suggests moderate inflation pressure. Macro cross-check: Recent US_NFP (-140) signals labor weakness, dampening CPI; THB_USD and FX stability limit import effects. Base effect (prior month: 2.38) supports upward trend. Weighted forecast: 40% BoK_CSI, 30% labor/USD, 30% base effect.",
+    "2025-12": "BoK_CSI rose to 112.3 in Nov 2025 (from 109.6 in Oct), signaling strengthening consumer optimism. This CSI direction implies rising household spending pressures. Macro checks: CPI_KR_YoY rose 2.448% in Nov vs 2.380% in Oct, while Pork inflation reached 83.8 (Nov) vs 93.9 (Oct), suggesting transient commodity impacts. Base effect neutral as Nov 2024 CPI was 2.273. Weighing CSI (35%), recent CPI momentum (45%), and commodity drag (20%) yields 2.5% forecast."
+  },
+  "n_seeds": 5,
+  "temperature": 0.7,
+  "ctx_len": 36,
+  "fewshot_per_seed_rmse": [
+    0.27239517476499103,
+    0.35064830134373964,
+    0.2619878455868707,
+    0.25549081438527294,
+    0.2720815020085893
+  ]
+}
