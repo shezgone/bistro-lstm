@@ -1,0 +1,137 @@
+{
+  "lessons": [
+    {
+      "round_idx": -1,
+      "text": "N≥8 multi-seed required; N=1 results are a single point of a wide distribution (std/mean 0.15-0.40). Most one-shot 'effects' (cov vs univar, think on/off) collapsed to p>0.13 under N=8.",
+      "evidence": "rolling_2025: forced CoT per-seed std 0.004; mild prompt 0.039 — same model, prompt difference = 10× variance gap.",
+      "tag": "methodology",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Always co-report deterministic baseline ladder (RW / AR(1) / Trend12 / domain-mean-revert / MA12). On stable regimes simple arithmetic often beats 32B LLMs; new LLM records are usually only Tier-1 (RMSE 0.23-0.26) tied with baselines.",
+      "evidence": "rolling_2025: HCX forced CoT 0.250 vs Trend12 0.258 — per-seed 0.263 > 0.258, baseline slightly better single-call.",
+      "tag": "methodology",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Vintage management for in-context LLMs = the model's training cutoff vs forecast period. Cutoff < eval period strictly required. Wrong-CPI injection probe (4.5 fed as recent CPI) is the operational test for contamination.",
+      "evidence": "Opus 4.7 (cutoff 2026-01) RMSE 0.184 vs Sonnet 4.5 (2024-04) 0.265 = 38% gap on rolling_2025. HCX wrong_cpi probe 2.437 → confirms HCX honest, no recall mode.",
+      "tag": "contamination",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Distribution shift dominates architecture choice. Trained models (LSTM 327K=0.484, TFM 170K=0.773) lose to baselines on regimes outside their training distribution. LLM zero-training adapts better in absolute terms.",
+      "evidence": "rolling_2025: LSTM-csi 0.394 > HCX-csi 0.250 — LLM wins absolutely despite trained model getting bigger marginal CSI lift.",
+      "tag": "data",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "LLM forecasting evaluation IS prompt engineering evaluation. Plain HCX call 0.296 vs forced 4-step CSI CoT 0.250 = -19% (p=0.010 vs base prompt). Same model, same data, same seeds — only system_prompt differs.",
+      "evidence": "rolling_2025 forced vs base. Plain calls underestimate any LLM's capacity.",
+      "tag": "prompt",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Minimal Prompt Principle (HCX, 4-time verified): user-msg DECORATIONS hurt — markdown tables, unit headers (e.g. 'CPI_KR_YoY (YoY %)'), Date column, lag columns, naive recent few-shot examples. ALL increased RMSE +0.018 to +0.17pp. EXCEPTION: pure number→narrative conversion (no information added) = neutral. Reasoning instructions belong in system_prompt; user_prompt should carry raw TSV only.",
+      "evidence": "Cleaned format +0.17, naive few-shot +0.018, format header +0.029, csilag +0.027. Narrative ±0.001 (only neutral case).",
+      "tag": "prompt",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Sentiment variable VALUE = direction signal, not search-volume quantity. BoK_CSI (survey, 100=neutral) p=0.010 effect; Google Trends 5-keyword search volume p=0.55 (no effect). Within 'sentiment proxy' the operational distinction is qualitative direction encoding.",
+      "evidence": "rolling_2025_aug (Trends) vs rolling_2025_csi (CSI). Same prompt frame, opposite results.",
+      "tag": "covariate",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Ensemble bias diversification (LLM + simple baseline averaged) is the lowest-risk RMSE win. HCX (CSI-aware, catches inflection) + Trend12 (smooth, low variance) at 50/50 weights = RMSE 0.235, p<0.001 vs both alone. Works because the two err in opposite directions on different regimes.",
+      "evidence": "posthoc_ensemble_perseed: 0.250 (HCX) and 0.258 (Trend12) → 0.235 (avg) on rolling_2025.",
+      "tag": "ensemble",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Naive-recent few-shot (k=3, examples = origin-3..origin-1) is an ANCHORING trap, especially in stable regimes. It collapses CoT's variance-reduction effect (σ 0.004 → 0.039, 10× explosion) and undershoots inflection points. If few-shot is to be tried, regime-DIVERSE sampling (one stable + one rising + one falling example) is the open hypothesis worth testing.",
+      "evidence": "rolling_2025_fewshot: examples 2025-01..03 CPI 2.0±0.05 anchored predictions for 2025-06/09/10 (all undershoots).",
+      "tag": "fewshot",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Bias-feedback prompts (telling the model 'recent forecast errors: +0.08, -0.05, ...') cause OVER-correction → significantly worse (p=0.009). Same trap as post-hoc bias correction. Do not use TTA-style error injection in the prompt.",
+      "evidence": "rolling_2025_extra_ablations bias_feedback: 0.313 vs forced 0.250.",
+      "tag": "prompt",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "HCX-32B's pretraining seems to favor raw messy TSV — any 'helpful cleanup' (markdown, unit hints, definitions, date column, sentinel masking) pushes it into a 'textbook answer' mode that recites priors instead of inspecting raw numbers. This is HCX-specific; Claude/GPT may behave differently.",
+      "evidence": "Cleaned format 0.66 vs messy 0.49 (2023, N=1 era), then 4 more verifications on 2025 OOS.",
+      "tag": "prompt",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Partial contamination is WORSE than full clean (paradox). Opus 4.5 (cutoff early 2025, partial recall of H1) RMSE 0.35-0.40 > Sonnet 4.5 (clean 2024-04) 0.27. Half-remembered trends become bad anchors. When choosing models, prefer cleanly out-of-cutoff over 'almost out'.",
+      "evidence": "rolling_2025_claude contamination ladder.",
+      "tag": "contamination",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Marginal lift and absolute RMSE must be reported separately. A trick that gives +0.09 marginal can still leave the model at 0.394 — losing absolutely. Don't confuse 'big delta on a bad model' with 'good model'.",
+      "evidence": "LSTM-base 0.484 → LSTM-csi 0.394 (Δ -0.09, large) but still > HCX 0.250.",
+      "tag": "methodology",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Regime-conditional value: LLMs win in shock regimes (2023 disinflation, blinded -46% vs Trend12; labeled -76%). Baselines win in monotonic / stable regimes (2024, 2025). The right operational stance is regime detector + ensemble switching, not 'LLM always' or 'baseline always'.",
+      "evidence": "stress_2023_2024_blinded: 2023 Trend12 RMSE 3.33, HCX blinded 1.80, HCX labeled 0.79; 2024 Trend12 0.37, HCX labeled 0.54.",
+      "tag": "data",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "HCX in blinded mode (var_N, t=N, no Korean/CPI/BoK keywords) still identifies sentiment-like covariates by their statistical pattern. var_20 (= BoK_CSI, anonymized) was cited spontaneously when its 100-centered structure was visible. So pattern-recognition capability is real and labeled-vs-blinded delta is mostly domain priors + recall.",
+      "evidence": "rolling_2025_blinded HCX rationales spontaneously cited var_20 trajectory.",
+      "tag": "blinded",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": -1,
+      "text": "Best-of-N reporting is misleading marketing. It's N-dependent, not reproducible, and tells nothing about deployment. Always report mean ± std + distribution.",
+      "evidence": "Original BISTRO LSTM report 0.6895 was best of 10; same model single seed = 1.234 — both within std but only one was reported.",
+      "tag": "methodology",
+      "created_at": "2026-04-28T00:00:00"
+    },
+    {
+      "round_idx": 0,
+      "text": "HCX forced 4-step CSI CoT (rolling_2025 best, RMSE 0.250) transfers IMPERFECTLY to stress_2022_h1 surge regime — RMSE_mc 0.452 (per-seed 0.473 ± 0.06) marginally beats RW 0.471, within noise. Per-seed σ explodes 15× (0.06 vs 0.004) because the prompt's Step-2 framing 'CSI direction → demand-side inflation pressure' creates indecision when CSI is INVERSELY correlated with CPI (CSI 104→86 while CPI 3.77→6.33). The 'CSI as PRIMARY leading indicator' instruction is the offending phrase.",
+      "evidence": "Round 0 (id=1, hash cdc3406e2f22e10f): RMSE_mc 0.4519, per-seed [0.402, 0.409, 0.501, 0.523, 0.528], rationales repeatedly say 'Prioritize BoK_CSI (50% weight)' even when CSI signal contradicted CPI trajectory.",
+      "tag": "prompt",
+      "created_at": "2026-04-30T08:09:26.179742"
+    },
+    {
+      "round_idx": 0,
+      "text": "HCX systematically UNDER-PROJECTS momentum in surge regimes when forced CSI CoT prompt is used: forecast_mean < actual on 7 of 8 stress_2022_h1 origins, with biggest miss at peak (2022-04 -0.58, 2022-06 -0.60, 2022-07 -0.53). The only overshoot (2022-08 +0.40) was when surge actually reversed. Mechanism: CSI dropped sharply (104→86) → Step 2 interpreted as 'reduced demand-side pressure' → final forecast pulled DOWN even though base effect / commodity / FX all said UP. Surge regimes need either (a) regime-aware CSI re-framing, or (b) explicit momentum-projection instruction.",
+      "evidence": "Round 0 per_target err vector: [-0.29, -0.09, -0.52, -0.58, -0.38, -0.60, -0.53, +0.40] for origins 2022-01..08; 7/8 negative.",
+      "tag": "prompt",
+      "created_at": "2026-04-30T08:09:26.179742"
+    },
+    {
+      "round_idx": 0,
+      "text": "Ensemble bias diversification (HCX + simple baseline 50/50) — proven on rolling_2025 (RMSE 0.250→0.235) — likely WON'T help on stress_2022_h1 because both HCX (0.452, undershoot) and RW (0.471, undershoot — flat-extrapolates 'last value' on rising series) point in the SAME direction. For ensemble to work in surge, the partner needs an OVER-projecting bias. Candidate partners: AR(2)/AR(3) with momentum, polynomial trend extrapolation, or a second LLM explicitly instructed to project acceleration.",
+      "evidence": "stress_2022_h1: HCX 0.452 mean-curve, RW 0.471 mean-curve — both undershoot. Trend12 (0.534) lags worse, MA12 (1.80) catastrophic. No deterministic baseline currently OVER-projects.",
+      "tag": "ensemble",
+      "created_at": "2026-04-30T08:09:26.179742"
+    }
+  ]
+}

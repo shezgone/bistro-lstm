@@ -1,0 +1,315 @@
+{
+  "shock_threshold_pp": 0.5,
+  "n_total_months": 263,
+  "n_shock_months": 95,
+  "detector_summary": {
+    "A_RollingSigma_12m": {
+      "auc": 0.6950501253132831,
+      "n_total": 263,
+      "n_shock": 95,
+      "n_stable": 168,
+      "optimal_threshold": 0.7312304845758104,
+      "tpr_at_opt": 0.42105263157894735,
+      "fpr_at_opt": 0.09523809523809523,
+      "j_at_opt": 0.3258145363408521
+    },
+    "B_CUSUM_2sided": {
+      "auc": 0.5568922305764411,
+      "n_total": 263,
+      "n_shock": 95,
+      "n_stable": 168,
+      "optimal_threshold": 19.74350562292927,
+      "tpr_at_opt": 0.3263157894736842,
+      "fpr_at_opt": 0.10714285714285714,
+      "j_at_opt": 0.21917293233082707
+    },
+    "C_MAD_around_MA12": {
+      "auc": 0.5804267844002944,
+      "n_total": 241,
+      "n_shock": 90,
+      "n_stable": 151,
+      "optimal_threshold": 2.0869351954063347,
+      "tpr_at_opt": 0.37777777777777777,
+      "fpr_at_opt": 0.1986754966887417,
+      "j_at_opt": 0.17910228108903606
+    },
+    "D_MultiSignal_zsum": {
+      "auc": 0.7037907268170427,
+      "n_total": 263,
+      "n_shock": 95,
+      "n_stable": 168,
+      "optimal_threshold": 0.3620285615383387,
+      "tpr_at_opt": 0.5894736842105263,
+      "fpr_at_opt": 0.2261904761904762,
+      "j_at_opt": 0.3632832080200501
+    }
+  },
+  "coverage": {
+    "A_RollingSigma_12m": {
+      "shock_coverage": {
+        "2008 GFC era": {
+          "period_len": 24,
+          "flagged": 19,
+          "rate": 0.7916666666666666,
+          "first_flag": "2008-04"
+        },
+        "2010 commodity surge": {
+          "period_len": 17,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "COVID drop": {
+          "period_len": 6,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2022 inflation surge": {
+          "period_len": 15,
+          "flagged": 13,
+          "rate": 0.8666666666666667,
+          "first_flag": "2021-10"
+        },
+        "2023 disinflation": {
+          "period_len": 12,
+          "flagged": 9,
+          "rate": 0.75,
+          "first_flag": "2023-04"
+        }
+      },
+      "stable_fp": {
+        "2014-15 stable": {
+          "period_len": 24,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2018-19 stable": {
+          "period_len": 24,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2024 H2 stable": {
+          "period_len": 6,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2025 stable": {
+          "period_len": 12,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        }
+      }
+    },
+    "B_CUSUM_2sided": {
+      "shock_coverage": {
+        "2008 GFC era": {
+          "period_len": 24,
+          "flagged": 9,
+          "rate": 0.375,
+          "first_flag": "2008-08"
+        },
+        "2010 commodity surge": {
+          "period_len": 17,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "COVID drop": {
+          "period_len": 6,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2022 inflation surge": {
+          "period_len": 15,
+          "flagged": 10,
+          "rate": 0.6666666666666666,
+          "first_flag": "2022-03"
+        },
+        "2023 disinflation": {
+          "period_len": 12,
+          "flagged": 10,
+          "rate": 0.8333333333333334,
+          "first_flag": "2023-01"
+        }
+      },
+      "stable_fp": {
+        "2014-15 stable": {
+          "period_len": 24,
+          "flagged": 10,
+          "rate": 0.4166666666666667,
+          "first_flag": "2015-03"
+        },
+        "2018-19 stable": {
+          "period_len": 24,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2024 H2 stable": {
+          "period_len": 6,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2025 stable": {
+          "period_len": 12,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        }
+      }
+    },
+    "C_MAD_around_MA12": {
+      "shock_coverage": {
+        "2008 GFC era": {
+          "period_len": 24,
+          "flagged": 11,
+          "rate": 0.4583333333333333,
+          "first_flag": "2008-01"
+        },
+        "2010 commodity surge": {
+          "period_len": 17,
+          "flagged": 2,
+          "rate": 0.11764705882352941,
+          "first_flag": "2011-07"
+        },
+        "COVID drop": {
+          "period_len": 6,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2022 inflation surge": {
+          "period_len": 15,
+          "flagged": 11,
+          "rate": 0.7333333333333333,
+          "first_flag": "2021-10"
+        },
+        "2023 disinflation": {
+          "period_len": 12,
+          "flagged": 5,
+          "rate": 0.4166666666666667,
+          "first_flag": "2023-03"
+        }
+      },
+      "stable_fp": {
+        "2014-15 stable": {
+          "period_len": 24,
+          "flagged": 3,
+          "rate": 0.125,
+          "first_flag": "2015-02"
+        },
+        "2018-19 stable": {
+          "period_len": 24,
+          "flagged": 3,
+          "rate": 0.125,
+          "first_flag": "2018-01"
+        },
+        "2024 H2 stable": {
+          "period_len": 6,
+          "flagged": 4,
+          "rate": 0.6666666666666666,
+          "first_flag": "2024-08"
+        },
+        "2025 stable": {
+          "period_len": 12,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        }
+      }
+    },
+    "D_MultiSignal_zsum": {
+      "shock_coverage": {
+        "2008 GFC era": {
+          "period_len": 24,
+          "flagged": 24,
+          "rate": 1.0,
+          "first_flag": "2008-01"
+        },
+        "2010 commodity surge": {
+          "period_len": 17,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "COVID drop": {
+          "period_len": 6,
+          "flagged": 6,
+          "rate": 1.0,
+          "first_flag": "2020-02"
+        },
+        "2022 inflation surge": {
+          "period_len": 15,
+          "flagged": 14,
+          "rate": 0.9333333333333333,
+          "first_flag": "2021-10"
+        },
+        "2023 disinflation": {
+          "period_len": 12,
+          "flagged": 12,
+          "rate": 1.0,
+          "first_flag": "2023-01"
+        }
+      },
+      "stable_fp": {
+        "2014-15 stable": {
+          "period_len": 24,
+          "flagged": 0,
+          "rate": 0.0,
+          "first_flag": null
+        },
+        "2018-19 stable": {
+          "period_len": 24,
+          "flagged": 5,
+          "rate": 0.20833333333333334,
+          "first_flag": "2019-02"
+        },
+        "2024 H2 stable": {
+          "period_len": 6,
+          "flagged": 2,
+          "rate": 0.3333333333333333,
+          "first_flag": "2024-10"
+        },
+        "2025 stable": {
+          "period_len": 12,
+          "flagged": 1,
+          "rate": 0.08333333333333333,
+          "first_flag": "2025-01"
+        }
+      }
+    }
+  },
+  "operational_ranking": [
+    {
+      "name": "D_MultiSignal_zsum",
+      "shock_recall": 0.7866666666666667,
+      "stable_fp": 0.15625,
+      "op_score": 0.6304166666666667
+    },
+    {
+      "name": "A_RollingSigma_12m",
+      "shock_recall": 0.48166666666666663,
+      "stable_fp": 0.0,
+      "op_score": 0.48166666666666663
+    },
+    {
+      "name": "B_CUSUM_2sided",
+      "shock_recall": 0.375,
+      "stable_fp": 0.10416666666666667,
+      "op_score": 0.2708333333333333
+    },
+    {
+      "name": "C_MAD_around_MA12",
+      "shock_recall": 0.3451960784313725,
+      "stable_fp": 0.22916666666666666,
+      "op_score": 0.11602941176470585
+    }
+  ]
+}

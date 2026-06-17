@@ -2,7 +2,7 @@
 import os, requests
 import pandas as pd
 
-API_KEY = os.environ.get("ECOS_API_KEY", "Z3WLWOJ8X7GY0M3AJ0IE")
+API_KEY = os.environ.get("ECOS_API_KEY", "sample")  # set ECOS_API_KEY env var; 'sample' works for limited sample queries
 
 # 511Y002 = 소비자동향조사(전국, 월), FME = 소비자심리지수, 99988 = 전체
 url = (
