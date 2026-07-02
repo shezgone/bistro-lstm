@@ -1,407 +1,397 @@
 {
-  ".claude/settings.local.json": {
+  "/Users/user_1/vibe/bistro-lstm/.claude/settings.local.json": {
     "mtime": 1781091765.6922305,
     "ast_hash": "54f4a2f3e97e5e234a53fa10755d5330",
     "semantic_hash": "54f4a2f3e97e5e234a53fa10755d5330"
   },
-  "ablation_study.py": {
+  "/Users/user_1/vibe/bistro-lstm/ablation_study.py": {
     "mtime": 1777370878.86608,
     "ast_hash": "8e6134865e75fa11588cb59e2bf36362",
     "semantic_hash": "8e6134865e75fa11588cb59e2bf36362"
   },
-  "agents/__init__.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/__init__.py": {
     "mtime": 1777530337.5991917,
     "ast_hash": "31efd4b8a42123a69275f1d340cd29b4",
     "semantic_hash": "31efd4b8a42123a69275f1d340cd29b4"
   },
-  "agents/analyzer.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/analyzer.py": {
     "mtime": 1777531638.488133,
     "ast_hash": "af2cb034ae0be42226ec9bb5a15c3297",
     "semantic_hash": "af2cb034ae0be42226ec9bb5a15c3297"
   },
-  "agents/engineer.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/engineer.py": {
     "mtime": 1777531438.2287421,
     "ast_hash": "1766a5296d045f4ce51f75801d461bbc",
     "semantic_hash": "1766a5296d045f4ce51f75801d461bbc"
   },
-  "agents/manual_run.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/manual_run.py": {
     "mtime": 1777532092.6662457,
     "ast_hash": "a01d4e70968adc2bd754e95daaae84ad",
     "semantic_hash": "a01d4e70968adc2bd754e95daaae84ad"
   },
-  "agents/orchestrator.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/orchestrator.py": {
     "mtime": 1777531615.7115655,
     "ast_hash": "2dcf22c5f6f3168ad8f601a8f0920acb",
     "semantic_hash": "2dcf22c5f6f3168ad8f601a8f0920acb"
   },
-  "agents/researcher.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/researcher.py": {
     "mtime": 1777531584.1831436,
     "ast_hash": "da49e195e0d44cfc2d327059f7c2b2f0",
     "semantic_hash": "da49e195e0d44cfc2d327059f7c2b2f0"
   },
-  "agents/schemas.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/schemas.py": {
     "mtime": 1777531775.2409923,
     "ast_hash": "02b646bc7dd7ee49e6370a9312d25346",
     "semantic_hash": "02b646bc7dd7ee49e6370a9312d25346"
   },
-  "agents/store.py": {
+  "/Users/user_1/vibe/bistro-lstm/agents/store.py": {
     "mtime": 1777530393.3656664,
     "ast_hash": "baa26c348d818ac3a7845f4a6c4969d4",
     "semantic_hash": "baa26c348d818ac3a7845f4a6c4969d4"
   },
-  "app.py": {
+  "/Users/user_1/vibe/bistro-lstm/app.py": {
     "mtime": 1777373305.8289638,
     "ast_hash": "3ec5fa72e6faf27f85fc19a394fff4c3",
     "semantic_hash": "3ec5fa72e6faf27f85fc19a394fff4c3"
   },
-  "build_augmented_panel.py": {
+  "/Users/user_1/vibe/bistro-lstm/build_augmented_panel.py": {
     "mtime": 1777382094.4380796,
     "ast_hash": "76177dbf186c38f31947a929b960cb49",
     "semantic_hash": "76177dbf186c38f31947a929b960cb49"
   },
-  "causal_narrative.py": {
+  "/Users/user_1/vibe/bistro-lstm/causal_narrative.py": {
     "mtime": 1777370878.8664415,
     "ast_hash": "9c3f9ce40d71c3be6872c493d4af912e",
     "semantic_hash": "9c3f9ce40d71c3be6872c493d4af912e"
   },
-  "comparison.py": {
+  "/Users/user_1/vibe/bistro-lstm/comparison.py": {
     "mtime": 1777370878.8665557,
     "ast_hash": "8f5e570728a0307332a377a66f3697c8",
     "semantic_hash": "8f5e570728a0307332a377a66f3697c8"
   },
-  "data/cognition.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/cognition.json": {
     "mtime": 1777536566.1801984,
     "ast_hash": "ef5c2bd29dee26352d309b3dbc9f26cd",
     "semantic_hash": "ef5c2bd29dee26352d309b3dbc9f26cd"
   },
-  "data/hcx32_ablation_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/hcx32_ablation_results.json": {
     "mtime": 1777376849.2995532,
     "ast_hash": "c3333a83678f496fab2acb97317c7c63",
     "semantic_hash": "c3333a83678f496fab2acb97317c7c63"
   },
-  "data/hcx_value_by_regime.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/hcx_value_by_regime.json": {
     "mtime": 1777705482.592102,
     "ast_hash": "06b23affda52b6589b79551dae346877",
     "semantic_hash": "06b23affda52b6589b79551dae346877"
   },
-  "data/posthoc_aggregation_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/posthoc_aggregation_results.json": {
     "mtime": 1777413811.4011343,
     "ast_hash": "7041a691eff6f0451c40e7be8064c715",
     "semantic_hash": "7041a691eff6f0451c40e7be8064c715"
   },
-  "data/posthoc_ensemble_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/posthoc_ensemble_results.json": {
     "mtime": 1777413860.3903744,
     "ast_hash": "ee6b8763176096f961e9dc40e7790eda",
     "semantic_hash": "ee6b8763176096f961e9dc40e7790eda"
   },
-  "data/regime_detector_backtest.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/regime_detector_backtest.json": {
     "mtime": 1777705298.890208,
     "ast_hash": "29ea04fe13fac98f69ac70ba5ab79d90",
     "semantic_hash": "29ea04fe13fac98f69ac70ba5ab79d90"
   },
-  "data/rolling_2025_aug_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_aug_results.json": {
     "mtime": 1777382929.9902003,
     "ast_hash": "38802668a848806d37f8150e5033043a",
     "semantic_hash": "38802668a848806d37f8150e5033043a"
   },
-  "data/rolling_2025_blinded_claude_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_blinded_claude_results.json": {
     "mtime": 1777428217.9223444,
     "ast_hash": "e1eb7c72baebae1bc222e86733878906",
     "semantic_hash": "e1eb7c72baebae1bc222e86733878906"
   },
-  "data/rolling_2025_blinded_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_blinded_results.json": {
     "mtime": 1777429013.8968458,
     "ast_hash": "6c0fb28ed5c2d1a242f57858d59e6e9d",
     "semantic_hash": "6c0fb28ed5c2d1a242f57858d59e6e9d"
   },
-  "data/rolling_2025_chronos_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_chronos_results.json": {
     "mtime": 1778130931.6008773,
     "ast_hash": "356a4207ebd8ec5e11d21dfc72d9b986",
     "semantic_hash": "356a4207ebd8ec5e11d21dfc72d9b986"
   },
-  "data/rolling_2025_claude_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_claude_results.json": {
     "mtime": 1777380415.8055646,
     "ast_hash": "79ac4de7f534fd50a3f54104c12bb041",
     "semantic_hash": "79ac4de7f534fd50a3f54104c12bb041"
   },
-  "data/rolling_2025_csi_forced_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_csi_forced_results.json": {
     "mtime": 1777384377.1106076,
     "ast_hash": "65f4ab83ee6934ddb49302ec2f04a9af",
     "semantic_hash": "65f4ab83ee6934ddb49302ec2f04a9af"
   },
-  "data/rolling_2025_csi_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_csi_results.json": {
     "mtime": 1777383846.8558745,
     "ast_hash": "032a4439b26498385398f695406c0d6c",
     "semantic_hash": "032a4439b26498385398f695406c0d6c"
   },
-  "data/rolling_2025_extra_ablations.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_extra_ablations.json": {
     "mtime": 1777416539.9343398,
     "ast_hash": "ab838b6860a7c5cadba306577c7b44e8",
     "semantic_hash": "ab838b6860a7c5cadba306577c7b44e8"
   },
-  "data/rolling_2025_fewshot_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_fewshot_results.json": {
     "mtime": 1777410458.6792445,
     "ast_hash": "bb4df1d0b5b348051fca4a72f8fb786c",
     "semantic_hash": "bb4df1d0b5b348051fca4a72f8fb786c"
   },
-  "data/rolling_2025_format_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_format_results.json": {
     "mtime": 1777413155.9670296,
     "ast_hash": "57a09a1df0cb29a6fd43ac2bb975e4f5",
     "semantic_hash": "57a09a1df0cb29a6fd43ac2bb975e4f5"
   },
-  "data/rolling_2025_moirai_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_moirai_results.json": {
     "mtime": 1778139238.6617596,
     "ast_hash": "8bb58bf98a957a16ead67cd7044eceaf",
     "semantic_hash": "8bb58bf98a957a16ead67cd7044eceaf"
   },
-  "data/rolling_2025_paper_ablations.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_paper_ablations.json": {
     "mtime": 1777416079.7269385,
     "ast_hash": "ee6d24f17f4b96e1265395fdbef39940",
     "semantic_hash": "ee6d24f17f4b96e1265395fdbef39940"
   },
-  "data/rolling_2025_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_results.json": {
     "mtime": 1777378606.5545547,
     "ast_hash": "9102e137191c0baa7d0c0614cf811b29",
     "semantic_hash": "9102e137191c0baa7d0c0614cf811b29"
   },
-  "data/rolling_2025_torch_csi_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_torch_csi_results.json": {
     "mtime": 1777383418.2642508,
     "ast_hash": "4023b05bcd38e9e397d255e113a194b9",
     "semantic_hash": "4023b05bcd38e9e397d255e113a194b9"
   },
-  "data/rolling_2025_torch_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/rolling_2025_torch_results.json": {
     "mtime": 1777380945.1619487,
     "ast_hash": "6a647649ae3fb5308cb853afe1623232",
     "semantic_hash": "6a647649ae3fb5308cb853afe1623232"
   },
-  "data/stress_2023_2024_blinded_results.json": {
+  "/Users/user_1/vibe/bistro-lstm/data/stress_2023_2024_blinded_results.json": {
     "mtime": 1777430048.7106655,
     "ast_hash": "c4f77b5ef50997b732f98342d8f21d20",
     "semantic_hash": "c4f77b5ef50997b732f98342d8f21d20"
   },
-  "data_collector.py": {
+  "/Users/user_1/vibe/bistro-lstm/data_collector.py": {
     "mtime": 1777370878.8672123,
     "ast_hash": "0a0e5138b0d711d252cf714364c2131a",
     "semantic_hash": "0a0e5138b0d711d252cf714364c2131a"
   },
-  "ensemble_decomposition.py": {
+  "/Users/user_1/vibe/bistro-lstm/ensemble_decomposition.py": {
     "mtime": 1777414354.5362904,
     "ast_hash": "4c586e2908502ef9bb47222f2da6edaa",
     "semantic_hash": "4c586e2908502ef9bb47222f2da6edaa"
   },
-  "export_pdf.py": {
+  "/Users/user_1/vibe/bistro-lstm/export_pdf.py": {
     "mtime": 1777370878.8674679,
     "ast_hash": "509a215d47181a7f178cf069f0208071",
     "semantic_hash": "509a215d47181a7f178cf069f0208071"
   },
-  "export_report_v1.py": {
+  "/Users/user_1/vibe/bistro-lstm/export_report_v1.py": {
     "mtime": 1777370878.867647,
     "ast_hash": "17481c4fdeac3d8766143ddda03ed0f0",
     "semantic_hash": "17481c4fdeac3d8766143ddda03ed0f0"
   },
-  "feature_importance.py": {
+  "/Users/user_1/vibe/bistro-lstm/feature_importance.py": {
     "mtime": 1777370878.8677926,
     "ast_hash": "85b5173fc1a93a052fcd1d30b7736e5b",
     "semantic_hash": "85b5173fc1a93a052fcd1d30b7736e5b"
   },
-  "fetch_ecos_csi.py": {
-    "mtime": 1781654225.6020694,
-    "ast_hash": "0223446de56636f6f0444d97fa302f3d",
-    "semantic_hash": ""
+  "/Users/user_1/vibe/bistro-lstm/fetch_ecos_csi.py": {
+    "mtime": 1777382865.2273211,
+    "ast_hash": "6dfdcf5b693b565c5b0882394a8204c4",
+    "semantic_hash": "6dfdcf5b693b565c5b0882394a8204c4"
   },
-  "hcx_ablation.py": {
+  "/Users/user_1/vibe/bistro-lstm/hcx_ablation.py": {
     "mtime": 1777376036.09269,
     "ast_hash": "b6b953f1bdedf1998ffbe085ca75b9f1",
     "semantic_hash": "b6b953f1bdedf1998ffbe085ca75b9f1"
   },
-  "hcx_forecast.py": {
+  "/Users/user_1/vibe/bistro-lstm/hcx_forecast.py": {
     "mtime": 1777373146.1048632,
     "ast_hash": "e5b80d1096f260fbd24749d33c7a7988",
     "semantic_hash": "e5b80d1096f260fbd24749d33c7a7988"
   },
-  "hcx_forecast_clean.py": {
+  "/Users/user_1/vibe/bistro-lstm/hcx_forecast_clean.py": {
     "mtime": 1777375428.229035,
     "ast_hash": "7b7ea655d84243f1dc58ec4a1d3244c8",
     "semantic_hash": "7b7ea655d84243f1dc58ec4a1d3244c8"
   },
-  "hcx_forecast_univar.py": {
+  "/Users/user_1/vibe/bistro-lstm/hcx_forecast_univar.py": {
     "mtime": 1777374627.167994,
     "ast_hash": "ed5652966c48cc4a627a38a258aa919d",
     "semantic_hash": "ed5652966c48cc4a627a38a258aa919d"
   },
-  "hcx_no_think.py": {
+  "/Users/user_1/vibe/bistro-lstm/hcx_no_think.py": {
     "mtime": 1777375622.489335,
     "ast_hash": "db67d0a056b30edddc3999bde83f1e13",
     "semantic_hash": "db67d0a056b30edddc3999bde83f1e13"
   },
-  "hcx_value_quantification.py": {
+  "/Users/user_1/vibe/bistro-lstm/hcx_value_quantification.py": {
     "mtime": 1777705481.2902527,
     "ast_hash": "2a41aab614286d1a42749a3adf59a45e",
     "semantic_hash": "2a41aab614286d1a42749a3adf59a45e"
   },
-  "inference_util.py": {
+  "/Users/user_1/vibe/bistro-lstm/inference_util.py": {
     "mtime": 1777370878.8679087,
     "ast_hash": "4dbf95e2e1d3a90b0afe375da74d28c0",
     "semantic_hash": "4dbf95e2e1d3a90b0afe375da74d28c0"
   },
-  "lstm_core.py": {
+  "/Users/user_1/vibe/bistro-lstm/lstm_core.py": {
     "mtime": 1777370878.8680477,
     "ast_hash": "07b922d0a550a4aa9ffda6bda0f1f6c3",
     "semantic_hash": "07b922d0a550a4aa9ffda6bda0f1f6c3"
   },
-  "lstm_model.py": {
+  "/Users/user_1/vibe/bistro-lstm/lstm_model.py": {
     "mtime": 1777370878.868191,
     "ast_hash": "cbd62a3dfe6ba71668c09bc18bca4382",
     "semantic_hash": "cbd62a3dfe6ba71668c09bc18bca4382"
   },
-  "lstm_runner.py": {
+  "/Users/user_1/vibe/bistro-lstm/lstm_runner.py": {
     "mtime": 1777370878.8682911,
     "ast_hash": "3f597bf59c7cf085a6cdc5ce36d53686",
     "semantic_hash": "3f597bf59c7cf085a6cdc5ce36d53686"
   },
-  "lstm_trainer.py": {
+  "/Users/user_1/vibe/bistro-lstm/lstm_trainer.py": {
     "mtime": 1777370878.8683858,
     "ast_hash": "b6bdbbab54337eed0ff056633106099b",
     "semantic_hash": "b6bdbbab54337eed0ff056633106099b"
   },
-  "posthoc_aggregation.py": {
+  "/Users/user_1/vibe/bistro-lstm/posthoc_aggregation.py": {
     "mtime": 1777413806.8894117,
     "ast_hash": "0b024c4e4fdc4c48e70e54a623acd845",
     "semantic_hash": "0b024c4e4fdc4c48e70e54a623acd845"
   },
-  "posthoc_ensemble_perseed.py": {
+  "/Users/user_1/vibe/bistro-lstm/posthoc_ensemble_perseed.py": {
     "mtime": 1777413854.6090946,
     "ast_hash": "14f7a69d05b5ab315b524c4851cb71de",
     "semantic_hash": "14f7a69d05b5ab315b524c4851cb71de"
   },
-  "preprocessing_util.py": {
+  "/Users/user_1/vibe/bistro-lstm/preprocessing_util.py": {
     "mtime": 1777370878.8684852,
     "ast_hash": "b91af472b05a924cbfbc7b8876e6ce36",
     "semantic_hash": "b91af472b05a924cbfbc7b8876e6ce36"
   },
-  "regime_detector_backtest.py": {
+  "/Users/user_1/vibe/bistro-lstm/regime_detector_backtest.py": {
     "mtime": 1777705296.2235715,
     "ast_hash": "a6e9ef78eb6f7edfa8248a2865ca0a20",
     "semantic_hash": "a6e9ef78eb6f7edfa8248a2865ca0a20"
   },
-  "rolling_2025.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025.py": {
     "mtime": 1777377727.26577,
     "ast_hash": "c79dbc7e6331ae446e884d4f2dba5b6b",
     "semantic_hash": "c79dbc7e6331ae446e884d4f2dba5b6b"
   },
-  "rolling_2025_aug.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_aug.py": {
     "mtime": 1777382142.8680222,
     "ast_hash": "121c695f6266e0561cbdb3efb6ab57bc",
     "semantic_hash": "121c695f6266e0561cbdb3efb6ab57bc"
   },
-  "rolling_2025_blinded.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_blinded.py": {
     "mtime": 1777426744.0187025,
     "ast_hash": "6f3f678b7bb581320352c330e73a99a9",
     "semantic_hash": "6f3f678b7bb581320352c330e73a99a9"
   },
-  "rolling_2025_blinded_claude.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_blinded_claude.py": {
     "mtime": 1777427944.5065582,
     "ast_hash": "d5d11a4e4dc0c361e964000379c32565",
     "semantic_hash": "d5d11a4e4dc0c361e964000379c32565"
   },
-  "rolling_2025_chronos.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_chronos.py": {
     "mtime": 1778130848.3306136,
     "ast_hash": "ce37446426172c1a6789caff85e5bb10",
     "semantic_hash": "ce37446426172c1a6789caff85e5bb10"
   },
-  "rolling_2025_claude.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_claude.py": {
     "mtime": 1777379942.7806523,
     "ast_hash": "d42ec0f66ff6a3502a8075116695660f",
     "semantic_hash": "d42ec0f66ff6a3502a8075116695660f"
   },
-  "rolling_2025_csi_forced.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_csi_forced.py": {
     "mtime": 1777383687.1170487,
     "ast_hash": "831af76d9a8b8289d9a9b9f9808ce443",
     "semantic_hash": "831af76d9a8b8289d9a9b9f9808ce443"
   },
-  "rolling_2025_extra_ablations.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_extra_ablations.py": {
     "mtime": 1777414307.0776515,
     "ast_hash": "c32619329e2a380f0de853a9059de53d",
     "semantic_hash": "c32619329e2a380f0de853a9059de53d"
   },
-  "rolling_2025_fewshot.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_fewshot.py": {
     "mtime": 1777409649.7906742,
     "ast_hash": "f6b1fe9edfb8cffe0fa3e7e994d25dae",
     "semantic_hash": "f6b1fe9edfb8cffe0fa3e7e994d25dae"
   },
-  "rolling_2025_format.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_format.py": {
     "mtime": 1777412635.619045,
     "ast_hash": "fa5911a8a21db22f4030f5cf258fd5b1",
     "semantic_hash": "fa5911a8a21db22f4030f5cf258fd5b1"
   },
-  "rolling_2025_full.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_full.py": {
     "mtime": 1777383048.3889575,
     "ast_hash": "f8d6d2dca2c1c016339a0266a11f38a3",
     "semantic_hash": "f8d6d2dca2c1c016339a0266a11f38a3"
   },
-  "rolling_2025_moirai.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_moirai.py": {
     "mtime": 1778138948.4673688,
     "ast_hash": "755d3ccb64975c2258097cf5dc5d07ac",
     "semantic_hash": "755d3ccb64975c2258097cf5dc5d07ac"
   },
-  "rolling_2025_paper_ablations.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_paper_ablations.py": {
     "mtime": 1777413726.4036357,
     "ast_hash": "164b2b8185ec9b7c1aaa42443b331224",
     "semantic_hash": "164b2b8185ec9b7c1aaa42443b331224"
   },
-  "rolling_2025_torch.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_torch.py": {
     "mtime": 1777380865.4693189,
     "ast_hash": "50ef2d339f0b9a7da99aa4db7618eb15",
     "semantic_hash": "50ef2d339f0b9a7da99aa4db7618eb15"
   },
-  "rolling_2025_torch_csi.py": {
+  "/Users/user_1/vibe/bistro-lstm/rolling_2025_torch_csi.py": {
     "mtime": 1777383275.780514,
     "ast_hash": "c3c7073ac3bd2e6df43880fbf1de5028",
     "semantic_hash": "c3c7073ac3bd2e6df43880fbf1de5028"
   },
-  "run_foundation_models.py": {
+  "/Users/user_1/vibe/bistro-lstm/run_foundation_models.py": {
     "mtime": 1777370878.868643,
     "ast_hash": "865bfba2c8ec3f331cd217b33eb43068",
     "semantic_hash": "865bfba2c8ec3f331cd217b33eb43068"
   },
-  "stress_2023_2024_blinded.py": {
+  "/Users/user_1/vibe/bistro-lstm/stress_2023_2024_blinded.py": {
     "mtime": 1777429587.9102745,
     "ast_hash": "51f0a58a670c428da71840557c39bc4f",
     "semantic_hash": "51f0a58a670c428da71840557c39bc4f"
   },
-  "train_and_evaluate.py": {
+  "/Users/user_1/vibe/bistro-lstm/train_and_evaluate.py": {
     "mtime": 1777370878.8687408,
     "ast_hash": "993f63f150ae882eba3d72c9d0197b71",
     "semantic_hash": "993f63f150ae882eba3d72c9d0197b71"
   },
-  "train_optimal.py": {
+  "/Users/user_1/vibe/bistro-lstm/train_optimal.py": {
     "mtime": 1777371878.3789167,
     "ast_hash": "34d090bdb815b5c18ff66d0727d29b74",
     "semantic_hash": "34d090bdb815b5c18ff66d0727d29b74"
   },
-  "transformer_model.py": {
+  "/Users/user_1/vibe/bistro-lstm/transformer_model.py": {
     "mtime": 1777370878.86885,
     "ast_hash": "4e4a45d2d1bd3d584b230b9fab1cf358",
     "semantic_hash": "4e4a45d2d1bd3d584b230b9fab1cf358"
   },
-  "README.md": {
-    "mtime": 1781653906.8976386,
-    "ast_hash": "9f62fa948981c697bc2f618c7f53ab10",
-    "semantic_hash": ""
+  "/Users/user_1/vibe/bistro-lstm/README.md": {
+    "mtime": 1777370878.8659353,
+    "ast_hash": "7ed6a293ac1c4567e290882df9e2a456",
+    "semantic_hash": "7ed6a293ac1c4567e290882df9e2a456"
   },
-  "requirements.txt": {
+  "/Users/user_1/vibe/bistro-lstm/requirements.txt": {
     "mtime": 1777370878.8685544,
     "ast_hash": "aa8162dc2db5e1ba3f32f5abc54df425",
     "semantic_hash": "aa8162dc2db5e1ba3f32f5abc54df425"
-  },
-  ".claude/harness-log.py": {
-    "mtime": 1781570616.9993193,
-    "ast_hash": "6fe0d6e861365f936010a31acf0fb363",
-    "semantic_hash": ""
-  },
-  ".claude/settings.json": {
-    "mtime": 1781570630.1349385,
-    "ast_hash": "98f22f36a8023c2822c160790069cb59",
-    "semantic_hash": ""
   }
 }

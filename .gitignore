@@ -21,3 +21,17 @@ CLAUDE.md
 
 .claude/harness.log
 .claude/settings.local.json
+
+# 한국은행 기밀 빈티지 데이터 — 절대 커밋 금지
+data/bok_gdp_vintage/
+*_vintage*.pkl
+GDP_releases.pkl
+
+# 한은 기밀/내부 문서 — 공유 리포 제외 (BoK 원본 보고서·회의록, 내부 메모)
+docs/gdp-nowcasting-main.pdf
+docs/gdp-nowcasting-summary.pdf
+docs/회의록-260619_GDP예측시스템개편과AI모델적용연구.pdf
+docs/메일_한은_중간결과_2026-07-02.md
+docs/주간회의록_2026-06-23.md
+docs/GDP_Nowcasting_업무플랜.md
+/BISTRO_온보딩_상사용.pdf

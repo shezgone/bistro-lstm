@@ -1,18 +1,13 @@
-# Graph Report - bistro-lstm  (2026-06-17)
+# Graph Report - .  (2026-06-10)
 
 ## Corpus Check
-- 79 files · ~66,282 words
+- 79 files · ~65,164 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1251 nodes · 1833 edges · 84 communities (67 shown, 17 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 103 edges (avg confidence: 0.5)
-- Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `0496b07a`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
+- 1247 nodes · 1838 edges · 79 communities (65 shown, 14 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.51)
+- Token cost: 29,716 input · 0 output
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Agent Experiment Framework|Agent Experiment Framework]]
@@ -94,10 +89,6 @@
 - [[_COMMUNITY_HCX Univariate Forecast|HCX Univariate Forecast]]
 - [[_COMMUNITY_HCX No-Think Variant|HCX No-Think Variant]]
 - [[_COMMUNITY_XAI Importance Concepts|XAI Importance Concepts]]
-- [[_COMMUNITY_Community 80|Community 80]]
-- [[_COMMUNITY_Community 81|Community 81]]
-- [[_COMMUNITY_Community 82|Community 82]]
-- [[_COMMUNITY_Community 83|Community 83]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `results` - 49 edges
@@ -106,10 +97,10 @@
 4. `ZScoreNormalizer` - 39 edges
 5. `Candidate` - 22 edges
 6. `train_model()` - 21 edges
-7. `BISTRO-LSTM` - 18 edges
+7. `results` - 17 edges
 8. `results` - 17 edges
-9. `results` - 17 edges
-10. `hcx_results` - 17 edges
+9. `hcx_results` - 17 edges
+10. `run_training()` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `device` --uses--> `LSTMConfig`  [INFERRED]
@@ -131,7 +122,7 @@
 - **XAI Methods Suite (6 types)** — readme_cross_variable_attention, readme_integrated_gradients, readme_permutation_importance, readme_ablation_study, readme_counterfactual_analysis, readme_narrative_generation [EXTRACTED 1.00]
 - **Korean CPI Forecasting Benchmark (Task-specific vs Foundation Models)** — readme_task_specific_transformer, readme_attentionlstmforecaster, readme_chronos_2, readme_bistro_moirai, readme_timesfm, readme_ar1_baseline [EXTRACTED 1.00]
 
-## Communities (84 total, 17 thin omitted)
+## Communities (79 total, 14 thin omitted)
 
 ### Community 0 - "Agent Experiment Framework"
 Cohesion: 0.06
@@ -143,7 +134,7 @@ Nodes (58): first_flag, flagged, period_len, rate, first_flag, flagged, period_l
 
 ### Community 2 - "Dashboard & Results Loading"
 Cohesion: 0.07
-Nodes (36): load_all_data(), BISTRO-LSTM Streamlit Dashboard ================================ 8개 탭: 핵심결론 + 트레, compare_forecasts(), compare_variable_rankings(), compute_metrics(), load_bistro_ablation(), load_bistro_results(), load_lstm_ablation() (+28 more)
+Nodes (39): load_all_data(), BISTRO-LSTM Streamlit Dashboard ================================ 8개 탭: 핵심결론 + 트레, load_narrative_results(), compare_forecasts(), compare_variable_rankings(), compute_metrics(), load_bistro_ablation(), load_bistro_results() (+31 more)
 
 ### Community 3 - "Claude Rolling Results"
 Cohesion: 0.04
@@ -175,7 +166,7 @@ Nodes (33): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-
 
 ### Community 10 - "Transformer Architecture"
 Cohesion: 0.10
-Nodes (17): Tensor, 최근 forward의 attention weights 반환. (B, N, N), Temporal Attention Decoder.     Learnable forecast queries가 LSTM hidden states에, Per-variable linear projection.     각 변수를 독립적인 learned embedding으로 변환.      Inpu, 최근 forward의 temporal attention weights. (B, pred_len, seq_len), Forward pass.          Parameters         ----------         x : (batch, seq_len, 예측 + 불확실성 추정.          Returns         -------         dict with keys:, Cross-variable attention per timestep.     각 시점에서 변수 간 상호작용을 학습.      Input:  (b (+9 more)
+Nodes (16): Tensor, 최근 forward의 attention weights 반환. (B, N, N), Temporal Attention Decoder.     Learnable forecast queries가 LSTM hidden states에, Per-variable linear projection.     각 변수를 독립적인 learned embedding으로 변환.      Inpu, 최근 forward의 temporal attention weights. (B, pred_len, seq_len), Forward pass.          Parameters         ----------         x : (batch, seq_len, 예측 + 불확실성 추정.          Returns         -------         dict with keys:, Cross-variable attention per timestep.     각 시점에서 변수 간 상호작용을 학습.      Input:  (b (+8 more)
 
 ### Community 11 - "Google Trends Aug Results"
 Cohesion: 0.06
@@ -198,16 +189,16 @@ Cohesion: 0.06
 Nodes (31): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-11 (+23 more)
 
 ### Community 16 - "LSTM Training Pipeline"
-Cohesion: 0.11
-Nodes (24): DataLoader, LSTMConfig, LSTM 모델 설정.      Parameters     ----------     variates    : 변수 이름 리스트 (순서 = 입력, EarlyStopping, evaluate(), optuna_objective(), AttentionLSTMForecaster, device (+16 more)
+Cohesion: 0.12
+Nodes (22): DataLoader, LSTMConfig, LSTM 모델 설정.      Parameters     ----------     variates    : 변수 이름 리스트 (순서 = 입력, EarlyStopping, evaluate(), optuna_objective(), AttentionLSTMForecaster, device (+14 more)
 
 ### Community 17 - "Causal Narrative Analysis"
-Cohesion: 0.19
-Nodes (21): counterfactual_analysis(), generate_narrative(), get_active_channels(), get_variable_channel(), jacobian_lag_analysis(), main(), pathway_decomposition(), AttentionLSTMForecaster (+13 more)
+Cohesion: 0.15
+Nodes (25): counterfactual_analysis(), generate_narrative(), get_active_channels(), get_variable_channel(), jacobian_lag_analysis(), main(), pathway_decomposition(), AttentionLSTMForecaster (+17 more)
 
 ### Community 18 - "Project Overview Concepts"
 Cohesion: 0.09
-Nodes (22): 1) 2023 + 2024 OOS (12-step, CPI YoY), 1) Regime Detector Backtest (`regime_detector_backtest.py`), 2) HCX Value by Regime (`hcx_value_quantification.py`), 2) Rolling 2025 OOS (1-step, 8 origins 2025-04..2025-11, post-LLM-cutoff), Architecture, BISTRO-LSTM, Dashboard, Data (+14 more)
+Nodes (26): AR(1) Statistical Baseline, AttentionLSTMForecaster, BISTRO-LSTM Project, BISTRO (Moirai 91M), BISTRO-XAI (Related Project), Chronos-2 (120M, Zero-shot), Counterfactual Analysis, Cross-variable Attention (XAI) (+18 more)
 
 ### Community 19 - "Torch CSI Benchmarks"
 Cohesion: 0.08
@@ -219,31 +210,31 @@ Nodes (23): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-
 
 ### Community 21 - "PyTorch Rolling Runners"
 Cohesion: 0.14
-Nodes (19): set_seed(), create_sequences(), prepare_walk_forward_splits(), DataFrame, ndarray, Preprocessing Utility for BISTRO-LSTM ===================================== 월별 매, 슬라이딩 윈도우로 학습용 시퀀스 생성.      Parameters     ----------     data : (T, n_vars) 정규화된, Walk-forward CV용 데이터 분할.      Parameters     ----------     df : 전체 학습 데이터 (Peri (+11 more)
+Nodes (14): BISTRO-LSTM Model — Attention-Augmented Stacked LSTM ===========================, set_seed(), prepare_walk_forward_splits(), DataFrame, Walk-forward CV용 데이터 분할.      Parameters     ----------     df : 전체 학습 데이터 (Peri, Per-variable z-score 정규화.     학습 세트 기준으로 mean/std 계산, 테스트 세트에 동일 적용., ZScoreNormalizer, LSTM/Transformer rolling 2025 with vs without BoK CSI sentiment column.  4 model (+6 more)
 
 ### Community 22 - "LSTM Runner Pipeline"
-Cohesion: 0.15
-Nodes (21): save_narrative_results(), ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, main(), AttentionLSTMForecaster (+13 more)
+Cohesion: 0.17
+Nodes (18): main(), AttentionLSTMForecaster, DataFrame, device, LSTMConfig, ZScoreNormalizer, BISTRO-LSTM Runner — 2-Stage Inference Pipeline ================================, Stage 2: 선택된 변수로 최종 학습 + 예측. (+10 more)
 
 ### Community 23 - "Feature Importance XAI"
-Cohesion: 0.16
-Nodes (19): LSTMConfig, compute_all_importance(), compute_gradient_importance(), compute_permutation_importance(), extract_attention_importance(), AttentionLSTMForecaster, device, ndarray (+11 more)
+Cohesion: 0.21
+Nodes (16): compute_all_importance(), compute_gradient_importance(), compute_permutation_importance(), extract_attention_importance(), AttentionLSTMForecaster, device, ndarray, Tensor (+8 more)
 
 ### Community 24 - "HCX Value by Regime"
 Cohesion: 0.11
 Nodes (17): main_per_target, main_summary, non-flagged, shock-flagged, hcx_rmse, mean_delta_err, n, p (+9 more)
 
 ### Community 25 - "Training & Evaluation"
-Cohesion: 0.23
-Nodes (8): load_narrative_results(), load_stage1_screening(), BISTRO-LSTM Core — Domain Classes ================================== bistro-xai의, Stage 1 전체 변수 스크리닝 결과 로딩., main(), BISTRO-LSTM: Main Entry Point ============================== 학습 → 평가 → 결과 저장 파이프, save_results(), Train LSTM with the report's optimal config (matches CPI_Forecasting_Benchmark_v
+Cohesion: 0.16
+Nodes (15): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, load_stage1_screening(), Stage 1 전체 변수 스크리닝 결과 로딩., Optuna 하이퍼파라미터 튜닝.      Returns     -------     dict with best_params, best_valu (+7 more)
 
 ### Community 26 - "Regime Detector Backtest"
 Cohesion: 0.24
 Nodes (15): compute_trend12_errors(), coverage_in_periods(), cusum_two_sided(), evaluate_detector(), mad_around_ma(), main(), multi_signal(), ndarray (+7 more)
 
 ### Community 27 - "PDF Report Export"
-Cohesion: 0.23
-Nodes (8): ImportanceAnalyzer, DataFrame, ndarray, Series, LSTM의 Variable Fusion Attention 및 Temporal Attention에서     cross-variate, tempor, Variable Fusion Attention weights → N×N cross-variate matrix.          Parameter, 타겟 변수의 각 변수에 대한 attention 비율., Temporal Attention Decoder weights → (pred_len, seq_len) matrix.          Parame
+Cohesion: 0.22
+Nodes (8): generate(), load_all(), make_2023_chart(), make_2024_chart(), make_seed_chart(), CPI Forecasting Benchmark - PDF Report v1 ======================================, LSTM vs Transformer seed 비교 차트., Report
 
 ### Community 28 - "Ablation Study Runner"
 Cohesion: 0.27
@@ -278,7 +269,7 @@ Cohesion: 0.29
 Nodes (11): build_predictor(), evaluate(), forecast_one(), load_panel(), main(), origins(), pick_device(), DataFrame (+3 more)
 
 ### Community 36 - "Post-hoc Aggregation Results"
-Cohesion: 0.22
+Cohesion: 0.20
 Nodes (9): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-11 (+1 more)
 
 ### Community 37 - "Post-hoc Ensemble Results"
@@ -338,8 +329,8 @@ Cohesion: 0.47
 Nodes (4): build_messages(), hcx_call(), panel_blinded_tsv(), HCX blinded 12-step forecast for 2023 + 2024 (shock + transition periods).  Test
 
 ### Community 53 - "Consensus Aggregation"
-Cohesion: 0.50
-Nodes (4): mae, preds, rmse, Consensus (3-closest-to-median)
+Cohesion: 0.40
+Nodes (5): mae, preds, rmse, methods, Consensus (3-closest-to-median)
 
 ### Community 54 - "Claude Results Metadata"
 Cohesion: 0.40
@@ -358,8 +349,8 @@ Cohesion: 0.50
 Nodes (4): mae, preds, rmse, Bias-corrected mean (TTA-style)
 
 ### Community 58 - "Ensemble 30/70"
-Cohesion: 0.33
-Nodes (5): mae, preds, rmse, methods, Ensemble HCX 30% + Trend12 70%
+Cohesion: 0.50
+Nodes (4): mae, preds, rmse, Ensemble HCX 30% + Trend12 70%
 
 ### Community 59 - "Ensemble 50/50"
 Cohesion: 0.50
@@ -393,19 +384,19 @@ Nodes (4): Trend12 baseline alone, mae, preds, rmse
 Cohesion: 0.50
 Nodes (4): Trimmed mean (k=1, drop min+max), mae, preds, rmse
 
-### Community 78 - "XAI Importance Concepts"
-Cohesion: 0.50
-Nodes (3): hooks, PostToolUse, PreToolUse
-
 ## Knowledge Gaps
-- **578 isolated node(s):** `PreToolUse`, `PostToolUse`, `1) 2023 + 2024 OOS (12-step, CPI YoY)`, `2) Rolling 2025 OOS (1-step, 8 origins 2025-04..2025-11, post-LLM-cutoff)`, `Architecture` (+573 more)
+- **569 isolated node(s):** `allow`, `ndarray`, `lessons`, `rows`, `n_per_cell` (+564 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TemporalAttentionDecoder` connect `Transformer Architecture` to `Feature Importance XAI`?**
+- **Why does `LSTMConfig` connect `LSTM Training Pipeline` to `Dashboard & Results Loading`, `Causal Narrative Analysis`, `PyTorch Rolling Runners`, `LSTM Runner Pipeline`, `Training & Evaluation`, `Ablation Study Runner`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `Report` connect `PDF Report Export` to `Dashboard & Results Loading`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `baselines` connect `Baseline Forecasts 2025` to `HCX Rolling Results`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `LSTMConfig` (e.g. with `device` and `ndarray`) actually correct?**
   _`LSTMConfig` has 22 INFERRED edges - model-reasoned connections that need verification._
@@ -415,7 +406,3 @@ _Questions this graph is uniquely positioned to answer:_
   _`ZScoreNormalizer` has 19 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 11 inferred relationships involving `Candidate` (e.g. with `Candidate` and `DataFrame`) actually correct?**
   _`Candidate` has 11 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `PreToolUse`, `PostToolUse`, `1) 2023 + 2024 OOS (12-step, CPI YoY)` to the rest of the system?**
-  _711 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Agent Experiment Framework` be split into smaller, more focused modules?**
-  _Cohesion score 0.05664556962025316 - nodes in this community are weakly interconnected._
