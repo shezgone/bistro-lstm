@@ -385,8 +385,8 @@
     "semantic_hash": "4e4a45d2d1bd3d584b230b9fab1cf358"
   },
   "README.md": {
-    "mtime": 1782967828.2027094,
-    "ast_hash": "7a4051dc537fd59f49b90553eedae848",
+    "mtime": 1781653906.8976386,
+    "ast_hash": "9f62fa948981c697bc2f618c7f53ab10",
     "semantic_hash": ""
   },
   "requirements.txt": {
@@ -402,86 +402,6 @@
   ".claude/settings.json": {
     "mtime": 1781570630.1349385,
     "ast_hash": "98f22f36a8023c2822c160790069cb59",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/make_bok_report.py": {
-    "mtime": 1782967780.2857437,
-    "ast_hash": "e5adc3e0fbd07be541460e3bca69f729",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_compare.py": {
-    "mtime": 1782967780.2740893,
-    "ast_hash": "eef5c32d6a7f44fcec0da763586d1505",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_ensemble_search.py": {
-    "mtime": 1782967780.2745621,
-    "ast_hash": "9c472bde092acc16b110cae2d322f704",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_fair.py": {
-    "mtime": 1782967780.275028,
-    "ast_hash": "0d100c5a124b623e9aaf2b71fabbf155",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_foundation.py": {
-    "mtime": 1782967780.2756956,
-    "ast_hash": "15b1ceec186ded23a77c4ebf4acf8eef",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_harness.py": {
-    "mtime": 1782967780.276093,
-    "ast_hash": "4b7d386780493ce5a9229482059120a7",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_regime_gated.py": {
-    "mtime": 1782967780.2763917,
-    "ast_hash": "ae8e503171bb72de5ce00f07a85236db",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_seq.py": {
-    "mtime": 1782967780.2769203,
-    "ast_hash": "559a1bb2d7c8b16f4f6c94752c9d9fe8",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_tf_detector.py": {
-    "mtime": 1782967780.2773724,
-    "ast_hash": "f7acc70b79e85effc45973a49b33600d",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_transformer.py": {
-    "mtime": 1782967780.2778828,
-    "ast_hash": "226a7a4cc12c98f0376523f26e22e345",
-    "semantic_hash": ""
-  },
-  "make_onboarding_pdf.py": {
-    "mtime": 1781656207.861043,
-    "ast_hash": "26808c5635869af4a463618458e49424",
-    "semantic_hash": ""
-  },
-  "docs/GDP_\ubaa8\ub378_\ud3c9\uac00\ud45c_2026-07-02.md": {
-    "mtime": 1782961291.6454673,
-    "ast_hash": "78b87754e8feed646f41555e383a7f1f",
-    "semantic_hash": ""
-  },
-  "docs/regime-gated_\uad6c\uc870_2026-07-02.md": {
-    "mtime": 1782961445.571821,
-    "ast_hash": "8c3a58faf93ea3b5a8df16ecbf067161",
-    "semantic_hash": ""
-  },
-  "gdp/README.md": {
-    "mtime": 1782967801.1874268,
-    "ast_hash": "d16ef9a68dca7c57155910d89e281649",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/report.html": {
-    "mtime": 1782967780.282182,
-    "ast_hash": "b50ec82ac0e5b5259701bd29775b11ce",
-    "semantic_hash": ""
-  },
-  "docs/GDP_Nowcasting_\uc911\uac04\ubcf4\uace0_2026-07-02.pdf": {
-    "mtime": 1782964187.2268155,
-    "ast_hash": "a7867f1a36b8da72e2544b5506a1e853",
     "semantic_hash": ""
   }
 }
