@@ -1,33 +1,45 @@
 # BISTRO-LSTM
 
-**Task-Specific vs Foundation vs LLM In-Context: Korean Macro Forecasting Benchmark**
+**한국 거시지표 예측 벤치마크 → 한국은행 GDP Nowcasting 협업**
 
-170K 파라미터의 task-specific Transformer가 91~200M 파라미터의 Foundation Model 및 LLM in-context forecaster(HCX-32B, Claude)와 한국 거시지표 예측에서 경쟁한 결과를 정리한 프로젝트. 초기엔 CPI YoY 예측에서 출발했고, 이후 **rolling-2025 OOS 평가**, **regime-gated escalation**, **자기개선 멀티에이전트 루프**로 확장되었다.
+CPI YoY 예측 벤치마크(task-specific 소형 모델 vs Foundation Model vs LLM in-context)에서 출발해, 2026-06부터 **한국은행 GDP Nowcasting 시스템 고도화 협업**이 본 트랙이 된 프로젝트. CPI 챕터에서 얻은 lesson(특히 **regime-conditional value** — 모델의 가치는 국면에 따라 다르다)이 GDP 협업의 핵심 제안(regime-gated 앙상블)으로 이어졌다.
 
-> **방향 전환 (2026-06)**: 발주처(한국은행) 요청으로 타깃이 **CPI → GDP 예측**으로 전환됨. 현 코드베이스는 CPI 기준이며, GDP 전환 계획은 [Roadmap](#roadmap--cpi--gdp-전환) 참조.
+| 트랙 | 상태 | 위치 |
+|---|---|---|
+| **GDP Nowcasting 협업 (한국은행)** | **진행 중** — v1 보고(7/2), v2 후보 공유(7/9) | [`gdp/`](gdp/), [`docs/`](docs/) |
+| CPI 벤치마크 (22단계 ablation, rolling-2025) | 완료 — lesson 아카이브 | 아래 "완료된 챕터" |
+
+---
+
+## 🔥 현재 진행 — GDP Nowcasting 협업 (한국은행, 2026-06~)
+
+한은 GDP Nowcasting 시스템을 동일 검증체계에서 **재현**하고, 국면전환(regime-gated) 앙상블로 **개선**하는 협업. 분석 코드는 [`gdp/`](gdp/) 참조. (데이터·아티팩트는 기밀이라 미포함)
+
+**성과 (속보치 flash, 전망주차 w[-19,-1] 평균 RMSE, 2018Q1–2025Q4):**
+
+| 모형 | 전체 32분기 | 상태 |
+|---|---|---|
+| **regime-gated v2 (3-arm, 반등 국면 추가)** | **0.722** (strict 0.738) | 유망 후보 — 7/9 한은 공유 |
+| regime-gated v1 (2-arm: shock/calm) | 0.755 | 7/2 중간보고 |
+| DFM+XGBoost (한은 기존 최고) | 0.765 | 재현 완료 |
+| DFM (한은 기준선) | 0.865 | 재현 완료 |
+| Transformer·Foundation·AttnLSTM (단독/보정) | 0.94–1.45 | 기각 — 소표본에서 열위 |
+
+**타임라인과 현재 위치:**
+
+- **7/2 중간보고** — 재현 성공(소수점 수준) + v1(shock→DFM+XGB / calm→DFM+RF, 실시간 충격탐지기) 0.755 + 딥러닝 한계 정직 보고 → 최신기술은 설명가능성·국면진단 역할 제안
+- **7/8~9 v2 발견** — 반등 국면(직전 분기 flash<0 & 심리 저점통과) 추가, 반등기엔 **보정 OFF(DFM 단독)**. 핵심 통찰: *반등 국면은 학습 표본에 드물어 트리 보정이 잡음이 됨*. NN(AttnLSTM) 반등 arm은 기각, LLM arm은 보류(무오염 검증 전, 기준선이 "반등기 DFM 단독"으로 상향)
+- **다음 단계** — ① DM 검정(v2 vs v1/DFM+XGB, 한은 보고 전 필수) ② 반등 정의 고정 후 재검증 ③ 충격탐지기 고도화(월별 지표 조기 감지) ④ 설명가능성 레이어
+
+상세: [`docs/GDP_모델_평가표_2026-07-02.md`](docs/GDP_모델_평가표_2026-07-02.md) · [`docs/regime-gated_구조_2026-07-02.md`](docs/regime-gated_구조_2026-07-02.md) · v2 요약 슬라이드 [`docs/regime-gated_v2_3arm_1p_2026-07-09.pptx`](docs/regime-gated_v2_3arm_1p_2026-07-09.pptx)
 
 ---
 
-## GDP Nowcasting 협업 (한국은행, 2026-07)
+# 완료된 챕터 — CPI 벤치마크 (2026-04~06, lesson 아카이브)
 
-한은 GDP Nowcasting 시스템을 동일 검증체계에서 **재현**하고, 우리 모델·최신기술을 **확장 평가**했다. 분석 코드는 [`gdp/`](gdp/) 참조. (데이터·아티팩트는 기밀이라 미포함)
-
-**결과 (속보치 flash, 전망주차 w[-19,-1] 평균 RMSE, 2018Q1–2025Q4):**
-
-| 모형 | 전체 32분기 | COVID (20–22) | 최근 (23–25) |
-|---|---|---|---|
-| **regime-gated (제안)** | **0.755** | **0.992** | **0.520** |
-| DFM+XGBoost (기존 최고) | 0.765 | 0.999 | 0.542 |
-| DFM (기준선) | 0.865 | 1.255 | 0.541 |
-| Transformer·Foundation (단독) | 1.02–1.45 | 열위 | 열위 |
-
-- **재현 성공** — DFM(0.865)·DFM+XGBoost(0.765)를 소수점 수준으로 재현 (검증체계 신뢰성 확인)
-- **국면전환 앙상블로 개선** — 실시간 충격탐지기가 shock→DFM+XGBoost / calm→DFM+RF 전환. 기존 최고치 상회, 두 국면 모두 우위, 변동성창 K∈{3–8} 견고
-- **최신 딥러닝의 한계(정직 보고)** — Transformer·파운데이션 모델은 분기 GDP 소표본 특성상 정확도 개선 미확인 → 설명가능성·국면진단 역할로 제안
-
-상세: [`docs/GDP_모델_평가표_2026-07-02.md`](docs/GDP_모델_평가표_2026-07-02.md) · [`docs/regime-gated_구조_2026-07-02.md`](docs/regime-gated_구조_2026-07-02.md)
-
----
+> 아래는 CPI YoY 예측 벤치마크의 결과 기록이다. 22단계 ablation으로 prompt/모델 공간을 탐색했고,
+> 여기서 확립된 lesson들(N=8 multi-seed, baseline ladder, vintage=cutoff 통제, Minimal Prompt Principle,
+> **regime-conditional value**)이 GDP 협업의 방법론적 기반이 됐다.
 
 ## Key Results
 
@@ -254,54 +266,6 @@ streamlit run app.py
 
 ---
 
-## Project Structure
-
-```
-bistro-lstm/
-├── lstm_core.py            — Domain classes, presets, tier labels, loaders
-├── lstm_model.py           — AttentionLSTMForecaster (PyTorch)
-├── lstm_trainer.py         — Walk-forward CV + Optuna tuning
-├── lstm_runner.py          — 2-Stage pipeline + narrative integration
-├── transformer_model.py    — Task-specific Transformer (170K)
-├── causal_narrative.py     — Economic Narrative Analysis (CF, Jacobian, Pathway)
-├── feature_importance.py   — Integrated Gradients + Permutation importance
-├── ablation_study.py       — Variable removal/addition experiments
-├── train_and_evaluate.py   — Main training entry point
-├── comparison.py           — BISTRO vs LSTM comparison
-├── app.py                  — Streamlit dashboard (9 tabs)
-├── export_pdf.py           — PDF report generator
-├── data_collector.py       — FRED/BIS data collection + panel build
-├── build_augmented_panel.py— optimal18 + Google Trends 병합
-├── fetch_ecos_csi.py       — BoK CSI(소비자심리지수) fetch
-├── preprocessing_util.py   — Monthly panel preprocessing (z-score, splits)
-├── inference_util.py       — AR(1) baseline
-│
-├── rolling_2025*.py        — Rolling 2025 OOS: HCX/Claude in-context + ablations
-├── rolling_2025_chronos.py — Chronos zero-shot
-├── rolling_2025_moirai.py  — Moirai zero-shot (+CSI covariate)
-├── run_foundation_models.py— Chronos/Sundial/TimesFM 통합 러너
-├── hcx_*.py                — HCX-32B forecaster 변형 (clean/univar/no-think)
-├── posthoc_*.py            — seed 집계 + 앙상블 분해
-├── regime_detector_backtest.py  — 4 statistical shock detectors
-├── hcx_value_quantification.py  — regime별 HCX 가치 정량화
-│
-├── agents/                 — Researcher→Engineer→Analyzer 자기개선 루프
-│   ├── orchestrator.py  researcher.py  engineer.py  analyzer.py
-│   ├── schemas.py  store.py  manual_run.py
-│
-├── data/
-│   ├── macro_panel*.csv             — 거시 패널 (29 / optimal18 / aug)
-│   ├── google_trends_kr.csv         — Google Trends 키워드
-│   ├── experiments.db               — 멀티에이전트 실험 DB
-│   ├── cognition.json               — 누적 lessons
-│   ├── rolling_2025_*_results.json  — rolling OOS 결과
-│   ├── regime_detector_backtest.json
-│   └── hcx_value_by_regime.json
-└── requirements.txt
-```
-
----
-
 ## XAI Methods (6 types)
 
 | Method | File | What it measures |
@@ -325,19 +289,12 @@ bistro-lstm/
 
 ---
 
-## Roadmap — CPI → GDP 전환
+## CPI → GDP 전환 (완료)
 
-2026-06 한국은행 요청으로 예측 타깃이 **CPI → GDP 성장률**로 전환. 이식 계획:
-
-| 단계 | 내용 | 재사용 여부 |
-|------|------|------------|
-| 1. 데이터 레이어 | 분기 GDP + 혼합빈도(mixed-frequency) 공변량 수집 | ❌ 재설계 |
-| 2. 공변량 재선정 | GDP 드라이버(투자·소비·순수출·심리) 기준 | ❌ 재실행 |
-| 3. DFM 베이스라인 | `statsmodels` DynamicFactorMQ로 nowcasting 기준선 | ➕ 신규 |
-| 4. 하네스 이식 | rolling 평가 / FM 비교 / regime-gating을 분기로 | ✅ 대부분 이식 |
-| 5. LLM in-context | HCX/Claude 프롬프트를 GDP·분기로 교체 | ✅ 구조 재사용 |
-
-> **핵심 제약**: GDP는 분기 데이터(~90 obs since 2003)라 CPI 월별(276) 대비 소표본. 327K LSTM/Transformer 단독은 불리하며, 중앙은행 표준인 **DFM / MIDAS / bridge equation**을 베이스라인으로 깔고 task-specific 모델을 챌린저로 두는 구도가 현실적.
+2026-06 한국은행 요청으로 타깃이 GDP로 전환됐고, 당초의 "CPI 하네스 이식" 계획 대신
+**한은 시스템(DFM 기반)을 재현·확장하는 협업 방식**으로 실현됐다 — 상단 "현재 진행" 섹션 참조.
+예상대로 분기 GDP 소표본에서 task-specific NN·파운데이션 모델은 열위였고, DFM을 기반으로
+국면 규칙을 얹는 구도가 이겼다. CPI 챕터의 regime-conditional lesson이 그대로 적용된 사례.
 
 ---
 
