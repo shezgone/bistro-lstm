@@ -7,12 +7,12 @@
 import sys, os, warnings
 from pathlib import Path
 warnings.filterwarnings("ignore")
-sys.path.insert(0, "/Users/user_1/vibe/bistro-lstm")
+sys.path.insert(0, "/Users/user/vibe/bistro-lstm")
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
-from lstm_model import AttentionLSTMForecaster
+from core.lstm_model import AttentionLSTMForecaster
 import phase_b_harness as H
 
 SMOKE = os.environ.get("SMOKE", "1") == "1"

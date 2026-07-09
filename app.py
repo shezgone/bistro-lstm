@@ -15,12 +15,12 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 
-from lstm_core import (
+from core.lstm_core import (
     LSTMConfig, ImportanceAnalyzer, TIER_LABELS,
     results_available, load_inference_results, load_narrative_results,
 )
-from comparison import load_bistro_results, load_bistro_ablation
-from causal_narrative import MEDIATOR_CHANNELS, CHANNEL_ORDER, get_variable_channel
+from analysis.comparison import load_bistro_results, load_bistro_ablation
+from analysis.causal_narrative import MEDIATOR_CHANNELS, CHANNEL_ORDER, get_variable_channel
 
 # ============================================================
 # Page Config
@@ -185,7 +185,7 @@ def load_all_data():
 data = load_all_data()
 
 if not data:
-    st.error("결과 데이터가 없습니다. 먼저 학습을 실행하세요: `python train_and_evaluate.py`")
+    st.error("결과 데이터가 없습니다. 먼저 학습을 실행하세요: `python training/train_and_evaluate.py`")
     st.stop()
 
 

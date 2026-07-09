@@ -3,10 +3,10 @@
 """
 import os, sys, re, warnings
 warnings.filterwarnings("ignore")
-sys.path.insert(0,"src"); sys.path.insert(0,"."); sys.path.insert(0,"/Users/user_1/vibe/bistro-lstm")
+sys.path.insert(0,"src"); sys.path.insert(0,"."); sys.path.insert(0,"/Users/user/vibe/bistro-lstm")
 import numpy as np, pandas as pd, torch, torch.nn as nn
 from sklearn.base import BaseEstimator, RegressorMixin
-from lstm_model import AttentionLSTMForecaster
+from core.lstm_model import AttentionLSTMForecaster
 import gdp_nowcasting.ml_models as MM
 import gdp_nowcasting.hyperparameter_tuning as HT
 import gdp_nowcasting.pipeline_ai_ml as PL

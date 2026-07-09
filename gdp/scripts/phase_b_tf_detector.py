@@ -6,9 +6,9 @@
 """
 import os, sys, warnings, glob
 warnings.filterwarnings("ignore")
-sys.path.insert(0,"."); sys.path.insert(0,"/Users/user_1/vibe/bistro-lstm")
+sys.path.insert(0,"."); sys.path.insert(0,"/Users/user/vibe/bistro-lstm")
 import numpy as np, pandas as pd, torch, torch.nn as nn
-from lstm_model import AttentionLSTMForecaster
+from core.lstm_model import AttentionLSTMForecaster
 import phase_b_harness as H
 
 COVID=[str(p) for p in pd.period_range("2020Q1","2022Q4",freq="Q")]
