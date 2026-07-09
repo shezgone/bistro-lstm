@@ -22,6 +22,10 @@
 | `phase_b_regime_gated_v2.py` | **v2: 반등(REBOUND) 국면 추가 3-arm** — 직전분기 flash<0 & 심리 저점통과 → DFM 단독(보정 OFF). `--strict`는 flash 발표 후 주차만 발동 |
 | `phase_b_llm.py` | Claude LLM(Fable 5/Opus 4.8) zero-shot 나우캐스트 비교 (2025H1, API 키 필요) |
 | `phase_b_tf_detector.py` | Transformer 기반 충격탐지기 실험 |
+| `phase_b_tabpfn.py` | TabPFN(PFN, in-context 학습) 공정 주입 — 비-트리 ML 최고(DFM+TabPFN 0.815) but DFM+XGB 미달 |
+| `phase_b_ncde.py` | NCDENow-style 근사(PCA요인+euler CDE) — 기각 (DFM+NCDE 0.932 > DFM 0.865) |
+| `phase_b_soft_gate.py` | soft gate·AE 탐지기 타당성 (soft 0.7226 ≈ v2 hard) |
+| `phase_b_score_new.py` | TabPFN·NCDE 통합 채점 |
 | `phase_b_compare.py` | 종합 비교표 |
 | `make_bok_report.py` / `report.html` | 중간결과 보고서 생성 |
 
