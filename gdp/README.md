@@ -35,7 +35,7 @@
 | DFM (기준선) | 0.865 |
 
 > v2는 유망 후보 단계 (반등 arm 사후 선택·6분기 소표본·DM 미검증).
-> 세부: `../docs/regime-gated_v2_3arm_1p_2026-07-09.pptx`, 메일 초안 `../docs/메일_한은_regime-gated_v2_2026-07-09.md`
+> 세부: `../docs/regime-gated_v2_3arm_구조_2026-07-09.md`, `../docs/regime-gated_v2_3arm_1p_2026-07-09.pptx`, 메일 초안 `../docs/메일_한은_regime-gated_v2_2026-07-09.md`
 
 - 재현: DFM·DFM+XGBoost를 소수점 수준으로 재현
 - 개선: 국면전환 앙상블로 기존 최고치 상회 (K∈{3–8} 견고)
