@@ -240,8 +240,8 @@
     "semantic_hash": ""
   },
   "gdp/README.md": {
-    "mtime": 1783637836.5103111,
-    "ast_hash": "4e34cc5fab6d248551a66afbd5b2213b",
+    "mtime": 1783571560.5277038,
+    "ast_hash": "e010174c9ef99c0b89c737ea65fb1e39",
     "semantic_hash": ""
   },
   "gdp/scripts/report.html": {
@@ -547,21 +547,6 @@
   "gdp/scripts/phase_b_soft_gate.py": {
     "mtime": 1783635275.8956816,
     "ast_hash": "5d4b913aa9431f4224387c200f813b0e",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_ncde.py": {
-    "mtime": 1783637836.4650176,
-    "ast_hash": "6a06d277857196e8156d98b41e40ebb7",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_score_new.py": {
-    "mtime": 1783637836.4652057,
-    "ast_hash": "65fa470e850c43fdc60ab9bdf3aa9f90",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_tabpfn.py": {
-    "mtime": 1783637836.4645898,
-    "ast_hash": "1942d8069e320f6e7506b87c8f3d063d",
     "semantic_hash": ""
   }
 }
