@@ -26,6 +26,12 @@
 | `phase_b_ncde.py` | NCDENow-style 근사(PCA요인+euler CDE) — 기각 (DFM+NCDE 0.932 > DFM 0.865) |
 | `phase_b_soft_gate.py` | soft gate·AE 탐지기 타당성 (soft 0.7226 ≈ v2 hard) |
 | `phase_b_score_new.py` | TabPFN·NCDE 통합 채점 |
+| `phase_b_hopp.py` | Hopp nowcast_lstm(JOS'22) 주입 — 기각 (DFM+Hopp 0.888) |
+| `phase_b_ttm.py` | **TTM(NeurIPS'24) few-shot — DL 단독 최초 DFM 돌파 (0.854<0.865)** |
+| `phase_b_ttm_pooled.py` | 38개국 풀링 사전학습 — 무익 (0.870, 선형보간 코퍼스 한계) |
+| `phase_b_d2fm.py` | D2FM-lite(arXiv 2007.11887 축소) — 기각 (단독 1.089, 앙상블 0.868) |
+| `phase_b_combo.py` | 예측결합 8종 (BG/스태킹/디바이어스 등) — 전패, DM 부산물 확보 |
+| `phase_b_gate_v3.py` | **v3 게이트: 반등 arm→(DFM+TTM)/2 = 0.7178, DM vs DFM+XGB p=0.088** |
 | `phase_b_compare.py` | 종합 비교표 |
 | `make_bok_report.py` / `report.html` | 중간결과 보고서 생성 |
 
