@@ -51,4 +51,30 @@ def monthly_covariates(month_index, vintage):
         out["esi_mom"] = (out["esi_raw"] - out["esi_raw"].rolling(4).mean()).fillna(0.0)
     else:
         out["esi_raw"] = 100.0; out["esi_mom"] = 0.0
+    # NSI (한은 뉴스심리지수, 일별·무개정) — 캐시 존재 시 사용
+    if os.path.exists("data/fast_signals_nsi.parquet"):
+        nsi = pd.read_parquet("data/fast_signals_nsi.parquet")["nsi"]
+        nsi = nsi[nsi.index <= v]
+        nm = nsi.resample("ME").mean().reindex(month_index).astype(np.float32)
+        out["nsi_m"] = nm.ffill().fillna(100.0)
+        out["nsi_mom"] = (out["nsi_m"] - out["nsi_m"].rolling(4).mean()).fillna(0.0)
     return out
+
+
+def nsi_daily(api_key=None):
+    """한은 뉴스심리지수(NSI, 일별) — ECOS API. 키 필요 (env ECOS_KEY).
+    통계표코드 후보 521Y001 (키 발급 후 StatisticTableList로 확정할 것)."""
+    import os, json, urllib.request
+    key = api_key or os.environ.get("ECOS_KEY")
+    if not key:
+        raise RuntimeError("ECOS_KEY 필요 — https://ecos.bok.or.kr/api 에서 무료 발급")
+    url = (f"https://ecos.bok.or.kr/api/StatisticSearch/{key}/json/kr/1/100000/"
+           f"521Y001/D/20050101/20991231/")
+    with urllib.request.urlopen(url, timeout=60) as r:
+        d = json.loads(r.read().decode())
+    rows = d.get("StatisticSearch", {}).get("row", [])
+    if not rows:
+        raise RuntimeError(f"NSI 조회 실패: {str(d)[:200]}")
+    s = pd.Series({pd.Timestamp(x["TIME"]): float(x["DATA_VALUE"]) for x in rows}).sort_index()
+    s.name = "nsi"
+    return s
