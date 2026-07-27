@@ -12,6 +12,10 @@ from chronos import Chronos2Pipeline
 import phase_b_harness as H
 
 COVARS = ["I_m", "I_s", "M_s", "S_es", "S_cb", "S_mo", "B_bx", "B_bi", "R_s", "M_fi"]
+FAST = os.environ.get("FAST_COV", "") == "1"          # E4: 빠른신호 공변량 추가
+TAG = os.environ.get("C2_TAG", "our_chronos2")
+if FAST:
+    import fast_signals
 PLEN_MAX = 6
 QUANTS = [0.1, 0.25, 0.5, 0.75, 0.9]
 
@@ -46,8 +50,11 @@ for tq in quarters:
             if h < 1:
                 yp = float(panel.loc[qend, "N_gdp"]) if qend in panel.index else np.nan
             elif h <= PLEN_MAX and len(hist) >= 60:
-                inp = [{"target": hist["N_gdp"].to_numpy(np.float32),
-                        "past_covariates": {c: hist[c].to_numpy(np.float32) for c in COVARS if c in hist.columns}}]
+                pcov = {c: hist[c].to_numpy(np.float32) for c in COVARS if c in hist.columns}
+                if FAST:
+                    fs = fast_signals.monthly_covariates(hist.index, r.vintage)
+                    for c in fs.columns: pcov[c] = fs[c].to_numpy(np.float32)
+                inp = [{"target": hist["N_gdp"].to_numpy(np.float32), "past_covariates": pcov}]
                 try:
                     qt, mean = pipe.predict_quantiles(inp, prediction_length=h, quantile_levels=QUANTS)
                     arr = np.asarray(qt[0])          # (1, h, n_q) — 배치 차원 포함
@@ -57,16 +64,16 @@ for tq in quarters:
                 except Exception as e:
                     print(f"  predict err {tq} {r.vintage}: {type(e).__name__}: {e}", flush=True)
         row = {"tq": tq, "vintage": r.vintage, "week_idx": r.week_idx,
-               "flash": r.flash, "model_name": "our_chronos2", "y_pred": yp}
+               "flash": r.flash, "model_name": TAG, "y_pred": yp}
         row.update({f"q{int(q*100)}": v for q, v in qv.items()})
         rows.append(row)
     print(f"[{tq}] done", flush=True)
 
 pred = pd.DataFrame(rows)
-pred.to_csv("output/csv/_phase_b_chronos2_predictions.csv", index=False)
+pred.to_csv(f"output/csv/_phase_b_{TAG}_predictions.csv", index=False)
 dfm = H.load_baseline(grid, "dfm"); dfm["vintage"] = pd.to_datetime(dfm["vintage"]).dt.strftime("%Y-%m-%d")
 core = pred[["tq","vintage","week_idx","flash","model_name","y_pred"]].dropna(subset=["y_pred"])
-ens = H.ensemble_with_dfm(core, dfm, suffix="chronos2")
+ens = H.ensemble_with_dfm(core, dfm, suffix=TAG)
 print("\n=== Chronos-2 (공변량 zero-shot) flash w[-19,-1] avg RMSE ===")
 print(H.score(pd.concat([core, ens], ignore_index=True)).to_string())
 print("[기준] 구세대 Chronos-Bolt 1.351 / TTM_ft 0.854 / DFM 0.865 / DFM+XGB 0.765")

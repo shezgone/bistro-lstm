@@ -19,21 +19,24 @@ import phase_b_harness as H
 from tabpfn import TabPFNRegressor
 
 N_EST = int(os.environ.get("TABPFN_NEST", "4"))
+MODEL_PATH = os.environ.get("TABPFN_CKPT", "")           # v2.5 로컬 ckpt 경로 (빈값=기본 v2)
+TAG = os.environ.get("TABPFN_TAG", "our_tabpfn")
 
 def make_est():
-    return TabPFNRegressor(device="cpu", n_estimators=N_EST, random_state=0,
-                           ignore_pretraining_limits=True)
+    kw = dict(device="cpu", n_estimators=N_EST, random_state=0, ignore_pretraining_limits=True)
+    if MODEL_PATH: kw["model_path"] = MODEL_PATH
+    return TabPFNRegressor(**kw)
 
 _orig = MM.create_model
 def cm(model_name, model_params=None):
     spec = model_name if isinstance(model_name, ModelSpec) else None
     name = (spec.model_name if spec else model_name).lower()
-    if name == "our_tabpfn":
-        return SklearnNowcastModel(model_name="our_tabpfn", estimator=make_est())
+    if name == TAG:
+        return SklearnNowcastModel(model_name=TAG, estimator=make_est())
     return _orig(model_name, model_params)
 MM.create_model = cm; PL.create_model = cm
 _og = HT.get_default_parameter_grid
-HT.get_default_parameter_grid = lambda n: {} if str(n).lower() == "our_tabpfn" else _og(n)
+HT.get_default_parameter_grid = lambda n: {} if str(n).lower() == TAG else _og(n)
 
 repo = os.getcwd(); os.environ["GDP_NOWCAST_USE_S3"] = "0"; os.environ["GDP_NOWCAST_LOCAL_PATH"] = repo
 ctx = AIRunContext(specfile=str(Path(repo)/"data/meta/Spec_kim_34var_transformchange_named.xlsx"),
@@ -46,15 +49,16 @@ quarters = QSUB.split(",") if QSUB else [str(p) for p in pd.period_range("2018Q1
 print(f"[run] our_tabpfn (n_estimators={N_EST}) quarters={len(quarters)}", flush=True)
 
 res = run_tree_ensemble_backtest(ctx, feature_config=fc, linear_specs=[],
-    tree_specs=[ModelSpec("our_tabpfn", {}, model_id="our_tabpfn")],
+    tree_specs=[ModelSpec(TAG, {}, model_id=TAG)],
     backtest_config=BacktestConfig(tuning_mode="quarter_batch",
         quarter_batch_selection_mode="fvintage_window", min_train_rows=8, verbose=True),
     tuning_config=tuning, dfm_snapshot_root=Path(repo)/"output/model/DFM/11",
     gdp_release_file=str(Path(repo)/"data/GDP_releases.pkl"), quarters=quarters, news_config=None)
 
-res.predictions.to_csv("output/csv/_phase_b_tabpfn_predictions.csv", index=False)
+res.predictions.to_csv(f"output/csv/_phase_b_{TAG}_predictions.csv", index=False)
 sc = H.score(res.predictions)
 print("\n=== our_tabpfn (공정 주입) flash w[-19,-1] avg RMSE ===")
 print(sc[sc.index.str.contains("tabpfn")].to_string())
+print("TAG:", TAG, "| ckpt:", MODEL_PATH.split("/")[-1] if MODEL_PATH else "v2-default")
 print("[참고] DFM+XGBoost 0.765 / DFM+our_mlp 0.820 / DFM 0.865 / 3-arm v2 0.722")
 print("PHASE_B_TABPFN_DONE")
