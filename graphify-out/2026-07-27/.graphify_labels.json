@@ -1,7 +1,6 @@
 {
   "0": "Agent Experiment Framework",
   "1": "Economic Regime Eras",
-  "2": "ablation_study.py",
   "3": "Claude Rolling Results",
   "4": "Baseline Forecasts 2025",
   "5": "Regime Detector Signals",
@@ -38,9 +37,7 @@
   "36": "Post-hoc Aggregation Results",
   "37": "Post-hoc Ensemble Results",
   "38": "2025 Actuals",
-  "39": "ImportanceAnalyzer",
-  "41": "ar1_forecast",
-  "43": "phase_b_fanchart.py",
+  "42": "phase_b_transformer.py",
   "44": "phase_b_chronos2.py",
   "53": "Consensus Aggregation",
   "54": "Claude Results Metadata",

@@ -4,454 +4,14 @@
   "graph": {},
   "nodes": [
     {
-      "label": "phase_b_combo_c2f.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f",
-      "community": 39,
-      "norm_label": "phase_b_combo_c2f.py"
-    },
-    {
-      "label": "norm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_norm",
-      "community": 39,
-      "norm_label": "norm()"
-    },
-    {
-      "label": "sc()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_sc",
-      "community": 39,
-      "norm_label": "sc()"
-    },
-    {
-      "label": "dm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_dm",
-      "community": 39,
-      "norm_label": "dm()"
-    },
-    {
-      "label": "\ubb34\uac8c\uc774\ud2b8 \uc0c1\uc2dc \uc559\uc0c1\ube14 \u2014 \uae30\uc874\ucd5c\uace0(DFM+XGB) \u00d7 Chronos-2f(\ube60\ub978\uc2e0\ud638) \uacb0\ud569 \uac80\uc99d.  \ubc30\uacbd: 7/22 \ubb34\uac8c\uc774\ud2b8 \uc559\uc0c1\ube14 \uac80\uc99d((DFM",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_rationale_1",
-      "community": 39,
-      "norm_label": "\u1106\u116e\u1100\u1166\u110b\u1175\u1110\u1173 \u1109\u1161\u11bc\u1109\u1175 \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af \u2014 \u1100\u1175\u110c\u1169\u11ab\u110e\u116c\u1100\u1169(dfm+xgb) \u00d7 chronos-2f(\u1108\u1161\u1105\u1173\u11ab\u1109\u1175\u11ab\u1112\u1169) \u1100\u1167\u11af\u1112\u1161\u11b8 \u1100\u1165\u11b7\u110c\u1173\u11bc.  \u1107\u1162\u1100\u1167\u11bc: 7/22 \u1106\u116e\u1100\u1166\u110b\u1175\u1110\u1173 \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af \u1100\u1165\u11b7\u110c\u1173\u11bc((dfm"
-    },
-    {
-      "label": "fast_signals.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "fast_signals.py",
-      "id": "gdp_scripts_fast_signals"
-    },
-    {
-      "label": "daily_market()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "daily_market()",
-      "id": "gdp_scripts_fast_signals_daily_market"
-    },
-    {
-      "label": "load_raw_vintage()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L23",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "load_raw_vintage()",
-      "id": "gdp_scripts_fast_signals_load_raw_vintage"
-    },
-    {
-      "label": "monthly_covariates()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L36",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "monthly_covariates()",
-      "id": "gdp_scripts_fast_signals_monthly_covariates"
-    },
-    {
-      "label": "nsi_daily()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L64",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "nsi_daily()",
-      "id": "gdp_scripts_fast_signals_nsi_daily"
-    },
-    {
-      "label": "E1-lite \ube60\ub978\uc2e0\ud638: \uc77c\ubcc4 \uae08\uc735(KOSPI\u00b7\uc6d0\ub2ec\ub7ec, yfinance \u2014 \uac00\uaca9\uc740 \ubb34\uac1c\uc815\uc774\ub77c vintage-safe) + \uc6d0\uc2dc \ube48\ud2f0\uc9c0\uc758 ESI",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "e1-lite \u1108\u1161\u1105\u1173\u11ab\u1109\u1175\u11ab\u1112\u1169: \u110b\u1175\u11af\u1107\u1167\u11af \u1100\u1173\u11b7\u110b\u1172\u11bc(kospi\u00b7\u110b\u116f\u11ab\u1103\u1161\u11af\u1105\u1165, yfinance \u2014 \u1100\u1161\u1100\u1167\u11a8\u110b\u1173\u11ab \u1106\u116e\u1100\u1162\u110c\u1165\u11bc\u110b\u1175\u1105\u1161 vintage-safe) + \u110b\u116f\u11ab\u1109\u1175 \u1107\u1175\u11ab\u1110\u1175\u110c\u1175\u110b\u1174 esi",
-      "id": "gdp_scripts_fast_signals_rationale_1"
-    },
-    {
-      "label": "\uc77c\ubcc4 KOSPI \uc885\uac00\u00b7\uc6d0\ub2ec\ub7ec \ud658\uc728 (2000~). \uce90\uc2dc \uc0ac\uc6a9.",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L13",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "\u110b\u1175\u11af\u1107\u1167\u11af kospi \u110c\u1169\u11bc\u1100\u1161\u00b7\u110b\u116f\u11ab\u1103\u1161\u11af\u1105\u1165 \u1112\u116a\u11ab\u110b\u1172\u11af (2000~). \u110f\u1162\u1109\u1175 \u1109\u1161\u110b\u116d\u11bc.",
-      "id": "gdp_scripts_fast_signals_rationale_13"
-    },
-    {
-      "label": "month_index(\uc6d4\ub9d0 DatetimeIndex)\uc5d0 \uc815\ub82c\ub41c \ube60\ub978\uc2e0\ud638 4\uc885.     \uc77c\ubcc4 \ub370\uc774\ud130\ub294 vintage \ub0a0\uc9dc\uae4c\uc9c0\ub9cc \uc0ac\uc6a9(\ud604\uc7ac \ubbf8\uc644\uc131",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L37",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "month_index(\u110b\u116f\u11af\u1106\u1161\u11af datetimeindex)\u110b\u1166 \u110c\u1165\u11bc\u1105\u1167\u11af\u1103\u116c\u11ab \u1108\u1161\u1105\u1173\u11ab\u1109\u1175\u11ab\u1112\u1169 4\u110c\u1169\u11bc.     \u110b\u1175\u11af\u1107\u1167\u11af \u1103\u1166\u110b\u1175\u1110\u1165\u1102\u1173\u11ab vintage \u1102\u1161\u11af\u110d\u1161\u1101\u1161\u110c\u1175\u1106\u1161\u11ab \u1109\u1161\u110b\u116d\u11bc(\u1112\u1167\u11ab\u110c\u1162 \u1106\u1175\u110b\u116a\u11ab\u1109\u1165\u11bc",
-      "id": "gdp_scripts_fast_signals_rationale_37"
-    },
-    {
-      "label": "\ud55c\uc740 \ub274\uc2a4\uc2ec\ub9ac\uc9c0\uc218(NSI, \uc77c\ubcc4) \u2014 ECOS API. \ud0a4 \ud544\uc694 (env ECOS_KEY).     \ud1b5\uacc4\ud45c\ucf54\ub4dc \ud6c4\ubcf4 521Y001 (\ud0a4 \ubc1c\uae09 \ud6c4",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L65",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "\u1112\u1161\u11ab\u110b\u1173\u11ab \u1102\u1172\u1109\u1173\u1109\u1175\u11b7\u1105\u1175\u110c\u1175\u1109\u116e(nsi, \u110b\u1175\u11af\u1107\u1167\u11af) \u2014 ecos api. \u110f\u1175 \u1111\u1175\u11af\u110b\u116d (env ecos_key).     \u1110\u1169\u11bc\u1100\u1168\u1111\u116d\u110f\u1169\u1103\u1173 \u1112\u116e\u1107\u1169 521y001 (\u110f\u1175 \u1107\u1161\u11af\u1100\u1173\u11b8 \u1112\u116e",
-      "id": "gdp_scripts_fast_signals_rationale_65"
-    },
-    {
-      "label": "phase_b_fanchart.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 43,
-      "norm_label": "phase_b_fanchart.py",
-      "id": "gdp_scripts_phase_b_fanchart"
-    },
-    {
-      "label": "norm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 43,
-      "norm_label": "norm()",
-      "id": "gdp_scripts_phase_b_fanchart_norm"
-    },
-    {
-      "label": "conformal()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L34",
-      "_origin": "ast",
-      "community": 43,
-      "norm_label": "conformal()",
-      "id": "gdp_scripts_phase_b_fanchart_conformal"
-    },
-    {
-      "label": "winkler()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L58",
-      "_origin": "ast",
-      "community": 43,
-      "norm_label": "winkler()",
-      "id": "gdp_scripts_phase_b_fanchart_winkler"
-    },
-    {
-      "label": "rep()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L63",
-      "_origin": "ast",
-      "community": 43,
-      "norm_label": "rep()",
-      "id": "gdp_scripts_phase_b_fanchart_rep"
-    },
-    {
-      "label": "Fan Chart \uc0c1\ud488\ud654 \uc5d4\uc9c4 \u2014 \uc608\uce21 \ubd88\ubcc0, \ucee8\ud3ec\uba40 \ubcf4\uc815 + \uc804\ub9dd\uc2dc\uacc4 \ud558\uc774\ube0c\ub9ac\ub4dc.  \uad6c\uc131:   - \uc911\uc2ec\uc120: \ud604\uc9c1(DFM+XGB) \uc810\uc608\uce21 \uadf8\ub300\ub85c",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 43,
-      "norm_label": "fan chart \u1109\u1161\u11bc\u1111\u116e\u11b7\u1112\u116a \u110b\u1166\u11ab\u110c\u1175\u11ab \u2014 \u110b\u1168\u110e\u1173\u11a8 \u1107\u116e\u11af\u1107\u1167\u11ab, \u110f\u1165\u11ab\u1111\u1169\u1106\u1165\u11af \u1107\u1169\u110c\u1165\u11bc + \u110c\u1165\u11ab\u1106\u1161\u11bc\u1109\u1175\u1100\u1168 \u1112\u1161\u110b\u1175\u1107\u1173\u1105\u1175\u1103\u1173.  \u1100\u116e\u1109\u1165\u11bc:   - \u110c\u116e\u11bc\u1109\u1175\u11b7\u1109\u1165\u11ab: \u1112\u1167\u11ab\u110c\u1175\u11a8(dfm+xgb) \u110c\u1165\u11b7\u110b\u1168\u110e\u1173\u11a8 \u1100\u1173\u1103\u1162\u1105\u1169",
-      "id": "gdp_scripts_phase_b_fanchart_rationale_1"
-    },
-    {
-      "label": "phase_b_chronos2.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_chronos2.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "phase_b_chronos2.py",
-      "id": "gdp_scripts_phase_b_chronos2"
-    },
-    {
-      "label": "load_panel()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_chronos2.py",
-      "source_location": "L30",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "load_panel()",
-      "id": "gdp_scripts_phase_b_chronos2_load_panel"
-    },
-    {
-      "label": "Chronos-2 (Amazon, 2025.10) \uacf5\ubcc0\ub7c9 zero-shot \ub098\uc6b0\uce90\uc2a4\ud2b8 \u2014 \uc2e0\ud615 TSFM \uc7ac\ub3c4\uc804.  \uc6b0\ub9ac\uac00 \uae30\uac01\ud55c \uac83\uc740 \uad6c\uc138\ub300 C",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_chronos2.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "chronos-2 (amazon, 2025.10) \u1100\u1169\u11bc\u1107\u1167\u11ab\u1105\u1163\u11bc zero-shot \u1102\u1161\u110b\u116e\u110f\u1162\u1109\u1173\u1110\u1173 \u2014 \u1109\u1175\u11ab\u1112\u1167\u11bc tsfm \u110c\u1162\u1103\u1169\u110c\u1165\u11ab.  \u110b\u116e\u1105\u1175\u1100\u1161 \u1100\u1175\u1100\u1161\u11a8\u1112\u1161\u11ab \u1100\u1165\u11ba\u110b\u1173\u11ab \u1100\u116e\u1109\u1166\u1103\u1162 c",
-      "id": "gdp_scripts_phase_b_chronos2_rationale_1"
-    },
-    {
-      "label": "phase_b_prob_axis.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "phase_b_prob_axis.py",
-      "id": "gdp_scripts_phase_b_prob_axis"
-    },
-    {
-      "label": "norm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "norm()",
-      "id": "gdp_scripts_phase_b_prob_axis_norm"
-    },
-    {
-      "label": "vol_z()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L38",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "vol_z()",
-      "id": "gdp_scripts_phase_b_prob_axis_vol_z"
-    },
-    {
-      "label": "conformal_intervals()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L54",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "conformal_intervals()",
-      "id": "gdp_scripts_phase_b_prob_axis_conformal_intervals"
-    },
-    {
-      "label": "winkler()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L95",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "winkler()",
-      "id": "gdp_scripts_phase_b_prob_axis_winkler"
-    },
-    {
-      "label": "pinball()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L99",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "pinball()",
-      "id": "gdp_scripts_phase_b_prob_axis_pinball"
-    },
-    {
-      "label": "report()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L116",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "report()",
-      "id": "gdp_scripts_phase_b_prob_axis_report"
-    },
-    {
-      "label": "E2: \ud655\ub960\uc608\uce21 \ucd95 \ub9de\ub300\uacb0 \u2014 \ubd84\ud3ec/\uad6c\uac04 \uc608\uce21\uc5d0\uc11c \ubb34\uc5c7\uc774 \uc774\uae30\ub294\uac00 (\uc810\uc608\uce21 \ubd88\ubcc0).  \ud6c4\ubcf4:   CONF-INC : \ud604\uc9c1(DFM+XGB) \uc810\uc608\uce21",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "e2: \u1112\u116a\u11a8\u1105\u1172\u11af\u110b\u1168\u110e\u1173\u11a8 \u110e\u116e\u11a8 \u1106\u1161\u11bd\u1103\u1162\u1100\u1167\u11af \u2014 \u1107\u116e\u11ab\u1111\u1169/\u1100\u116e\u1100\u1161\u11ab \u110b\u1168\u110e\u1173\u11a8\u110b\u1166\u1109\u1165 \u1106\u116e\u110b\u1165\u11ba\u110b\u1175 \u110b\u1175\u1100\u1175\u1102\u1173\u11ab\u1100\u1161 (\u110c\u1165\u11b7\u110b\u1168\u110e\u1173\u11a8 \u1107\u116e\u11af\u1107\u1167\u11ab).  \u1112\u116e\u1107\u1169:   conf-inc : \u1112\u1167\u11ab\u110c\u1175\u11a8(dfm+xgb) \u110c\u1165\u11b7\u110b\u1168\u110e\u1173\u11a8",
-      "id": "gdp_scripts_phase_b_prob_axis_rationale_1"
-    },
-    {
-      "label": "\ud655\uc7a5\ucc3d\u00b7\ubc84\ud0b7\ubcc4 \uacbd\ud5d8 \uc624\ucc28 \ubd84\uc704\uc218 \u2192 \uad6c\uac04 \uceec\ub7fc 4\uac1c \ucd94\uac00.",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L55",
-      "_origin": "ast",
-      "community": 44,
-      "norm_label": "\u1112\u116a\u11a8\u110c\u1161\u11bc\u110e\u1161\u11bc\u00b7\u1107\u1165\u110f\u1175\u11ba\u1107\u1167\u11af \u1100\u1167\u11bc\u1112\u1165\u11b7 \u110b\u1169\u110e\u1161 \u1107\u116e\u11ab\u110b\u1171\u1109\u116e \u2192 \u1100\u116e\u1100\u1161\u11ab \u110f\u1165\u11af\u1105\u1165\u11b7 4\u1100\u1162 \u110e\u116e\u1100\u1161.",
-      "id": "gdp_scripts_phase_b_prob_axis_rationale_55"
-    },
-    {
-      "label": "phase_b_tabpfn.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 23,
-      "norm_label": "phase_b_tabpfn.py",
-      "id": "gdp_scripts_phase_b_tabpfn"
-    },
-    {
-      "label": "make_est()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 23,
-      "norm_label": "make_est()",
-      "id": "gdp_scripts_phase_b_tabpfn_make_est"
-    },
-    {
-      "label": "cm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L31",
-      "_origin": "ast",
-      "community": 23,
-      "norm_label": "cm()",
-      "id": "gdp_scripts_phase_b_tabpfn_cm"
-    },
-    {
-      "label": "Phase B: TabPFN(v2, Prior-Fitted Network)\uc744 \uadf8\ub4e4 backtest\uc5d0 \uacf5\uc815 \uc8fc\uc785. XGBoost\uc640 \ub3d9\uc77c (X,y)",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 23,
-      "norm_label": "phase b: tabpfn(v2, prior-fitted network)\u110b\u1173\u11af \u1100\u1173\u1103\u1173\u11af backtest\u110b\u1166 \u1100\u1169\u11bc\u110c\u1165\u11bc \u110c\u116e\u110b\u1175\u11b8. xgboost\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af (x,y)",
-      "id": "gdp_scripts_phase_b_tabpfn_rationale_1"
-    },
-    {
-      "label": "phase_b_unused_cols.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "phase_b_unused_cols.py",
-      "id": "gdp_scripts_phase_b_unused_cols"
-    },
-    {
-      "label": "norm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "norm()",
-      "id": "gdp_scripts_phase_b_unused_cols_norm"
-    },
-    {
-      "label": "load_raw()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L36",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "load_raw()",
-      "id": "gdp_scripts_phase_b_unused_cols_load_raw"
-    },
-    {
-      "label": "feats()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L47",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "feats()",
-      "id": "gdp_scripts_phase_b_unused_cols_feats"
-    },
-    {
-      "label": "ridge_fit()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L78",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "ridge_fit()",
-      "id": "gdp_scripts_phase_b_unused_cols_ridge_fit"
-    },
-    {
-      "label": "sc()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L94",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "sc()",
-      "id": "gdp_scripts_phase_b_unused_cols_sc"
-    },
-    {
-      "label": "dm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L99",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "dm()",
-      "id": "gdp_scripts_phase_b_unused_cols_dm"
-    },
-    {
-      "label": "\ubbf8\uc0ac\uc6a9 39\uceec\ub7fc \uc815\ubcf4\uac00\uce58 \uac80\uc815: \uae30\uc874\ucd5c\uace0(DFM+XGB) \uc794\ucc28\ub97c \uc6d0\uc2dc \ube48\ud2f0\uc9c0 \ud53c\ucc98\ub85c \ubcf4\uc815.  \ubcc0\ud615:   V0 \uae30\uc874\ucd5c\uace0 \uadf8\ub300\ub85c (0.765)",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "\u1106\u1175\u1109\u1161\u110b\u116d\u11bc 39\u110f\u1165\u11af\u1105\u1165\u11b7 \u110c\u1165\u11bc\u1107\u1169\u1100\u1161\u110e\u1175 \u1100\u1165\u11b7\u110c\u1165\u11bc: \u1100\u1175\u110c\u1169\u11ab\u110e\u116c\u1100\u1169(dfm+xgb) \u110c\u1161\u11ab\u110e\u1161\u1105\u1173\u11af \u110b\u116f\u11ab\u1109\u1175 \u1107\u1175\u11ab\u1110\u1175\u110c\u1175 \u1111\u1175\u110e\u1165\u1105\u1169 \u1107\u1169\u110c\u1165\u11bc.  \u1107\u1167\u11ab\u1112\u1167\u11bc:   v0 \u1100\u1175\u110c\u1169\u11ab\u110e\u116c\u1100\u1169 \u1100\u1173\u1103\u1162\u1105\u1169 (0.765)",
-      "id": "gdp_scripts_phase_b_unused_cols_rationale_1"
-    },
-    {
       "label": "phase_b_grand_table.py",
       "file_type": "code",
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table",
       "community": 34,
-      "norm_label": "phase_b_grand_table.py",
-      "id": "gdp_scripts_phase_b_grand_table"
+      "norm_label": "phase_b_grand_table.py"
     },
     {
       "label": "norm()",
@@ -459,9 +19,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_norm",
       "community": 34,
-      "norm_label": "norm()",
-      "id": "gdp_scripts_phase_b_grand_table_norm"
+      "norm_label": "norm()"
     },
     {
       "label": "vol_before()",
@@ -469,9 +29,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L52",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_vol_before",
       "community": 34,
-      "norm_label": "vol_before()",
-      "id": "gdp_scripts_phase_b_grand_table_vol_before"
+      "norm_label": "vol_before()"
     },
     {
       "label": "p_soft()",
@@ -479,9 +39,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L57",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_p_soft",
       "community": 34,
-      "norm_label": "p_soft()",
-      "id": "gdp_scripts_phase_b_grand_table_p_soft"
+      "norm_label": "p_soft()"
     },
     {
       "label": "trough()",
@@ -489,9 +49,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L63",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_trough",
       "community": 34,
-      "norm_label": "trough()",
-      "id": "gdp_scripts_phase_b_grand_table_trough"
+      "norm_label": "trough()"
     },
     {
       "label": "g_soft()",
@@ -499,9 +59,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L66",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_g_soft",
       "community": 34,
-      "norm_label": "g_soft()",
-      "id": "gdp_scripts_phase_b_grand_table_g_soft"
+      "norm_label": "g_soft()"
     },
     {
       "label": "sc()",
@@ -509,9 +69,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L81",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_sc",
       "community": 34,
-      "norm_label": "sc()",
-      "id": "gdp_scripts_phase_b_grand_table_sc"
+      "norm_label": "sc()"
     },
     {
       "label": "dm()",
@@ -519,9 +79,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L115",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_dm",
       "community": 34,
-      "norm_label": "dm()",
-      "id": "gdp_scripts_phase_b_grand_table_dm"
+      "norm_label": "dm()"
     },
     {
       "label": "\uc804 \uc2e4\ud5d8 \ud1b5\ud569 \ub9ac\ub354\ubcf4\ub4dc + soft gate v3(+TTM) \uac80\uc99d.  soft_v3 = \uc644\uc804 \uc5f0\uc18d \uac8c\uc774\ud2b8: \u0177 = DFM + g\u00b70.5\u00b7(TTM",
@@ -529,9 +89,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_grand_table_rationale_1",
       "community": 34,
-      "norm_label": "\u110c\u1165\u11ab \u1109\u1175\u11af\u1112\u1165\u11b7 \u1110\u1169\u11bc\u1112\u1161\u11b8 \u1105\u1175\u1103\u1165\u1107\u1169\u1103\u1173 + soft gate v3(+ttm) \u1100\u1165\u11b7\u110c\u1173\u11bc.  soft_v3 = \u110b\u116a\u11ab\u110c\u1165\u11ab \u110b\u1167\u11ab\u1109\u1169\u11a8 \u1100\u1166\u110b\u1175\u1110\u1173: y = dfm + g\u00b70.5\u00b7(ttm",
-      "id": "gdp_scripts_phase_b_grand_table_rationale_1"
+      "norm_label": "\u110c\u1165\u11ab \u1109\u1175\u11af\u1112\u1165\u11b7 \u1110\u1169\u11bc\u1112\u1161\u11b8 \u1105\u1175\u1103\u1165\u1107\u1169\u1103\u1173 + soft gate v3(+ttm) \u1100\u1165\u11b7\u110c\u1173\u11bc.  soft_v3 = \u110b\u116a\u11ab\u110c\u1165\u11ab \u110b\u1167\u11ab\u1109\u1169\u11a8 \u1100\u1166\u110b\u1175\u1110\u1173: y = dfm + g\u00b70.5\u00b7(ttm"
     },
     {
       "label": "README.md",
@@ -1242,6 +802,46 @@
       "community": 26,
       "norm_label": "tabpfn\u00b7ncde \u1100\u1167\u11af\u1100\u116a \u1110\u1169\u11bc\u1112\u1161\u11b8 \u110e\u1162\u110c\u1165\u11b7: \u1103\u1161\u11ab\u1103\u1169\u11a8 + dfm \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af + \u1107\u1161\u11ab\u1103\u1173\u11bc 6\u1107\u116e\u11ab\u1100\u1175, \u1100\u1175\u110c\u1169\u11ab \u1100\u1175\u110c\u116e\u11ab\u1109\u1165\u11ab\u1100\u116a \u1107\u1175\u1100\u116d.",
       "id": "gdp_scripts_phase_b_score_new_rationale_1"
+    },
+    {
+      "label": "phase_b_tabpfn.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 23,
+      "norm_label": "phase_b_tabpfn.py",
+      "id": "gdp_scripts_phase_b_tabpfn"
+    },
+    {
+      "label": "make_est()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 23,
+      "norm_label": "make_est()",
+      "id": "gdp_scripts_phase_b_tabpfn_make_est"
+    },
+    {
+      "label": "cm()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 23,
+      "norm_label": "cm()",
+      "id": "gdp_scripts_phase_b_tabpfn_cm"
+    },
+    {
+      "label": "Phase B: TabPFN(v2, Prior-Fitted Network)\uc744 \uadf8\ub4e4 backtest\uc5d0 \uacf5\uc815 \uc8fc\uc785. XGBoost\uc640 \ub3d9\uc77c (X,y)",
+      "file_type": "rationale",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 23,
+      "norm_label": "phase b: tabpfn(v2, prior-fitted network)\u110b\u1173\u11af \u1100\u1173\u1103\u1173\u11af backtest\u110b\u1166 \u1100\u1169\u11bc\u110c\u1165\u11bc \u110c\u116e\u110b\u1175\u11b8. xgboost\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af (x,y)",
+      "id": "gdp_scripts_phase_b_tabpfn_rationale_1"
     },
     {
       "label": "phase_b_soft_gate.py",
@@ -3249,7 +2849,7 @@
       "source_file": "core/inference_util.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "inference_util.py",
       "id": "core_inference_util"
     },
@@ -3259,7 +2859,7 @@
       "source_file": "core/inference_util.py",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "ar1_forecast()",
       "id": "core_inference_util_ar1_forecast"
     },
@@ -3269,7 +2869,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "series",
       "id": "core_inference_util_py_series"
     },
@@ -3279,7 +2879,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "periodindex",
       "id": "core_inference_util_py_periodindex"
     },
@@ -3289,7 +2889,7 @@
       "source_file": "core/inference_util.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "utility: ar(1) baseline forecast. bistro-xai\u110b\u1174 inference_util.py\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af.",
       "id": "core_inference_util_rationale_1"
     },
@@ -3299,7 +2899,7 @@
       "source_file": "core/inference_util.py",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "simple ar(1) forecast: y_t = c + phi * y_{t-1}      parameters     ----------",
       "id": "core_inference_util_rationale_15"
     },
@@ -4019,7 +3619,7 @@
       "source_file": "core/lstm_trainer.py",
       "source_location": "L348",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "run_optuna_tuning()",
       "id": "core_lstm_trainer_run_optuna_tuning"
     },
@@ -4099,7 +3699,7 @@
       "source_file": "core/lstm_trainer.py",
       "source_location": "L354",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "optuna \u1112\u1161\u110b\u1175\u1111\u1165\u1111\u1161\u1105\u1161\u1106\u1175\u1110\u1165 \u1110\u1172\u1102\u1175\u11bc.      returns     -------     dict with best_params, best_valu",
       "id": "core_lstm_trainer_rationale_354"
     },
@@ -4119,7 +3719,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "load_macro_panel()",
       "id": "core_preprocessing_util_load_macro_panel"
     },
@@ -4259,7 +3859,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "macro_panel.csv \u1105\u1169\u1103\u1175\u11bc.      parameters     ----------     csv_path : csv \u1111\u1161\u110b\u1175\u11af \u1100\u1167\u11bc\u1105\u1169",
       "id": "core_preprocessing_util_rationale_20"
     },
@@ -7369,7 +6969,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "ablation_study.py",
       "id": "training_ablation_study"
     },
@@ -7379,7 +6979,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "train_and_evaluate_subset()",
       "id": "training_ablation_study_train_and_evaluate_subset"
     },
@@ -7389,7 +6989,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "device",
       "id": "training_ablation_study_py_device"
     },
@@ -7399,7 +6999,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L105",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "run_ablation()",
       "id": "training_ablation_study_run_ablation"
     },
@@ -7409,7 +7009,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L171",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "run_incremental()",
       "id": "training_ablation_study_run_incremental"
     },
@@ -7419,7 +7019,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "ndarray",
       "id": "training_ablation_study_py_ndarray"
     },
@@ -7429,7 +7029,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L232",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "main()",
       "id": "training_ablation_study_main"
     },
@@ -7439,7 +7039,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "ablation study for bistro-lstm =============================== bistro-xai\u110b\u1174 ablat",
       "id": "training_ablation_study_rationale_1"
     },
@@ -7449,7 +7049,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "\u110c\u116e\u110b\u1165\u110c\u1175\u11ab \u1107\u1167\u11ab\u1109\u116e \u1109\u1165\u1107\u1173\u1109\u1166\u11ba\u110b\u1173\u1105\u1169 \u1112\u1161\u11a8\u1109\u1173\u11b8 \u1112\u116e 2023 oos rmse/mae \u1107\u1161\u11ab\u1112\u116a\u11ab.",
       "id": "training_ablation_study_rationale_47"
     },
@@ -7459,7 +7059,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L111",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "leave-one-out ablation study.      parameters     ----------     base_vars : sta",
       "id": "training_ablation_study_rationale_111"
     },
@@ -7469,7 +7069,7 @@
       "source_file": "training/ablation_study.py",
       "source_location": "L178",
       "_origin": "ast",
-      "community": 2,
+      "community": 106,
       "norm_label": "incremental addition: \u110c\u116e\u11bc\u110b\u116d\u1103\u1169 \u1109\u116e\u11ab\u110b\u1173\u1105\u1169 \u1107\u1167\u11ab\u1109\u116e\u1105\u1173\u11af \u1112\u1161\u1102\u1161\u110a\u1175\u11a8 \u110e\u116e\u1100\u1161.      returns     -------     dict with",
       "id": "training_ablation_study_rationale_178"
     },
@@ -7609,7 +7209,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "train_and_evaluate.py",
       "id": "training_train_and_evaluate"
     },
@@ -7619,7 +7219,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "run_training()",
       "id": "training_train_and_evaluate_run_training"
     },
@@ -7629,7 +7229,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "device",
       "id": "training_train_and_evaluate_py_device"
     },
@@ -7639,7 +7239,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L242",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "save_results()",
       "id": "training_train_and_evaluate_save_results"
     },
@@ -7649,7 +7249,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L282",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "main()",
       "id": "training_train_and_evaluate_main"
     },
@@ -7659,7 +7259,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "bistro-lstm: main entry point ============================== \u1112\u1161\u11a8\u1109\u1173\u11b8 \u2192 \u1111\u1167\u11bc\u1100\u1161 \u2192 \u1100\u1167\u11af\u1100\u116a \u110c\u1165\u110c\u1161\u11bc \u1111\u1161\u110b\u1175\u1111\u1173",
       "id": "training_train_and_evaluate_rationale_1"
     },
@@ -7669,7 +7269,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 41,
+      "community": 2,
       "norm_label": "\u110c\u1165\u11ab\u110e\u1166 \u1112\u1161\u11a8\u1109\u1173\u11b8 + \u1111\u1167\u11bc\u1100\u1161 \u1111\u1161\u110b\u1175\u1111\u1173\u1105\u1161\u110b\u1175\u11ab.      parameters     ----------     selected_vars : \u1109\u1161\u110b\u116d\u11bc\u1112\u1161\u11af \u1107\u1167\u11ab\u1109\u116e \u1105\u1175\u1109\u1173\u1110\u1173",
       "id": "training_train_and_evaluate_rationale_42"
     },
@@ -15709,482 +15309,12 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "gdp_scripts_phase_b_combo_c2f",
-      "target": "gdp_scripts_phase_b_combo_c2f_dm",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "gdp_scripts_phase_b_combo_c2f",
-      "target": "gdp_scripts_phase_b_combo_c2f_norm",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "gdp_scripts_phase_b_combo_c2f",
-      "target": "gdp_scripts_phase_b_combo_c2f_sc",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_combo_c2f.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "gdp_scripts_phase_b_combo_c2f_rationale_1",
-      "target": "gdp_scripts_phase_b_combo_c2f",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals",
-      "target": "gdp_scripts_fast_signals_daily_market"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals",
-      "target": "gdp_scripts_fast_signals_load_raw_vintage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals",
-      "target": "gdp_scripts_fast_signals_monthly_covariates"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals",
-      "target": "gdp_scripts_fast_signals_nsi_daily"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals_rationale_1",
-      "target": "gdp_scripts_fast_signals"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_chronos2.py",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_chronos2",
-      "target": "gdp_scripts_fast_signals"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_fast_signals"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals_monthly_covariates",
-      "target": "gdp_scripts_fast_signals_daily_market"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals_rationale_13",
-      "target": "gdp_scripts_fast_signals_daily_market"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals_monthly_covariates",
-      "target": "gdp_scripts_fast_signals_load_raw_vintage"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals_rationale_37",
-      "target": "gdp_scripts_fast_signals_monthly_covariates"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/fast_signals.py",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_fast_signals_rationale_65",
-      "target": "gdp_scripts_fast_signals_nsi_daily"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_fanchart",
-      "target": "gdp_scripts_phase_b_fanchart_conformal"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_fanchart",
-      "target": "gdp_scripts_phase_b_fanchart_norm"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_fanchart",
-      "target": "gdp_scripts_phase_b_fanchart_rep"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_fanchart",
-      "target": "gdp_scripts_phase_b_fanchart_winkler"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_fanchart_rationale_1",
-      "target": "gdp_scripts_phase_b_fanchart"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_fanchart.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_fanchart_rep",
-      "target": "gdp_scripts_phase_b_fanchart_winkler"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_chronos2.py",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_chronos2",
-      "target": "gdp_scripts_phase_b_chronos2_load_panel"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_chronos2.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_chronos2_rationale_1",
-      "target": "gdp_scripts_phase_b_chronos2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_phase_b_prob_axis_conformal_intervals"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_phase_b_prob_axis_norm"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L99",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_phase_b_prob_axis_pinball"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L116",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_phase_b_prob_axis_report"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_phase_b_prob_axis_vol_z"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L95",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis",
-      "target": "gdp_scripts_phase_b_prob_axis_winkler"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis_rationale_1",
-      "target": "gdp_scripts_phase_b_prob_axis"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L55",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis_rationale_55",
-      "target": "gdp_scripts_phase_b_prob_axis_conformal_intervals"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L123",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis_report",
-      "target": "gdp_scripts_phase_b_prob_axis_winkler"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_prob_axis.py",
-      "source_location": "L124",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_prob_axis_report",
-      "target": "gdp_scripts_phase_b_prob_axis_pinball"
-    },
-    {
-      "relation": "indirect_call",
-      "confidence": "INFERRED",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "context": "assignment",
-      "confidence_score": 0.5,
-      "source": "gdp_scripts_phase_b_tabpfn",
-      "target": "gdp_scripts_phase_b_tabpfn_cm"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_tabpfn",
-      "target": "gdp_scripts_phase_b_tabpfn_make_est"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_tabpfn_rationale_1",
-      "target": "gdp_scripts_phase_b_tabpfn"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_tabpfn.py",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_tabpfn_cm",
-      "target": "gdp_scripts_phase_b_tabpfn_make_est"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L99",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols",
-      "target": "gdp_scripts_phase_b_unused_cols_dm"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols",
-      "target": "gdp_scripts_phase_b_unused_cols_feats"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols",
-      "target": "gdp_scripts_phase_b_unused_cols_load_raw"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols",
-      "target": "gdp_scripts_phase_b_unused_cols_norm"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols",
-      "target": "gdp_scripts_phase_b_unused_cols_ridge_fit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L94",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols",
-      "target": "gdp_scripts_phase_b_unused_cols_sc"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols_rationale_1",
-      "target": "gdp_scripts_phase_b_unused_cols"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_unused_cols.py",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_unused_cols_feats",
-      "target": "gdp_scripts_phase_b_unused_cols_load_raw"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L115",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_dm"
+      "target": "gdp_scripts_phase_b_grand_table_dm",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16192,9 +15322,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L66",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_g_soft"
+      "target": "gdp_scripts_phase_b_grand_table_g_soft",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16202,9 +15332,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L13",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_norm"
+      "target": "gdp_scripts_phase_b_grand_table_norm",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16212,9 +15342,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L57",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_p_soft"
+      "target": "gdp_scripts_phase_b_grand_table_p_soft",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16222,9 +15352,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L81",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_sc"
+      "target": "gdp_scripts_phase_b_grand_table_sc",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16232,9 +15362,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L63",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_trough"
+      "target": "gdp_scripts_phase_b_grand_table_trough",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16242,9 +15372,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L52",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table",
-      "target": "gdp_scripts_phase_b_grand_table_vol_before"
+      "target": "gdp_scripts_phase_b_grand_table_vol_before",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -16252,9 +15382,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table_rationale_1",
-      "target": "gdp_scripts_phase_b_grand_table"
+      "target": "gdp_scripts_phase_b_grand_table",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -16263,9 +15393,9 @@
       "source_file": "gdp/scripts/phase_b_grand_table.py",
       "source_location": "L68",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_grand_table_g_soft",
-      "target": "gdp_scripts_phase_b_grand_table_trough"
+      "target": "gdp_scripts_phase_b_grand_table_trough",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17062,6 +16192,48 @@
       "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_score_new_rationale_1",
       "target": "gdp_scripts_phase_b_score_new"
+    },
+    {
+      "relation": "indirect_call",
+      "confidence": "INFERRED",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "assignment",
+      "confidence_score": 0.5,
+      "source": "gdp_scripts_phase_b_tabpfn",
+      "target": "gdp_scripts_phase_b_tabpfn_cm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gdp_scripts_phase_b_tabpfn",
+      "target": "gdp_scripts_phase_b_tabpfn_make_est"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gdp_scripts_phase_b_tabpfn_rationale_1",
+      "target": "gdp_scripts_phase_b_tabpfn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/phase_b_tabpfn.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gdp_scripts_phase_b_tabpfn_cm",
+      "target": "gdp_scripts_phase_b_tabpfn_make_est"
     },
     {
       "relation": "contains",
@@ -37632,5 +36804,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1e6607663015abf173ad94dac38c6d007a340336"
+  "built_at_commit": "dbe2433948c555f84d11a4b76ff394dcabf9701e"
 }

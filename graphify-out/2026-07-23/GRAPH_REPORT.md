@@ -1,23 +1,23 @@
-# Graph Report - bistro-lstm  (2026-07-29)
+# Graph Report - bistro-lstm  (2026-07-10)
 
 ## Corpus Check
-- 123 files · ~86,554 words
+- 115 files · ~81,655 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1568 nodes · 2127 edges · 129 communities (103 shown, 26 thin omitted)
+- 1528 nodes · 2085 edges · 125 communities (100 shown, 25 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 61 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1e660766`
+- Built from commit: `dbe24339`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Agent Experiment Framework
 - Economic Regime Eras
-- ablation_study.py
+- Dashboard & Results Loading
 - Claude Rolling Results
 - Baseline Forecasts 2025
 - Regime Detector Signals
@@ -50,14 +50,9 @@
 - phase_b_hopp.py
 - Stress Test Results
 - phase_b_grand_table.py
-- phase_b_unused_cols.py
 - Post-hoc Aggregation Results
 - Post-hoc Ensemble Results
 - 2025 Actuals
-- ImportanceAnalyzer
-- ar1_forecast
-- phase_b_fanchart.py
-- phase_b_chronos2.py
 - Consensus Aggregation
 - Claude Results Metadata
 - HCX-32B Ablation Results
@@ -96,6 +91,7 @@
 - comparison.py
 - regime_detector_backtest.py
 - generate
+- ablation_study.py
 - hcx_value_quantification.py
 - run_foundation_models.py
 - data_collector.py
@@ -164,7 +160,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (129 total, 26 thin omitted)
+## Communities (125 total, 25 thin omitted)
 
 ### Community 0 - "Agent Experiment Framework"
 Cohesion: 0.06
@@ -174,9 +170,9 @@ Nodes (69): analyze(), _extract_json(), _format_history_block(), _format_lessons
 Cohesion: 0.05
 Nodes (58): first_flag, flagged, period_len, rate, first_flag, flagged, period_len, rate (+50 more)
 
-### Community 2 - "ablation_study.py"
-Cohesion: 0.27
-Nodes (12): load_macro_panel(), macro_panel.csv 로딩.      Parameters     ----------     csv_path : CSV 파일 경로, main(), device, ndarray, Ablation Study for BISTRO-LSTM =============================== bistro-xai의 ablat, Leave-one-out ablation study.      Parameters     ----------     base_vars : Sta, Incremental addition: 중요도 순으로 변수를 하나씩 추가.      Returns     -------     dict with (+4 more)
+### Community 2 - "Dashboard & Results Loading"
+Cohesion: 0.18
+Nodes (13): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, Optuna 하이퍼파라미터 튜닝.      Returns     -------     dict with best_params, best_valu, run_optuna_tuning(), main() (+5 more)
 
 ### Community 3 - "Claude Rolling Results"
 Cohesion: 0.04
@@ -294,10 +290,6 @@ Nodes (11): actuals, 2023, 2024, forecasts, 2023, 2024, n_seeds, rationales (+3 
 Cohesion: 0.25
 Nodes (3): g_soft(), 전 실험 통합 리더보드 + soft gate v3(+TTM) 검증.  soft_v3 = 완전 연속 게이트: ŷ = DFM + g·0.5·(TTM, trough()
 
-### Community 35 - "phase_b_unused_cols.py"
-Cohesion: 0.29
-Nodes (3): feats(), load_raw(), 미사용 39컬럼 정보가치 검정: 기존최고(DFM+XGB) 잔차를 원시 빈티지 피처로 보정.  변형:   V0 기존최고 그대로 (0.765)
-
 ### Community 36 - "Post-hoc Aggregation Results"
 Cohesion: 0.22
 Nodes (9): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-11 (+1 more)
@@ -309,18 +301,6 @@ Nodes (9): ar1_rmse, ensemble_30_per_seed_rmses, ensemble_50_per_seed_rmses, ens
 ### Community 38 - "2025 Actuals"
 Cohesion: 0.22
 Nodes (9): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-11 (+1 more)
-
-### Community 41 - "ar1_forecast"
-Cohesion: 0.18
-Nodes (13): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, Optuna 하이퍼파라미터 튜닝.      Returns     -------     dict with best_params, best_valu, run_optuna_tuning(), main() (+5 more)
-
-### Community 43 - "phase_b_fanchart.py"
-Cohesion: 0.40
-Nodes (3): Fan Chart 상품화 엔진 — 예측 불변, 컨포멀 보정 + 전망시계 하이브리드.  구성:   - 중심선: 현직(DFM+XGB) 점예측 그대로, rep(), winkler()
-
-### Community 44 - "phase_b_chronos2.py"
-Cohesion: 0.11
-Nodes (15): daily_market(), load_raw_vintage(), monthly_covariates(), nsi_daily(), E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI, 일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용., month_index(월말 DatetimeIndex)에 정렬된 빠른신호 4종.     일별 데이터는 vintage 날짜까지만 사용(현재 미완성, 한은 뉴스심리지수(NSI, 일별) — ECOS API. 키 필요 (env ECOS_KEY).     통계표코드 후보 521Y001 (키 발급 후 (+7 more)
 
 ### Community 53 - "Consensus Aggregation"
 Cohesion: 0.50
@@ -438,6 +418,10 @@ Nodes (15): compute_trend12_errors(), coverage_in_periods(), cusum_two_sided(), 
 Cohesion: 0.21
 Nodes (9): generate(), load_all(), make_2023_chart(), make_2024_chart(), make_seed_chart(), FPDF, CPI Forecasting Benchmark - PDF Report v1 ======================================, LSTM vs Transformer seed 비교 차트. (+1 more)
 
+### Community 106 - "ablation_study.py"
+Cohesion: 0.27
+Nodes (12): load_macro_panel(), macro_panel.csv 로딩.      Parameters     ----------     csv_path : CSV 파일 경로, main(), device, ndarray, Ablation Study for BISTRO-LSTM =============================== bistro-xai의 ablat, Leave-one-out ablation study.      Parameters     ----------     base_vars : Sta, Incremental addition: 중요도 순으로 변수를 하나씩 추가.      Returns     -------     dict with (+4 more)
+
 ### Community 107 - "hcx_value_quantification.py"
 Cohesion: 0.31
 Nodes (12): annotate_baselines(), load_2022_h1_round0(), load_2023_2024_blinded(), load_2025_forced_cot(), main(), multi_signal(), DataFrame, ndarray (+4 more)
@@ -549,22 +533,22 @@ Nodes (3): one(), Phase B 종합 비교: 우리 모델(단독/앙상블) vs DFM 
 ## Knowledge Gaps
 - **574 isolated node(s):** `실행 전제`, `스크립트`, `핵심 결과 (flash w[-19,-1] 평균 RMSE)`, `🔥 현재 진행 — GDP Nowcasting 협업 (한국은행, 2026-06~)`, `1) 2023 + 2024 OOS (12-step, CPI YoY)` (+569 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AttentionLSTMForecaster` connect `AttentionLSTMForecaster` to `causal_narrative.py`, `ablation_study.py`, `LSTMConfig`, `ar1_forecast`, `TorchSeq`, `Community 84`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `LSTMConfig` connect `LSTMConfig` to `causal_narrative.py`, `ablation_study.py`, `comparison.py`, `ar1_forecast`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `AttentionLSTMForecaster` connect `AttentionLSTMForecaster` to `causal_narrative.py`, `Dashboard & Results Loading`, `LSTMConfig`, `ablation_study.py`, `TorchSeq`, `Community 84`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `baselines` connect `Baseline Forecasts 2025` to `HCX Rolling Results`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `AttentionLSTMForecaster` (e.g. with `EarlyStopping` and `TorchSeq`) actually correct?**
   _`AttentionLSTMForecaster` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 11 inferred relationships involving `Candidate` (e.g. with `Candidate` and `DataFrame`) actually correct?**
   _`Candidate` has 11 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `무게이트 상시 앙상블 — 기존최고(DFM+XGB) × Chronos-2f(빠른신호) 결합 검증.  배경: 7/22 무게이트 앙상블 검증((DFM`, `E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI`, `일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용.` to the rest of the system?**
-  _774 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `전 실험 통합 리더보드 + soft gate v3(+TTM) 검증.  soft_v3 = 완전 연속 게이트: ŷ = DFM + g·0.5·(TTM`, `실행 전제`, `스크립트` to the rest of the system?**
+  _764 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent Experiment Framework` be split into smaller, more focused modules?**
   _Cohesion score 0.059876543209876544 - nodes in this community are weakly interconnected._
+- **Should `Economic Regime Eras` be split into smaller, more focused modules?**
+  _Cohesion score 0.050816696914700546 - nodes in this community are weakly interconnected._

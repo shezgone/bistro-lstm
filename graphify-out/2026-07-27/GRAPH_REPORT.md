@@ -1,23 +1,22 @@
-# Graph Report - bistro-lstm  (2026-07-29)
+# Graph Report - bistro-lstm  (2026-07-27)
 
 ## Corpus Check
-- 123 files · ~86,554 words
+- 121 files · ~85,462 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1568 nodes · 2127 edges · 129 communities (103 shown, 26 thin omitted)
+- 1555 nodes · 2115 edges · 126 communities (101 shown, 25 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 61 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1e660766`
+- Built from commit: `90b22d72`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Agent Experiment Framework
 - Economic Regime Eras
-- ablation_study.py
 - Claude Rolling Results
 - Baseline Forecasts 2025
 - Regime Detector Signals
@@ -54,9 +53,7 @@
 - Post-hoc Aggregation Results
 - Post-hoc Ensemble Results
 - 2025 Actuals
-- ImportanceAnalyzer
-- ar1_forecast
-- phase_b_fanchart.py
+- phase_b_transformer.py
 - phase_b_chronos2.py
 - Consensus Aggregation
 - Claude Results Metadata
@@ -164,7 +161,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (129 total, 26 thin omitted)
+## Communities (126 total, 25 thin omitted)
 
 ### Community 0 - "Agent Experiment Framework"
 Cohesion: 0.06
@@ -173,10 +170,6 @@ Nodes (69): analyze(), _extract_json(), _format_history_block(), _format_lessons
 ### Community 1 - "Economic Regime Eras"
 Cohesion: 0.05
 Nodes (58): first_flag, flagged, period_len, rate, first_flag, flagged, period_len, rate (+50 more)
-
-### Community 2 - "ablation_study.py"
-Cohesion: 0.27
-Nodes (12): load_macro_panel(), macro_panel.csv 로딩.      Parameters     ----------     csv_path : CSV 파일 경로, main(), device, ndarray, Ablation Study for BISTRO-LSTM =============================== bistro-xai의 ablat, Leave-one-out ablation study.      Parameters     ----------     base_vars : Sta, Incremental addition: 중요도 순으로 변수를 하나씩 추가.      Returns     -------     dict with (+4 more)
 
 ### Community 3 - "Claude Rolling Results"
 Cohesion: 0.04
@@ -310,17 +303,13 @@ Nodes (9): ar1_rmse, ensemble_30_per_seed_rmses, ensemble_50_per_seed_rmses, ens
 Cohesion: 0.22
 Nodes (9): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-11 (+1 more)
 
-### Community 41 - "ar1_forecast"
-Cohesion: 0.18
-Nodes (13): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, Optuna 하이퍼파라미터 튜닝.      Returns     -------     dict with best_params, best_valu, run_optuna_tuning(), main() (+5 more)
-
-### Community 43 - "phase_b_fanchart.py"
-Cohesion: 0.40
-Nodes (3): Fan Chart 상품화 엔진 — 예측 불변, 컨포멀 보정 + 전망시계 하이브리드.  구성:   - 중심선: 현직(DFM+XGB) 점예측 그대로, rep(), winkler()
+### Community 42 - "phase_b_transformer.py"
+Cohesion: 0.17
+Nodes (11): panel_feat(), q_first_vintage(), Transformer(어텐션) 기반 충격 탐지기 실험. - 입력: DFM 보정 월별 패널 (최근 L개월 × 변수)  [q의 첫 빈티지 CSV], train_detect(), load_panel(), main(), make_window(), q_last_month() (+3 more)
 
 ### Community 44 - "phase_b_chronos2.py"
-Cohesion: 0.11
-Nodes (15): daily_market(), load_raw_vintage(), monthly_covariates(), nsi_daily(), E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI, 일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용., month_index(월말 DatetimeIndex)에 정렬된 빠른신호 4종.     일별 데이터는 vintage 날짜까지만 사용(현재 미완성, 한은 뉴스심리지수(NSI, 일별) — ECOS API. 키 필요 (env ECOS_KEY).     통계표코드 후보 521Y001 (키 발급 후 (+7 more)
+Cohesion: 0.13
+Nodes (13): daily_market(), load_raw_vintage(), monthly_covariates(), E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI, 일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용., month_index(월말 DatetimeIndex)에 정렬된 빠른신호 4종.     일별 데이터는 vintage 날짜까지만 사용(현재 미완성, Chronos-2 (Amazon, 2025.10) 공변량 zero-shot 나우캐스트 — 신형 TSFM 재도전.  우리가 기각한 것은 구세대 C, conformal_intervals() (+5 more)
 
 ### Community 53 - "Consensus Aggregation"
 Cohesion: 0.50
@@ -379,8 +368,8 @@ Cohesion: 0.50
 Nodes (3): hooks, PostToolUse, PreToolUse
 
 ### Community 84 - "Community 84"
-Cohesion: 0.06
-Nodes (29): Tensor, BISTRO-LSTM Model — Attention-Augmented Stacked LSTM ===========================, 최근 forward의 attention weights 반환. (B, N, N), Temporal Attention Decoder.     Learnable forecast queries가 LSTM hidden states에, Per-variable linear projection.     각 변수를 독립적인 learned embedding으로 변환.      Inpu, 최근 forward의 temporal attention weights. (B, pred_len, seq_len), Forward pass.          Parameters         ----------         x : (batch, seq_len, 예측 + 불확실성 추정.          Returns         -------         dict with keys: (+21 more)
+Cohesion: 0.09
+Nodes (18): Tensor, BISTRO-LSTM Model — Attention-Augmented Stacked LSTM ===========================, 최근 forward의 attention weights 반환. (B, N, N), Temporal Attention Decoder.     Learnable forecast queries가 LSTM hidden states에, Per-variable linear projection.     각 변수를 독립적인 learned embedding으로 변환.      Inpu, 최근 forward의 temporal attention weights. (B, pred_len, seq_len), Forward pass.          Parameters         ----------         x : (batch, seq_len, 예측 + 불확실성 추정.          Returns         -------         dict with keys: (+10 more)
 
 ### Community 85 - "Community 85"
 Cohesion: 0.39
@@ -407,19 +396,19 @@ Cohesion: 0.67
 Nodes (3): one(), Phase B 종합 비교: 우리 모델(단독/앙상블) vs DFM 0.865 / DFM+XGBoost 0.765. 동일 잣대·국면별., score_sub()
 
 ### Community 94 - "train_and_evaluate.py"
-Cohesion: 0.11
-Nodes (23): EarlyStopping, evaluate(), optuna_objective(), device, ndarray, LSTM Trainer — Walk-Forward CV + Optuna Tuning =================================, 단일 fold 학습.      Returns     -------     dict with best_model_state, train_histo, Walk-forward cross-validation.      Parameters     ----------     splits : prepa (+15 more)
+Cohesion: 0.09
+Nodes (31): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, EarlyStopping, evaluate(), optuna_objective() (+23 more)
 
 ### Community 95 - "ZScoreNormalizer"
-Cohesion: 0.20
-Nodes (12): create_sequences(), prepare_walk_forward_splits(), DataFrame, ndarray, Preprocessing Utility for BISTRO-LSTM ===================================== 월별 매, 슬라이딩 윈도우로 학습용 시퀀스 생성.      Parameters     ----------     data : (T, n_vars) 정규화된, Walk-forward CV용 데이터 분할.      Parameters     ----------     df : 전체 학습 데이터 (Peri, Per-variable z-score 정규화.     학습 세트 기준으로 mean/std 계산, 테스트 세트에 동일 적용. (+4 more)
+Cohesion: 0.11
+Nodes (29): set_seed(), create_sequences(), load_macro_panel(), prepare_walk_forward_splits(), DataFrame, ndarray, Preprocessing Utility for BISTRO-LSTM ===================================== 월별 매, 슬라이딩 윈도우로 학습용 시퀀스 생성.      Parameters     ----------     data : (T, n_vars) 정규화된 (+21 more)
 
 ### Community 96 - "AttentionLSTMForecaster"
 Cohesion: 0.23
 Nodes (14): compute_all_importance(), compute_gradient_importance(), compute_permutation_importance(), extract_attention_importance(), device, ndarray, Tensor, Feature Importance Methods for LSTM ==================================== 1. Vari (+6 more)
 
 ### Community 97 - "causal_narrative.py"
-Cohesion: 0.15
+Cohesion: 0.14
 Nodes (20): counterfactual_analysis(), generate_narrative(), get_active_channels(), get_variable_channel(), jacobian_lag_analysis(), main(), pathway_decomposition(), DataFrame (+12 more)
 
 ### Community 99 - "LSTMConfig"
@@ -549,22 +538,22 @@ Nodes (3): one(), Phase B 종합 비교: 우리 모델(단독/앙상블) vs DFM 
 ## Knowledge Gaps
 - **574 isolated node(s):** `실행 전제`, `스크립트`, `핵심 결과 (flash w[-19,-1] 평균 RMSE)`, `🔥 현재 진행 — GDP Nowcasting 협업 (한국은행, 2026-06~)`, `1) 2023 + 2024 OOS (12-step, CPI YoY)` (+569 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AttentionLSTMForecaster` connect `AttentionLSTMForecaster` to `causal_narrative.py`, `ablation_study.py`, `LSTMConfig`, `ar1_forecast`, `TorchSeq`, `Community 84`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `LSTMConfig` connect `LSTMConfig` to `causal_narrative.py`, `ablation_study.py`, `comparison.py`, `ar1_forecast`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
+- **Why does `AttentionLSTMForecaster` connect `AttentionLSTMForecaster` to `causal_narrative.py`, `LSTMConfig`, `phase_b_transformer.py`, `TorchSeq`, `Community 84`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `baselines` connect `Baseline Forecasts 2025` to `HCX Rolling Results`?**
+- **Why does `ZScoreNormalizer` connect `ZScoreNormalizer` to `AttentionLSTMForecaster`, `causal_narrative.py`, `LSTMConfig`, `train_and_evaluate.py`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `LSTMConfig` connect `LSTMConfig` to `causal_narrative.py`, `comparison.py`, `train_and_evaluate.py`, `ZScoreNormalizer`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `AttentionLSTMForecaster` (e.g. with `EarlyStopping` and `TorchSeq`) actually correct?**
   _`AttentionLSTMForecaster` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 11 inferred relationships involving `Candidate` (e.g. with `Candidate` and `DataFrame`) actually correct?**
   _`Candidate` has 11 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `무게이트 상시 앙상블 — 기존최고(DFM+XGB) × Chronos-2f(빠른신호) 결합 검증.  배경: 7/22 무게이트 앙상블 검증((DFM`, `E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI`, `일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용.` to the rest of the system?**
-  _774 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI`, `일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용.`, `month_index(월말 DatetimeIndex)에 정렬된 빠른신호 4종.     일별 데이터는 vintage 날짜까지만 사용(현재 미완성` to the rest of the system?**
+  _771 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent Experiment Framework` be split into smaller, more focused modules?**
   _Cohesion score 0.059876543209876544 - nodes in this community are weakly interconnected._
