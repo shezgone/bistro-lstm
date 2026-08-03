@@ -4,14 +4,264 @@
   "graph": {},
   "nodes": [
     {
+      "label": "bok_charts.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/bok_charts.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gdp_scripts_bok_charts",
+      "community": 47,
+      "norm_label": "bok_charts.py"
+    },
+    {
+      "label": "style()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/bok_charts.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "gdp_scripts_bok_charts_style",
+      "community": 47,
+      "norm_label": "style()"
+    },
+    {
+      "label": "make_bok_agenda_deck.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck",
+      "community": 40,
+      "norm_label": "make_bok_agenda_deck.py"
+    },
+    {
+      "label": "new_slide()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_new_slide",
+      "community": 40,
+      "norm_label": "new_slide()"
+    },
+    {
+      "label": "runs()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_runs",
+      "community": 40,
+      "norm_label": "runs()"
+    },
+    {
+      "label": "hline()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_hline",
+      "community": 40,
+      "norm_label": "hline()"
+    },
+    {
+      "label": "rect()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_rect",
+      "community": 40,
+      "norm_label": "rect()"
+    },
+    {
+      "label": "header()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_header",
+      "community": 40,
+      "norm_label": "header()"
+    },
+    {
+      "label": "footer()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_footer",
+      "community": 40,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "notes()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_bok_agenda_deck_notes",
+      "community": 40,
+      "norm_label": "notes()"
+    },
+    {
+      "label": "make_fanchart_proposal.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_fanchart_proposal",
+      "community": 46,
+      "norm_label": "make_fanchart_proposal.py"
+    },
+    {
+      "label": "runs()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_fanchart_proposal_runs",
+      "community": 46,
+      "norm_label": "runs()"
+    },
+    {
+      "label": "tb()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_fanchart_proposal_tb",
+      "community": 46,
+      "norm_label": "tb()"
+    },
+    {
+      "label": "hline()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_fanchart_proposal_hline",
+      "community": 46,
+      "norm_label": "hline()"
+    },
+    {
+      "label": "rect()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_fanchart_proposal_rect",
+      "community": 46,
+      "norm_label": "rect()"
+    },
+    {
+      "label": "col_header()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_fanchart_proposal_col_header",
+      "community": 46,
+      "norm_label": "col_header()"
+    },
+    {
+      "label": "make_story_deck.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck",
+      "community": 45,
+      "norm_label": "make_story_deck.py"
+    },
+    {
+      "label": "new_slide()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck_new_slide",
+      "community": 45,
+      "norm_label": "new_slide()"
+    },
+    {
+      "label": "runs()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck_runs",
+      "community": 45,
+      "norm_label": "runs()"
+    },
+    {
+      "label": "hline()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck_hline",
+      "community": 45,
+      "norm_label": "hline()"
+    },
+    {
+      "label": "rect()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck_rect",
+      "community": 45,
+      "norm_label": "rect()"
+    },
+    {
+      "label": "header()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck_header",
+      "community": 45,
+      "norm_label": "header()"
+    },
+    {
+      "label": "footer()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "gdp_scripts_make_story_deck_footer",
+      "community": 45,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "story_charts.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/story_charts.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gdp_scripts_story_charts",
+      "community": 48,
+      "norm_label": "story_charts.py"
+    },
+    {
+      "label": "style()",
+      "file_type": "code",
+      "source_file": "gdp/scripts/story_charts.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "gdp_scripts_story_charts_style",
+      "community": 48,
+      "norm_label": "style()"
+    },
+    {
       "label": "phase_b_combo_c2f.py",
       "file_type": "code",
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f",
       "community": 39,
-      "norm_label": "phase_b_combo_c2f.py"
+      "norm_label": "phase_b_combo_c2f.py",
+      "id": "gdp_scripts_phase_b_combo_c2f"
     },
     {
       "label": "norm()",
@@ -19,9 +269,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_norm",
       "community": 39,
-      "norm_label": "norm()"
+      "norm_label": "norm()",
+      "id": "gdp_scripts_phase_b_combo_c2f_norm"
     },
     {
       "label": "sc()",
@@ -29,9 +279,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_sc",
       "community": 39,
-      "norm_label": "sc()"
+      "norm_label": "sc()",
+      "id": "gdp_scripts_phase_b_combo_c2f_sc"
     },
     {
       "label": "dm()",
@@ -39,9 +289,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_dm",
       "community": 39,
-      "norm_label": "dm()"
+      "norm_label": "dm()",
+      "id": "gdp_scripts_phase_b_combo_c2f_dm"
     },
     {
       "label": "\ubb34\uac8c\uc774\ud2b8 \uc0c1\uc2dc \uc559\uc0c1\ube14 \u2014 \uae30\uc874\ucd5c\uace0(DFM+XGB) \u00d7 Chronos-2f(\ube60\ub978\uc2e0\ud638) \uacb0\ud569 \uac80\uc99d.  \ubc30\uacbd: 7/22 \ubb34\uac8c\uc774\ud2b8 \uc559\uc0c1\ube14 \uac80\uc99d((DFM",
@@ -49,9 +299,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gdp_scripts_phase_b_combo_c2f_rationale_1",
       "community": 39,
-      "norm_label": "\u1106\u116e\u1100\u1166\u110b\u1175\u1110\u1173 \u1109\u1161\u11bc\u1109\u1175 \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af \u2014 \u1100\u1175\u110c\u1169\u11ab\u110e\u116c\u1100\u1169(dfm+xgb) \u00d7 chronos-2f(\u1108\u1161\u1105\u1173\u11ab\u1109\u1175\u11ab\u1112\u1169) \u1100\u1167\u11af\u1112\u1161\u11b8 \u1100\u1165\u11b7\u110c\u1173\u11bc.  \u1107\u1162\u1100\u1167\u11bc: 7/22 \u1106\u116e\u1100\u1166\u110b\u1175\u1110\u1173 \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af \u1100\u1165\u11b7\u110c\u1173\u11bc((dfm"
+      "norm_label": "\u1106\u116e\u1100\u1166\u110b\u1175\u1110\u1173 \u1109\u1161\u11bc\u1109\u1175 \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af \u2014 \u1100\u1175\u110c\u1169\u11ab\u110e\u116c\u1100\u1169(dfm+xgb) \u00d7 chronos-2f(\u1108\u1161\u1105\u1173\u11ab\u1109\u1175\u11ab\u1112\u1169) \u1100\u1167\u11af\u1112\u1161\u11b8 \u1100\u1165\u11b7\u110c\u1173\u11bc.  \u1107\u1162\u1100\u1167\u11bc: 7/22 \u1106\u116e\u1100\u1166\u110b\u1175\u1110\u1173 \u110b\u1161\u11bc\u1109\u1161\u11bc\u1107\u1173\u11af \u1100\u1165\u11b7\u110c\u1173\u11bc((dfm",
+      "id": "gdp_scripts_phase_b_combo_c2f_rationale_1"
     },
     {
       "label": "fast_signals.py",
@@ -3489,7 +3739,7 @@
       "source_file": "core/lstm_core.py",
       "source_location": "L281",
       "_origin": "ast",
-      "community": 100,
+      "community": 2,
       "norm_label": "load_stage1_screening()",
       "id": "core_lstm_core_load_stage1_screening"
     },
@@ -3579,7 +3829,7 @@
       "source_file": "core/lstm_core.py",
       "source_location": "L282",
       "_origin": "ast",
-      "community": 100,
+      "community": 2,
       "norm_label": "stage 1 \u110c\u1165\u11ab\u110e\u1166 \u1107\u1167\u11ab\u1109\u116e \u1109\u1173\u110f\u1173\u1105\u1175\u1102\u1175\u11bc \u1100\u1167\u11af\u1100\u116a \u1105\u1169\u1103\u1175\u11bc.",
       "id": "core_lstm_core_rationale_282"
     },
@@ -3589,7 +3839,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 94,
       "norm_label": "lstm_model.py",
       "id": "core_lstm_model"
     },
@@ -3769,7 +4019,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L370",
       "_origin": "ast",
-      "community": 94,
+      "community": 97,
       "norm_label": ".from_config()",
       "id": "core_lstm_model_attentionlstmforecaster_from_config"
     },
@@ -3779,7 +4029,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 94,
       "norm_label": "bistro-lstm model \u2014 attention-augmented stacked lstm ===========================",
       "id": "core_lstm_model_rationale_1"
     },
@@ -4109,7 +4359,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 95,
+      "community": 2,
       "norm_label": "preprocessing_util.py",
       "id": "core_preprocessing_util"
     },
@@ -4139,7 +4389,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 95,
+      "community": 2,
       "norm_label": "split_train_test()",
       "id": "core_preprocessing_util_split_train_test"
     },
@@ -4229,7 +4479,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L104",
       "_origin": "ast",
-      "community": 95,
+      "community": 99,
       "norm_label": "create_sequences()",
       "id": "core_preprocessing_util_create_sequences"
     },
@@ -4249,7 +4499,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 95,
+      "community": 2,
       "norm_label": "preprocessing utility for bistro-lstm ===================================== \u110b\u116f\u11af\u1107\u1167\u11af \u1106\u1162",
       "id": "core_preprocessing_util_rationale_1"
     },
@@ -4279,7 +4529,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L110",
       "_origin": "ast",
-      "community": 95,
+      "community": 99,
       "norm_label": "\u1109\u1173\u11af\u1105\u1161\u110b\u1175\u1103\u1175\u11bc \u110b\u1171\u11ab\u1103\u1169\u110b\u116e\u1105\u1169 \u1112\u1161\u11a8\u1109\u1173\u11b8\u110b\u116d\u11bc \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1162\u11bc\u1109\u1165\u11bc.      parameters     ----------     data : (t, n_vars) \u110c\u1165\u11bc\u1100\u1172\u1112\u116a\u1103\u116c\u11ab",
       "id": "core_preprocessing_util_rationale_110"
     },
@@ -5309,7 +5559,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "phase_b_tf_detector.py",
       "id": "gdp_scripts_phase_b_tf_detector"
     },
@@ -5319,7 +5569,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "norm()",
       "id": "gdp_scripts_phase_b_tf_detector_norm"
     },
@@ -5329,7 +5579,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "q_first_vintage()",
       "id": "gdp_scripts_phase_b_tf_detector_q_first_vintage"
     },
@@ -5339,7 +5589,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "panel_feat()",
       "id": "gdp_scripts_phase_b_tf_detector_panel_feat"
     },
@@ -5349,7 +5599,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "train_detect()",
       "id": "gdp_scripts_phase_b_tf_detector_train_detect"
     },
@@ -5359,7 +5609,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L84",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "rmse()",
       "id": "gdp_scripts_phase_b_tf_detector_rmse"
     },
@@ -5369,7 +5619,7 @@
       "source_file": "gdp/scripts/phase_b_tf_detector.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 96,
       "norm_label": "transformer(\u110b\u1165\u1110\u1166\u11ab\u1109\u1167\u11ab) \u1100\u1175\u1107\u1161\u11ab \u110e\u116e\u11bc\u1100\u1167\u11a8 \u1110\u1161\u11b7\u110c\u1175\u1100\u1175 \u1109\u1175\u11af\u1112\u1165\u11b7. - \u110b\u1175\u11b8\u1105\u1167\u11a8: dfm \u1107\u1169\u110c\u1165\u11bc \u110b\u116f\u11af\u1107\u1167\u11af \u1111\u1162\u1102\u1165\u11af (\u110e\u116c\u1100\u1173\u11ab l\u1100\u1162\u110b\u116f\u11af \u00d7 \u1107\u1167\u11ab\u1109\u116e)  [q\u110b\u1174 \u110e\u1165\u11ba \u1107\u1175\u11ab\u1110\u1175\u110c\u1175 csv]",
       "id": "gdp_scripts_phase_b_tf_detector_rationale_1"
     },
@@ -5379,7 +5629,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "phase_b_transformer.py",
       "id": "gdp_scripts_phase_b_transformer"
     },
@@ -5389,7 +5639,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "q_last_month()",
       "id": "gdp_scripts_phase_b_transformer_q_last_month"
     },
@@ -5399,7 +5649,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "load_panel()",
       "id": "gdp_scripts_phase_b_transformer_load_panel"
     },
@@ -5409,7 +5659,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "make_window()",
       "id": "gdp_scripts_phase_b_transformer_make_window"
     },
@@ -5419,7 +5669,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "train_predict()",
       "id": "gdp_scripts_phase_b_transformer_train_predict"
     },
@@ -5429,7 +5679,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "main()",
       "id": "gdp_scripts_phase_b_transformer_main"
     },
@@ -5439,7 +5689,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "phase b \u2014 \u110b\u116e\u1105\u1175 attentionlstmforecaster\u1105\u1173\u11af dfm \u1107\u1169\u110c\u1165\u11bc \u110b\u116f\u11af\u1107\u1167\u11af \u1111\u1162\u1102\u1165\u11af\u110b\u1166 \u110b\u1175\u1109\u1175\u11a8. \u1100\u1161\u11a8 (target quarter q, vin",
       "id": "gdp_scripts_phase_b_transformer_rationale_1"
     },
@@ -5449,7 +5699,7 @@
       "source_file": "gdp/scripts/phase_b_transformer.py",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 84,
+      "community": 42,
       "norm_label": "end_month\u110b\u1166\u1109\u1165 \u1101\u1173\u11c0\u1102\u1161\u1102\u1173\u11ab l\u1100\u1162\u110b\u116f\u11af \u110b\u1171\u11ab\u1103\u1169\u110b\u116e (features only).",
       "id": "gdp_scripts_phase_b_transformer_rationale_39"
     },
@@ -7139,7 +7389,7 @@
       "source_file": "rolling2025/rolling_2025_torch_csi.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 95,
+      "community": 94,
       "norm_label": "rolling_2025_torch_csi.py",
       "id": "rolling2025_rolling_2025_torch_csi"
     },
@@ -7159,7 +7409,7 @@
       "source_file": "rolling2025/rolling_2025_torch_csi.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 95,
+      "community": 94,
       "norm_label": "lstm/transformer rolling 2025 with vs without bok csi sentiment column.  4 model",
       "id": "rolling2025_rolling_2025_torch_csi_rationale_1"
     },
@@ -15709,12 +15959,333 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/bok_charts.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "gdp_scripts_bok_charts",
+      "target": "gdp_scripts_bok_charts_style",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_hline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_new_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_rect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck",
+      "target": "gdp_scripts_make_bok_agenda_deck_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck_footer",
+      "target": "gdp_scripts_make_bok_agenda_deck_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck_header",
+      "target": "gdp_scripts_make_bok_agenda_deck_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck_header",
+      "target": "gdp_scripts_make_bok_agenda_deck_hline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_bok_agenda_deck.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_bok_agenda_deck_footer",
+      "target": "gdp_scripts_make_bok_agenda_deck_rect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal",
+      "target": "gdp_scripts_make_fanchart_proposal_col_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal",
+      "target": "gdp_scripts_make_fanchart_proposal_hline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal",
+      "target": "gdp_scripts_make_fanchart_proposal_rect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal",
+      "target": "gdp_scripts_make_fanchart_proposal_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal",
+      "target": "gdp_scripts_make_fanchart_proposal_tb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal_col_header",
+      "target": "gdp_scripts_make_fanchart_proposal_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal_col_header",
+      "target": "gdp_scripts_make_fanchart_proposal_tb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_fanchart_proposal.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_fanchart_proposal_col_header",
+      "target": "gdp_scripts_make_fanchart_proposal_hline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck",
+      "target": "gdp_scripts_make_story_deck_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck",
+      "target": "gdp_scripts_make_story_deck_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck",
+      "target": "gdp_scripts_make_story_deck_hline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck",
+      "target": "gdp_scripts_make_story_deck_new_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck",
+      "target": "gdp_scripts_make_story_deck_rect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck",
+      "target": "gdp_scripts_make_story_deck_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck_footer",
+      "target": "gdp_scripts_make_story_deck_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck_header",
+      "target": "gdp_scripts_make_story_deck_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck_header",
+      "target": "gdp_scripts_make_story_deck_hline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/make_story_deck.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "gdp_scripts_make_story_deck_footer",
+      "target": "gdp_scripts_make_story_deck_rect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gdp/scripts/story_charts.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "gdp_scripts_story_charts",
+      "target": "gdp_scripts_story_charts_style",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_combo_c2f",
-      "target": "gdp_scripts_phase_b_combo_c2f_dm",
-      "confidence_score": 1.0
+      "target": "gdp_scripts_phase_b_combo_c2f_dm"
     },
     {
       "relation": "contains",
@@ -15722,9 +16293,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_combo_c2f",
-      "target": "gdp_scripts_phase_b_combo_c2f_norm",
-      "confidence_score": 1.0
+      "target": "gdp_scripts_phase_b_combo_c2f_norm"
     },
     {
       "relation": "contains",
@@ -15732,9 +16303,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_combo_c2f",
-      "target": "gdp_scripts_phase_b_combo_c2f_sc",
-      "confidence_score": 1.0
+      "target": "gdp_scripts_phase_b_combo_c2f_sc"
     },
     {
       "relation": "rationale_for",
@@ -15742,9 +16313,9 @@
       "source_file": "gdp/scripts/phase_b_combo_c2f.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_combo_c2f_rationale_1",
-      "target": "gdp_scripts_phase_b_combo_c2f",
-      "confidence_score": 1.0
+      "target": "gdp_scripts_phase_b_combo_c2f"
     },
     {
       "relation": "contains",
@@ -37632,5 +38203,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1e6607663015abf173ad94dac38c6d007a340336"
+  "built_at_commit": "b5c50aa7dcefc13a8231fe3815053f24aa7e6672"
 }

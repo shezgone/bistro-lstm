@@ -663,5 +663,30 @@
     "mtime": 1785283095.4801304,
     "ast_hash": "cdc94a4d8b66f491b180758981a5716b",
     "semantic_hash": ""
+  },
+  "gdp/scripts/bok_charts.py": {
+    "mtime": 1785284527.6468306,
+    "ast_hash": "850730aa87cd5839059df7613eab5f0c",
+    "semantic_hash": ""
+  },
+  "gdp/scripts/make_bok_agenda_deck.py": {
+    "mtime": 1785284527.647235,
+    "ast_hash": "1f808c210bb31313ff2c21323f62dc04",
+    "semantic_hash": ""
+  },
+  "gdp/scripts/make_fanchart_proposal.py": {
+    "mtime": 1785284527.650106,
+    "ast_hash": "1c2140c01bb5f3c5f091c57ea93d3367",
+    "semantic_hash": ""
+  },
+  "gdp/scripts/make_story_deck.py": {
+    "mtime": 1785284527.6463988,
+    "ast_hash": "6ef6d31e8847e6055564b56f352db15b",
+    "semantic_hash": ""
+  },
+  "gdp/scripts/story_charts.py": {
+    "mtime": 1785284527.6458988,
+    "ast_hash": "c1d66ebaf0de91c1d508ee861bb5e3e9",
+    "semantic_hash": ""
   }
 }
