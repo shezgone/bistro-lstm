@@ -64,7 +64,7 @@ ax.tick_params(colors=GREY, labelsize=8.5, length=3)
 ax.legend(loc="upper right", fontsize=9, frameon=False)
 ax.set_title("전망주차 구간별 RMSE — 조기 구간에서는 XGBoost가 최강이 아님", fontsize=10.5,
              color=INK, loc="left", pad=10, fontweight="bold")
-ax.annotate("정보 빈곤 구간:\n사전학습 모델·GBM 우위", xy=(0 - w, 0.872), xytext=(-0.42, 0.93),
+ax.annotate("해당 분기 지표 공백 구간:\n사전학습 모델·GBM 우위", xy=(0 - w, 0.872), xytext=(-0.42, 0.93),
             fontsize=8.8, color=GREEN, fontweight="bold",
             arrowprops=dict(arrowstyle="-", color=GREEN, lw=1))
 fig.savefig(f"{OUT}/bokf_horizon.png", bbox_inches="tight", facecolor="white")
