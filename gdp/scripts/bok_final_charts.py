@@ -13,7 +13,7 @@ INK = "#262626"; GREY = "#6b6b6b"; LINE = "#c9c9c9"; GREEN = "#008a3e"; GREY_L =
 
 # ---------- 차트 1: schema v2 리더보드 ----------
 rows = [
-    ("전망시계 하이브리드 (당사 제안)",          0.740, GREEN),
+    ("조기주차 (GBM+Chronos-2)/2\n→ 이후 XGBoost (당사 제안)",  0.740, GREEN),
     ("XGBoost 단독 (개정 후 기준선)",           0.750, BLUE),
     ("XGBoost+GBM 평균",                       0.752, BLUE_M),
     ("GBM 단독",                               0.757, BLUE_M),

@@ -85,9 +85,9 @@ runs(s, X, 1.4, 4.4, 5.2, [
     [("DFM 결합(0.787)을 포함한 대부분의 결합이 열세", False, INK, 10)],
     [("", False, INK, 5)],
     [("관찰 2", True, GREEN, 11)],
-    [("이를 수치상 상회하는 유일 구성 = 전망시계", False, INK, 10)],
-    [("하이브리드(0.740) — 조기 주차만 사전학습", False, INK, 10)],
-    [("모델·GBM으로 보완, 이후는 XGBoost 그대로", False, INK, 10)],
+    [("이를 수치상 상회하는 유일 구성(0.740) =", False, INK, 10)],
+    [("발표 19~14주 전: GBM·Chronos-2 예측의 평균,", True, INK, 10)],
+    [("발표 13~1주 전: XGBoost 단독", True, INK, 10), (" — 주차별 교대", False, INK, 10)],
     [("", False, INK, 5)],
     [("관찰 3", True, GREEN, 11)],
     [("딥러닝 단독 최고는 Chronos-2+일별신호(0.808)", False, INK, 10)],
@@ -137,15 +137,28 @@ runs(s, X, 1.4, 5.35, 2.5, [
     [("· 경기 반등 분기 6개 평균: Chronos-2f 0.581 <", False, INK, 10)],
     [("  XGBoost 0.717 — 일별 금융·심리 신호의 기여", False, INK, 10)],
 ])
-rect(s, X, 4.0, 5.35, 1.9, HL, GREEN, round_=True)
-runs(s, X + 0.22, 4.15, 4.95, 1.65, [
-    [("전망시계 하이브리드 (리더보드 1위 구성)", True, GREEN, 11.5)],
-    [("조기 주차 = (GBM + Chronos-2f) 평균,", False, INK, 10.5)],
-    [("그 외 주차 = XGBoost 그대로 — 0.740 (-1.3%)", False, INK, 10.5)],
-    [("· 국면 판단 없음 — 전망 시계에 따른 조건화는", False, INK, 10)],
-    [("  예측 실무의 표준 관행", False, INK, 10)],
+rect(s, X, 4.0, 5.35, 2.45, HL, GREEN, round_=True)
+runs(s, X + 0.22, 4.12, 4.95, 0.35, [
+    [("리더보드 1위 구성 — 실제 결합 방식 (0.740, -1.3%)", True, GREEN, 11.5)]])
+# 19주 타임라인: 조기 6주 = (GBM+C2f)/2, 이후 13주 = XGBoost
+TL_X, TL_Y, TL_W = X + 0.25, 4.55, 4.85
+w_early = TL_W * 6 / 19; w_rest = TL_W - w_early - 0.04
+rect(s, TL_X, TL_Y, w_early, 0.42, WARM, None)
+rect(s, TL_X + w_early + 0.04, TL_Y, w_rest, 0.42, BLUE, None)
+runs(s, TL_X - 0.05, TL_Y + 0.06, w_early + 0.1, 0.3,
+     [[("6주", True, WHITE, 10)]], align=PP_ALIGN.CENTER)
+runs(s, TL_X + w_early + 0.04, TL_Y + 0.06, w_rest, 0.3,
+     [[("13주", True, WHITE, 10)]], align=PP_ALIGN.CENTER)
+runs(s, TL_X - 0.15, TL_Y + 0.48, w_early + 0.5, 0.6, [
+    [("발표 19~14주 전", True, WARM, 9)],
+    [("(GBM+Chronos-2f)÷2", False, INK, 9)]], align=PP_ALIGN.CENTER, sp=1)
+runs(s, TL_X + w_early + 0.04, TL_Y + 0.48, w_rest, 0.6, [
+    [("발표 13~1주 전", True, BLUE, 9)],
+    [("XGBoost 단독 (현행 그대로)", False, INK, 9)]], align=PP_ALIGN.CENTER, sp=1)
+runs(s, X + 0.22, 5.75, 4.95, 0.65, [
+    [("· 국면 판단 없음 — 주차에 따른 고정 교대 규칙", False, INK, 10)],
     [("· 수위: 비열등 확인 + 개선 방향 (유의성 미달 명시)", False, INK, 10)],
-], sp=3)
+], sp=2)
 footer(s, FOOT + " · 반등 분기 6개: 2018Q1·2019Q2·2020Q3·2023Q1·2024Q3·2025Q2")
 notes(s, "구간 경계(-14주)는 이전 fan chart 검증에서 선정의된 것을 재사용(사후 선택 아님). 다만 조기 구간에 어떤 모델 조합을 쓸지는 후보 비교로 정했으므로 선택편의 가능성을 함께 명시하는 것이 정직한 보고.")
 
@@ -278,7 +291,7 @@ notes(s, "제목·프레임의 핵심은 '이긴다'가 아니라 '언제 기여
 s = new_slide()
 header(s, "07", "요약 및 다음 단계")
 rows = [
-    ("점 예측", "XGBoost 단독(개정 후)이 기준선 — 인정. 전망시계 하이브리드(0.740)는 비열등+개선 방향의 참고 옵션", "필요 시 병행 산출"),
+    ("점 예측", "XGBoost 단독(개정 후)이 기준선 — 인정. 주차별 결합(조기 6주 = GBM·Chronos-2 평균 → 이후 XGBoost, 0.740)은 비열등+개선 방향의 참고 옵션", "필요 시 병행 산출"),
     ("문맥학습(ICL)", "LLM 계열은 오염 문제로 실시간 채점 자체가 비성립 · 직접학습 이식판은 소표본 한계 실측", "채택 비권고"),
     ("트랜스포머류", "점 예측 대체재 아님 — 정보 빈곤 구간·반등기의 조건부 보완재 + 불확실성 재료", "논문 핵심 재료"),
     ("공동 논문", "\"언제 가치를 더하는가\" 프레임 · 기여 5건 실측 완료 · 다국가 복제 설계 포함", "구도 협의 요청"),
