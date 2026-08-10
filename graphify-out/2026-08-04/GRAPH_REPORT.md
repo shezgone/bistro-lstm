@@ -1,16 +1,16 @@
-# Graph Report - bistro-lstm  (2026-08-05)
+# Graph Report - bistro-lstm  (2026-08-04)
 
 ## Corpus Check
-- 134 files · ~96,650 words
+- 132 files · ~95,367 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1624 nodes · 2187 edges · 139 communities (110 shown, 29 thin omitted)
+- 1610 nodes · 2172 edges · 138 communities (109 shown, 29 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 61 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eb1f022a`
+- Built from commit: `d0834dce`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,13 +56,12 @@
 - 2025 Actuals
 - ImportanceAnalyzer
 - make_bok_agenda_deck.py
-- phase_b_macrocast.py
+- ar1_forecast
 - phase_b_transformer.py
 - phase_b_fanchart.py
 - phase_b_chronos2.py
 - make_story_deck.py
 - make_fanchart_proposal.py
-- ar1_forecast
 - ar1_forecast
 - phase_b_rank_v2.py
 - Consensus Aggregation
@@ -172,7 +171,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (139 total, 29 thin omitted)
+## Communities (138 total, 29 thin omitted)
 
 ### Community 0 - "Agent Experiment Framework"
 Cohesion: 0.06
@@ -318,9 +317,9 @@ Nodes (9): actuals, 2025-05, 2025-06, 2025-07, 2025-08, 2025-09, 2025-10, 2025-1
 Cohesion: 0.39
 Nodes (5): footer(), header(), hline(), rect(), runs()
 
-### Community 41 - "phase_b_macrocast.py"
-Cohesion: 0.32
-Nodes (5): finetune_macrocast(), E3: MACROCAST 레시피 (arXiv 2606.28670 변형) — 자기 DFM 합성 코퍼스로 TTM 미세조정.  아이디어: 실데이터 1, 학습창 패널 → 요인모형 적합 → 합성 패널 N_SYN개., synth_corpus(), windows()
+### Community 41 - "ar1_forecast"
+Cohesion: 0.21
+Nodes (11): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------, main(), device, BISTRO-LSTM: Main Entry Point ============================== 학습 → 평가 → 결과 저장 파이프 (+3 more)
 
 ### Community 42 - "phase_b_transformer.py"
 Cohesion: 0.39
@@ -331,8 +330,8 @@ Cohesion: 0.40
 Nodes (3): Fan Chart 상품화 엔진 — 예측 불변, 컨포멀 보정 + 전망시계 하이브리드.  구성:   - 중심선: 현직(DFM+XGB) 점예측 그대로, rep(), winkler()
 
 ### Community 44 - "phase_b_chronos2.py"
-Cohesion: 0.09
-Nodes (16): daily_market(), load_raw_vintage(), monthly_covariates(), nsi_daily(), E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI, 일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용., month_index(월말 DatetimeIndex)에 정렬된 빠른신호 4종.     일별 데이터는 vintage 날짜까지만 사용(현재 미완성, 한은 뉴스심리지수(NSI, 일별) — ECOS API. 키 필요 (env ECOS_KEY).     통계표코드 후보 521Y001 (키 발급 후 (+8 more)
+Cohesion: 0.11
+Nodes (15): daily_market(), load_raw_vintage(), monthly_covariates(), nsi_daily(), E1-lite 빠른신호: 일별 금융(KOSPI·원달러, yfinance — 가격은 무개정이라 vintage-safe) + 원시 빈티지의 ESI, 일별 KOSPI 종가·원달러 환율 (2000~). 캐시 사용., month_index(월말 DatetimeIndex)에 정렬된 빠른신호 4종.     일별 데이터는 vintage 날짜까지만 사용(현재 미완성, 한은 뉴스심리지수(NSI, 일별) — ECOS API. 키 필요 (env ECOS_KEY).     통계표코드 후보 521Y001 (키 발급 후 (+7 more)
 
 ### Community 45 - "make_story_deck.py"
 Cohesion: 0.48
@@ -342,13 +341,9 @@ Nodes (5): footer(), header(), hline(), rect(), runs()
 Cohesion: 0.53
 Nodes (4): col_header(), hline(), runs(), tb()
 
-### Community 49 - "ar1_forecast"
-Cohesion: 0.33
-Nodes (5): ar1_forecast(), PeriodIndex, Series, Utility: AR(1) baseline forecast. bistro-xai의 inference_util.py와 동일., Simple AR(1) forecast: y_t = c + phi * y_{t-1}      Parameters     ----------
-
 ### Community 51 - "ar1_forecast"
-Cohesion: 0.17
-Nodes (21): set_seed(), create_sequences(), load_macro_panel(), prepare_walk_forward_splits(), Preprocessing Utility for BISTRO-LSTM ===================================== 월별 매, 슬라이딩 윈도우로 학습용 시퀀스 생성.      Parameters     ----------     data : (T, n_vars) 정규화된, Walk-forward CV용 데이터 분할.      Parameters     ----------     df : 전체 학습 데이터 (Peri, macro_panel.csv 로딩.      Parameters     ----------     csv_path : CSV 파일 경로 (+13 more)
+Cohesion: 0.19
+Nodes (18): set_seed(), create_sequences(), load_macro_panel(), prepare_walk_forward_splits(), Preprocessing Utility for BISTRO-LSTM ===================================== 월별 매, 슬라이딩 윈도우로 학습용 시퀀스 생성.      Parameters     ----------     data : (T, n_vars) 정규화된, Walk-forward CV용 데이터 분할.      Parameters     ----------     df : 전체 학습 데이터 (Peri, macro_panel.csv 로딩.      Parameters     ----------     csv_path : CSV 파일 경로 (+10 more)
 
 ### Community 53 - "Consensus Aggregation"
 Cohesion: 0.50
@@ -436,7 +431,7 @@ Nodes (3): one(), Phase B 종합 비교: 우리 모델(단독/앙상블) vs DFM 
 
 ### Community 94 - "train_and_evaluate.py"
 Cohesion: 0.14
-Nodes (21): EarlyStopping, evaluate(), optuna_objective(), device, ndarray, LSTM Trainer — Walk-Forward CV + Optuna Tuning =================================, 단일 fold 학습.      Returns     -------     dict with best_model_state, train_histo, Walk-forward cross-validation.      Parameters     ----------     splits : prepa (+13 more)
+Nodes (20): EarlyStopping, evaluate(), optuna_objective(), device, ndarray, LSTM Trainer — Walk-Forward CV + Optuna Tuning =================================, 단일 fold 학습.      Returns     -------     dict with best_model_state, train_histo, Walk-forward cross-validation.      Parameters     ----------     splits : prepa (+12 more)
 
 ### Community 95 - "ZScoreNormalizer"
 Cohesion: 0.31
@@ -451,12 +446,12 @@ Cohesion: 0.14
 Nodes (20): counterfactual_analysis(), generate_narrative(), get_active_channels(), get_variable_channel(), jacobian_lag_analysis(), main(), pathway_decomposition(), DataFrame (+12 more)
 
 ### Community 99 - "LSTMConfig"
-Cohesion: 0.16
-Nodes (15): LSTMConfig, LSTM 모델 설정.      Parameters     ----------     variates    : 변수 이름 리스트 (순서 = 입력, main(), DataFrame, device, BISTRO-LSTM Runner — 2-Stage Inference Pipeline ================================, Stage 2: 선택된 변수로 최종 학습 + 예측., Counterfactual 분석: 각 공변량을 ±1σ perturbation.      Returns     -------     dict wi (+7 more)
+Cohesion: 0.17
+Nodes (14): LSTMConfig, LSTM 모델 설정.      Parameters     ----------     variates    : 변수 이름 리스트 (순서 = 입력, main(), DataFrame, device, BISTRO-LSTM Runner — 2-Stage Inference Pipeline ================================, Stage 2: 선택된 변수로 최종 학습 + 예측., Counterfactual 분석: 각 공변량을 ±1σ perturbation.      Returns     -------     dict wi (+6 more)
 
 ### Community 100 - "comparison.py"
 Cohesion: 0.06
-Nodes (48): compare_forecasts(), compare_variable_rankings(), compute_metrics(), load_bistro_ablation(), load_bistro_results(), load_lstm_ablation(), load_lstm_results(), main() (+40 more)
+Nodes (47): compare_forecasts(), compare_variable_rankings(), compute_metrics(), load_bistro_ablation(), load_bistro_results(), load_lstm_ablation(), load_lstm_results(), main() (+39 more)
 
 ### Community 101 - "regime_detector_backtest.py"
 Cohesion: 0.24
@@ -582,17 +577,17 @@ Nodes (3): one(), Phase B 종합 비교: 우리 모델(단독/앙상블) vs DFM 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AttentionLSTMForecaster` connect `AttentionLSTMForecaster` to `causal_narrative.py`, `LSTMConfig`, `phase_b_transformer.py`, `TorchSeq`, `Community 84`, `ar1_forecast`, `train_and_evaluate.py`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `train_model()` connect `train_and_evaluate.py` to `AttentionLSTMForecaster`, `LSTMConfig`, `ar1_forecast`?**
+- **Why does `AttentionLSTMForecaster` connect `AttentionLSTMForecaster` to `causal_narrative.py`, `LSTMConfig`, `ar1_forecast`, `phase_b_transformer.py`, `TorchSeq`, `Community 84`, `ar1_forecast`, `train_and_evaluate.py`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `ZScoreNormalizer` connect `ZScoreNormalizer` to `AttentionLSTMForecaster`, `causal_narrative.py`, `LSTMConfig`, `ar1_forecast`, `ar1_forecast`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `baselines` connect `Baseline Forecasts 2025` to `HCX Rolling Results`?**
+- **Why does `train_model()` connect `train_and_evaluate.py` to `AttentionLSTMForecaster`, `LSTMConfig`, `ar1_forecast`, `ar1_forecast`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `AttentionLSTMForecaster` (e.g. with `EarlyStopping` and `TorchSeq`) actually correct?**
   _`AttentionLSTMForecaster` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 11 inferred relationships involving `Candidate` (e.g. with `Candidate` and `DataFrame`) actually correct?**
   _`Candidate` has 11 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `E3: MACROCAST 레시피 (arXiv 2606.28670 변형) — 자기 DFM 합성 코퍼스로 TTM 미세조정.  아이디어: 실데이터 1`, `학습창 패널 → 요인모형 적합 → 합성 패널 N_SYN개.`, `XGB 잔차 encompassing 보정 (XGB + λ·g) — 기각 (2026-08-04).  구조: 최종 = XGB + ridge(gap,` to the rest of the system?**
-  _780 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `전망시계(주차) 조건화 하이브리드 — XGB(신) 단독을 수치상 이기는 유일한 구조 (2026-08-04).  배경: schema v2 이후 X`, `XGB(신, schema v2) × BISTRO(AttnLSTM) 결합 검증 — 기각 (2026-08-04).  배경: 단위버그 수정 후 XGB`, `schema v2 재순위 — 고객(한은) ML 단위버그 수정 반영 전면 재채점 (2026-08-04).  배경 (docs/code_changes` to the rest of the system?**
+  _777 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent Experiment Framework` be split into smaller, more focused modules?**
   _Cohesion score 0.059876543209876544 - nodes in this community are weakly interconnected._
