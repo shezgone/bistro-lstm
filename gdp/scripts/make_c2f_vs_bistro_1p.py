@@ -58,16 +58,25 @@ runs(0.6, 1.38, 12.1, 0.35, [
 
 # 좌: 차트
 s.shapes.add_picture(f"{SC}/c2f_vs_bistro.png", Inches(0.5), Inches(1.95), width=Inches(7.3))
-# 좌하: 원인 진단 표
-runs(0.6, 5.35, 7.0, 0.35, [[("원인 진단 — 조기 구간 단독 성능이 갈림길입니다", True, NAVY, 11.5)]])
-hline(0.6, 5.7, 7.1, LINE, 0.75)
-tbl = [("조기 구간(-19~-14주) 단독 RMSE", "GBM 0.997", "Chronos-2f 0.999", "XGBoost 1.024", "BISTRO 1.277")]
-runs(0.6, 5.82, 7.1, 0.4, [
-    [("조기 구간 단독 RMSE   ", True, GREY, 9.5),
-     ("GBM 0.997  ·  Chronos-2f 0.999  ·  XGBoost 1.024  ·  ", False, INK, 10),
-     ("BISTRO 1.277", True, WARM, 10)],
-    [("Chronos-2f는 이 구간에서 GBM과 대등(±0.002)하지만, BISTRO는 1.28배 열세 — 평균에 넣는 순간 조합 전체를 끌어내립니다.", False, INK, 9.5)],
-], sp=3)
+# 좌하: 원인 ① 증상
+runs(0.6, 5.28, 7.1, 0.32, [[("원인 ①  증상 — 조기 구간 단독 성능이 갈립니다", True, NAVY, 11)]])
+hline(0.6, 5.6, 7.1, LINE, 0.75)
+runs(0.6, 5.7, 7.1, 0.55, [
+    [("조기 구간 단독 RMSE   ", True, GREY, 9),
+     ("GBM 0.997  ·  Chronos-2f 0.999  ·  XGBoost 1.024  ·  ", False, INK, 9.5),
+     ("BISTRO 1.277", True, WARM, 9.5)],
+    [("Chronos-2f는 GBM과 대등(±0.002), BISTRO는 1.28배 열세 — 평균에 넣는 순간 조합 전체를 끌어내립니다.", False, INK, 9)],
+], sp=2)
+# 좌하: 원인 ② 근본
+runs(0.6, 6.28, 7.1, 0.32, [[("원인 ②  근본 — 같은 딥러닝 계열이지만 “지식의 출처”가 다릅니다", True, NAVY, 11)]])
+hline(0.6, 6.6, 7.1, LINE, 0.75)
+runs(0.6, 6.66, 7.1, 0.6, [
+    [("· Chronos-2f = ", False, INK, 8.8), ("사전학습", True, GREEN, 8.8),
+     (": 전 세계 시계열로 학습 후 동결(우리 데이터는 문맥으로만) → 140행에 과적합 통로 없음 + 유일하게 일별 신호 입력", False, INK, 8.8)],
+    [("· BISTRO = ", False, INK, 8.8), ("직접학습", True, WARM, 8.8),
+     (": 월 140행으로 파라미터 학습 → 과적합·급변기 붕괴(반등 단독 2.40), 입력도 월별 패널뿐", False, INK, 8.8)],
+    [("→ 갈림길은 아키텍처가 아니라 ", False, INK, 8.8), ("①지식의 출처(외부 사전학습 vs 내부 소표본) ②정보원 주기(일별 vs 월별)", True, INK, 8.8)],
+], sp=1.5)
 
 # 우: 해석
 X, W = 8.15, 4.6
@@ -99,10 +108,10 @@ runs(X + 0.2, 6.13, W - 0.4, 0.65, [
 ], sp=1.5)
 
 # 각주
-runs(0.6, 7.06, 11.5, 0.3, [
+runs(0.6, 7.22, 11.5, 0.25, [
     [("주: 공통표본 26개 분기(BISTRO 예측이 없는 2018Q1~2019Q2 제외) — 32개 분기 리더보드 수치(XGBoost 0.750 등)와 직접 비교 불가. "
-      "실시간 빈티지 · 속보치 · w[-19,-1] 평균 RMSE · schema v2. 낮을수록 정확.", False, GREY, 8)]])
-runs(12.35, 7.06, 0.5, 0.3, [[("1", False, GREY, 9)]], align=PP_ALIGN.RIGHT)
+      "실시간 빈티지 · 속보치 · w[-19,-1] 평균 RMSE · schema v2. 낮을수록 정확.", False, GREY, 7.5)]])
+runs(12.35, 7.2, 0.5, 0.25, [[("1", False, GREY, 9)]], align=PP_ALIGN.RIGHT)
 
 out = "/Users/user/vibe/bistro-lstm/docs/부품비교_Chronos2f_vs_BISTRO_1p_2026-08-12.pptx"
 prs.save(out); print("saved:", out)
