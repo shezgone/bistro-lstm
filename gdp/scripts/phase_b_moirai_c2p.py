@@ -16,6 +16,11 @@ env: QSUB=2024Q1 / CTX_MAX=200 / NSAMP=100
 해석: 슬롯 자격 요건 = "조기 구간 GBM 대등(0.924)". Moirai-1.0-small은 1.021로 미달 —
   세대·공변량 처리 차이(Chronos-2는 공변량 네이티브)로 해석. "사전학습이면 된다" 아님.
 
+절제 실험 (2026-08-13, COVMODE env — 힌트 흡수력 측정):
+  uni(공변량 없음) 0.8800 / base(+10종) 0.8834(+0.4% 무이득) / full(+빠른신호) 0.8731
+  빠른신호 효과: Moirai -1.2%(0.883→0.873) vs Chronos-2 -3.4%(0.836→0.808) — 흡수력 ~3배 차
+  → "이웃 vs 힌트"(사전학습 과제 설계 차이) 가설의 실측 확인.
+
 실행: /Users/user/vibe/bistro-lstm/.venv-moirai/bin/python phase_b_moirai_c2p.py
 """
 import os, sys, glob, warnings; warnings.filterwarnings("ignore"); sys.path.insert(0, ".")
@@ -30,7 +35,8 @@ FASTC = ["kospi_mret", "krw_mret", "esi_raw", "esi_mom"]
 PLEN_MAX = 6
 CTX_MAX = int(os.environ.get("CTX_MAX", "200"))
 NSAMP = int(os.environ.get("NSAMP", "100"))
-TAG = "our_moirai_c2p"
+COVMODE = os.environ.get("COVMODE", "full")   # full=10종+빠른신호 | base=10종만 | uni=공변량 없음
+TAG = {"full": "our_moirai_c2p", "base": "our_moirai_base", "uni": "our_moirai_uni"}[COVMODE]
 
 grid, _ = H.load_grid()
 g = grid.copy(); g["vintage"] = pd.to_datetime(g["vintage"]).dt.strftime("%Y-%m-%d")
@@ -62,6 +68,15 @@ def moirai_predict(hist, h):
     hist = hist.tail(CTX_MAX)
     T = len(hist)
     covcols = [c for c in hist.columns if c != "N_gdp"]
+    if not covcols:
+        model = MoiraiForecast(module=module, prediction_length=h, context_length=T,
+                               patch_size="auto", num_samples=NSAMP, target_dim=1,
+                               feat_dynamic_real_dim=0, past_feat_dynamic_real_dim=0)
+        pred = model.create_predictor(batch_size=1, device="cpu")
+        ds = ListDataset([{"target": hist["N_gdp"].values.astype(np.float32),
+                           "start": pd.Period(hist.index[0], freq="M")}], freq="M", one_dim_target=True)
+        fc = list(pred.predict(ds))[0]
+        return float(np.median(fc.samples[:, h - 1]))
     model = MoiraiForecast(module=module, prediction_length=h, context_length=T,
                            patch_size="auto", num_samples=NSAMP, target_dim=1,
                            feat_dynamic_real_dim=0, past_feat_dynamic_real_dim=len(covcols))
@@ -83,7 +98,10 @@ for tq in quarters:
         yp = np.nan
         panel = load_panel(tq, r.vintage)
         if panel is not None:
-            panel = with_fast(panel, r.vintage)
+            if COVMODE == "uni":
+                panel = panel[["N_gdp"]]
+            elif COVMODE == "full":
+                panel = with_fast(panel, r.vintage)
             edge = pd.Timestamp(r.vintage) + pd.offsets.MonthEnd(0)
             hist = panel[panel.index <= edge]
             h = int((qend.to_period("M") - hist.index[-1].to_period("M")).n) if len(hist) else 99
