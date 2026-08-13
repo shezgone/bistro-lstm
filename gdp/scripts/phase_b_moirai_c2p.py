@@ -36,15 +36,16 @@ PLEN_MAX = 6
 CTX_MAX = int(os.environ.get("CTX_MAX", "200"))
 NSAMP = int(os.environ.get("NSAMP", "100"))
 COVMODE = os.environ.get("COVMODE", "full")   # full=10종+빠른신호 | base=10종만 | uni=공변량 없음
-TAG = {"full": "our_moirai_c2p", "base": "our_moirai_base", "uni": "our_moirai_uni"}[COVMODE]
+MODEL_ID = os.environ.get("MODEL", "Salesforce/moirai-1.0-R-small")   # 로컬 경로 가능 (예: BISTRO 체크포인트)
+TAG = os.environ.get("TAG", {"full": "our_moirai_c2p", "base": "our_moirai_base", "uni": "our_moirai_uni"}[COVMODE])
 
 grid, _ = H.load_grid()
 g = grid.copy(); g["vintage"] = pd.to_datetime(g["vintage"]).dt.strftime("%Y-%m-%d")
 QSUB = os.environ.get("QSUB")
 quarters = QSUB.split(",") if QSUB else sorted(g.tq.unique(), key=lambda x: pd.Period(x, "Q"))
 
-module = MoiraiModule.from_pretrained("Salesforce/moirai-1.0-R-small")
-print("[moirai-1.0-R-small] loaded", flush=True)
+module = MoiraiModule.from_pretrained(MODEL_ID)
+print(f"[{MODEL_ID}] loaded — {sum(p.numel() for p in module.parameters())/1e6:.1f}M", flush=True)
 
 def load_panel(tq, vintage):
     files = sorted(glob.glob(f"output/model/DFM/11/{tq}/*.csv"))

@@ -14,8 +14,8 @@ INK = "#262626"; GREY = "#6b6b6b"; LINE = "#c9c9c9"; GREEN = "#008a3e"
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.4, 3.4), dpi=200)
 
 # (a) 조기 구간 단독 — 슬롯 자격 진단
-labels1 = ["GBM\n(파트너)", "Chronos-2f", "XGBoost\n(기준)", "Moirai\n-small", "직접학습\nLSTM"]
-vals1 = [0.9243, 0.9238, 0.9460, 1.0206, 1.2861]
+labels1 = ["GBM\n(파트너)", "Chronos-2f", "XGBoost\n(기준)", "BISTRO\n(BIS 원본)", "직접학습\nLSTM"]
+vals1 = [0.9243, 0.9238, 0.9460, 1.0049, 1.2861]
 cols1 = [BLUE_M, GREEN, BLUE, WARM, GREY_C]
 x = np.arange(5)
 bars = a1.bar(x, vals1, 0.6, color=cols1, zorder=3)
@@ -29,8 +29,8 @@ a1.set_ylim(0.85, 1.35)
 a1.set_title("① 조기 구간(-19~-14주) 단독 RMSE", fontsize=10, color=INK, loc="left", pad=8, fontweight="bold")
 
 # (b) 슬롯 교체 결과 — 전체 32Q
-labels2 = ["XGBoost\n단독(기준)", "슬롯=\nChronos-2f", "슬롯=\nMoirai", "슬롯=\n직접학습 LSTM"]
-vals2 = [0.7499, 0.7399, 0.7536, 0.7768]
+labels2 = ["XGBoost\n단독(기준)", "슬롯=\nChronos-2f", "슬롯=\nBISTRO", "슬롯=\n직접학습 LSTM"]
+vals2 = [0.7499, 0.7399, 0.7505, 0.7768]
 cols2 = [BLUE, GREEN, WARM, GREY_C]
 x2 = np.arange(4)
 bars = a2.bar(x2, vals2, 0.58, color=cols2, zorder=3)

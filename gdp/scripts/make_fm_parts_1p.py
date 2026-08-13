@@ -45,8 +45,8 @@ def rect(x, y, w, h, fill=None, line=None):
     shp.shadow.inherit = False; return shp
 
 # 헤더
-runs(0.6, 0.32, 11.5, 0.3, [[("부품 교체 실험 (개정판 — 완전 동일 프로토콜)  |  네이버클라우드 AX Forward Lab · 2026. 8.", True, GREY, 10.5)]])
-runs(0.6, 0.6, 12.1, 0.6, [[("같은 사전학습 FM끼리도 갈립니다 — 조기 슬롯 자격을 통과한 부품은 Chronos-2f뿐", True, NAVY, 17)]])
+runs(0.6, 0.32, 11.5, 0.3, [[("부품 교체 실험 — BISTRO 원본 실측판 (완전 동일 프로토콜)  |  네이버클라우드 AX Forward Lab · 2026. 8.", True, GREY, 10.5)]])
+runs(0.6, 0.6, 12.1, 0.6, [[("BISTRO 원본을 직접 실측했습니다 — 조기 슬롯 자격을 통과한 부품은 여전히 Chronos-2f뿐", True, NAVY, 17)]])
 hline(0.6, 1.22, 12.13, NAVY, 1.2)
 
 # 실험 설계
@@ -54,18 +54,20 @@ runs(0.6, 1.38, 12.1, 0.6, [
     [("실험 설계: BISTRO 프레임워크의 세 암(Task-Specific 소형 모델 · Foundation Model · LLM ICL) 중 채점 가능한 부품들을 ", False, INK, 10.5),
      ("전부 동일 프로토콜", True, INK, 10.5),
      ("(DFM 스냅샷 + 공변량 10종 + 빠른신호 4종, 분기말 N_gdp 외삽, 32분기 실시간 그리드)로 실행하고, 검증된 주차별 결합의 조기 슬롯에 교체 장착.", False, INK, 10.5)],
-    [("FM 부품 = Chronos-2f(zero-shot) vs Moirai-small(zero-shot — BISTRO의 기반 모델 계열, 공개 체크포인트 프록시) · 참고 = 직접학습 LSTM · LLM ICL 암은 오염 문제로 채점 불성립(제외).", False, GREY, 9.5)],
+    [("FM 부품 = Chronos-2f(120M, zero-shot) vs ", False, GREY, 9.5),
+     ("BISTRO 원본", True, GREY, 9.5),
+     ("(BIS WP 1337 공개 체크포인트 — Moirai-base 91M을 BIS 거시 4,925계열로 미세조정, zero-shot) · 참고 = 직접학습 LSTM · LLM ICL 암은 오염 문제로 채점 불성립(제외).", False, GREY, 9.5)],
 ])
 # 좌: 차트
 s.shapes.add_picture(f"{SC}/fm_parts.png", Inches(0.5), Inches(2.15), width=Inches(7.3))
-# 좌하: 프로토콜 정정 경고
-runs(0.6, 5.75, 7.1, 0.32, [[("이번 개정에서 바로잡은 것 — 프로토콜이 점수를 지배합니다", True, NAVY, 11)]])
+# 좌하: 원본 실측 확보 경위
+runs(0.6, 5.75, 7.1, 0.32, [[("이번 판의 핵심 — 프록시가 아니라 BISTRO 원본입니다", True, NAVY, 11)]])
 hline(0.6, 6.07, 7.1, LINE, 0.75)
 runs(0.6, 6.16, 7.1, 0.9, [
-    [("· 종전 Moirai 1.453은 구세대 프로토콜(분기 flash 단변량 외삽)의 수치 — 동일 프로토콜로 재실행하니 ", False, INK, 9.3),
-     ("0.873 (-40%)", True, GREEN, 9.3), (". 프로토콜 정정 전 비교는 무효.", False, INK, 9.3)],
-    [("· 직접학습 LSTM도 동일 입력(빠른신호 포함)으로 재실행: 1.268 → 1.019로 개선되나 여전히 격차 —", False, INK, 9.3)],
-    [("  입력을 똑같이 줘도 소표본 직접학습의 한계는 남습니다 (조기 구간 1.286).", False, INK, 9.3)],
+    [("· BISTRO 가중치를 BIS 공개 레포(bis-med-it/bistro, Apache 2.0)에서 확보해 직접 실측 — 단독 ", False, INK, 9.3),
+     ("0.871", True, INK, 9.3), (" (기반 Moirai-small 0.873과 동급, Chronos-2f 0.808에 미달).", False, INK, 9.3)],
+    [("· 거시 미세조정의 효과는 소폭(조기 구간 1.021→1.005) — 미세조정으로도 아래의 구조 차이는 바뀌지 않았습니다.", False, INK, 9.3)],
+    [("· 참고: 직접학습 LSTM은 동일 입력에도 1.019 (조기 1.286) — 소표본 직접학습 한계 별도 확인.", False, INK, 9.3)],
 ], sp=2)
 
 # 우측
@@ -74,10 +76,10 @@ rect(X, 2.15, 0.045, 1.5, GREEN)
 runs(X + 0.2, 2.15, W - 0.2, 1.55, [
     [("슬롯 자격 요건은 여전히 하나입니다", True, NAVY, 11.5)],
     [("“조기 구간(지표 공백기)에서 GBM과 대등한 단독 성능”", False, INK, 9.5)],
-    [("— Chronos-2f 0.924 ≈ GBM 0.924 (통과) / Moirai 1.021 ·", False, INK, 9.5)],
-    [("LSTM 1.286 (미달). 슬롯 결과가 그대로 따라오며, 두 FM을", False, INK, 9.5)],
-    [("함께 넣어도(듀오 0.745) C2f 단독 슬롯(0.740)을 못 넘습니다", False, INK, 9.5)],
-    [("(오차 상관 0.926 — 정보 중복).", False, INK, 9.5)],
+    [("— Chronos-2f 0.924 ≈ GBM 0.924 (통과) / BISTRO 1.005 ·", False, INK, 9.5)],
+    [("LSTM 1.286 (미달). 슬롯 결과: C2f 0.740(개선) / BISTRO", False, INK, 9.5)],
+    [("0.750(기준선과 동률 — 효과 없음) / 듀오 0.744 — C2f 단독을", False, INK, 9.5)],
+    [("못 넘습니다 (오차 상관 0.926 — 정보 중복).", False, INK, 9.5)],
 ], sp=2)
 rect(X, 3.8, 0.045, 2.5, NAVY)
 runs(X + 0.2, 3.8, W - 0.2, 2.55, [
@@ -86,26 +88,25 @@ runs(X + 0.2, 3.8, W - 0.2, 2.55, [
     [("같은 힌트에서 뽑아내는 이득", True, INK, 9), ("이 실측으로 다릅니다:", False, INK, 9)],
     [("· 빠른신호(주가·환율)를 얹었을 때 — ", False, INK, 9),
      ("C2 -3.4%", True, GREEN, 9), (" (0.836→0.808)", False, GREY, 8.5)],
-    [("  vs ", False, INK, 9), ("Moirai -1.2%", True, WARM, 9), (" (0.883→0.873) — 흡수력 약 3배 차이", False, INK, 9)],
-    [("· 공식지표 10종은 Moirai에서 무이득 (0.880→0.883 소폭 악화)", False, INK, 9)],
+    [("  vs ", False, INK, 9), ("BISTRO 무이득", True, WARM, 9), (" (0.870→0.871, +0.1%)", False, INK, 9)],
+    [("· 공식지표 10종: BISTRO -0.5% (0.875→0.870) — 미미", False, INK, 9)],
     [("원인 — 사전학습에서 채점 범위가 다릅니다:", False, INK, 9)],
-    [("· Moirai:  (공변량₁·₂, 타깃)과거 → ", False, INK, 9),
+    [("· Moirai/BISTRO:  (공변량₁·₂, 타깃)과거 → ", False, INK, 9),
      ("(공변량₁·₂, 타깃)미래 전부 채점", True, INK, 9)],
-    [("  = 공변량도 함께 예측할 대상(이웃). 타깃을 위해 공변량을", False, INK, 9)],
-    [("  쓰는 능력은 전체 손실의 일부에만 기여 → 약하게 자람", False, INK, 9)],
+    [("  = 공변량도 함께 예측할 대상(이웃). 거시 미세조정으로도", False, INK, 9)],
+    [("  이 채점 구조는 그대로 → 힌트 활용 회로가 약하게 유지", False, INK, 9)],
     [("· Chronos-2:  (공변량₁·₂, 타깃)과거 → ", False, INK, 9),
      ("타깃 미래만 채점", True, INK, 9)],
-    [("  = 공변량은 힌트. 힌트를 안 보면 손실을 줄일 수 없게", False, INK, 9)],
+    [("  = 공변량은 힌트 — 힌트를 안 보면 손실을 줄일 수 없게", False, INK, 9)],
     [("  의존관계가 설계된 사례(합성 포함)로 훈련", False, INK, 9)],
-    [("· 체급 차이(small 14M vs 120M)도 격차에 기여 가능", False, GREY, 8.5)],
-], sp=1.6)
+    [("· 체급은 비슷(91M vs 120M) — 격차 원인은 체급이 아니라 훈련 방식", False, GREY, 8.5)],
+], sp=1.5)
 rect(X, 6.42, W, 0.72, BGGREY, None)
 rect(X, 6.42, 0.045, 0.72, GREY)
 runs(X + 0.2, 6.47, W - 0.4, 0.65, [
-    [("유의: 본 실험의 Moirai는 공개 체크포인트 zero-shot ", False, GREY, 8.5), ("프록시", True, GREY, 8.5),
-     ("입니다. BISTRO", False, GREY, 8.5)],
-    [("원본(개량·미세조정 반영 가능)에 대한 판정이 아니며, 원본을 동일 규약으로", False, GREY, 8.5)],
-    [("채점하면 직접 비교가 가능합니다. LLM ICL 암은 오염으로 채점 불성립(제외).", False, GREY, 8.5)],
+    [("유의: BISTRO = BIS WP 1337 (Koyuncu·Kwon·Lombardi·Perez-Cruz·Shin)의", False, GREY, 8.5)],
+    [("공개 원본 체크포인트를 논문 표준 사용법(zero-shot)으로 적용한 실측입니다.", False, GREY, 8.5)],
+    [("한국 GDP 과제용 추가 미세조정은 미실시. LLM ICL 암은 오염으로 제외.", False, GREY, 8.5)],
 ], sp=1.5)
 
 # 각주
