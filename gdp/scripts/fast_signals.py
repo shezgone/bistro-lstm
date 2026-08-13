@@ -6,6 +6,8 @@
 import os, glob
 import numpy as np, pandas as pd
 
+_ME = "ME" if pd.__version__ >= "2.2" else "M"   # pandas 구버전 호환
+
 _CACHE = "data/fast_signals_daily.parquet"
 _raw_cache = {}
 
@@ -40,7 +42,7 @@ def monthly_covariates(month_index, vintage):
     px = daily_market()
     px = px[px.index <= v]
     out = pd.DataFrame(index=month_index, dtype=np.float32)
-    me = px.resample("ME").last().reindex(month_index)
+    me = px.resample(_ME).last().reindex(month_index)
     for c in ["kospi", "krw"]:
         ret = me[c].pct_change().astype(np.float32)
         out[f"{c}_mret"] = ret.fillna(0.0).clip(-0.3, 0.3)
@@ -55,7 +57,7 @@ def monthly_covariates(month_index, vintage):
     if os.path.exists("data/fast_signals_nsi.parquet"):
         nsi = pd.read_parquet("data/fast_signals_nsi.parquet")["nsi"]
         nsi = nsi[nsi.index <= v]
-        nm = nsi.resample("ME").mean().reindex(month_index).astype(np.float32)
+        nm = nsi.resample(_ME).mean().reindex(month_index).astype(np.float32)
         out["nsi_m"] = nm.ffill().fillna(100.0)
         out["nsi_mom"] = (out["nsi_m"] - out["nsi_m"].rolling(4).mean()).fillna(0.0)
     return out
