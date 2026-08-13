@@ -381,7 +381,7 @@ runs(s, AX + 0.2, 6.4, AW - 0.4, 0.6, [
     [("BISTRO는 공개 체크포인트를 논문 표준 사용법(zero-shot) 그대로 적용, 한국 GDP", False, GREY, 8.3)],
     [("과제용 추가 미세조정 없음. 저자: Koyuncu·Kwon·Lombardi·Perez-Cruz·Shin.", False, GREY, 8.3)],
 ], sp=1.3)
-footnote(s, RULE + " 슬롯 교체 = 조기(발표 19~14주 전)=(GBM+부품)÷2, 이후 XGBoost. BISTRO 출처: github.com/bis-med-it/bistro (Apache 2.0).")
+footnote(s, RULE + " 슬롯 교체 = 조기(발표 19~14주 전)=(GBM+부품)÷2, 이후 XGBoost. 조기 경계(-14주)는 예측구간 보정에서 선정의된 값 — 조기 4~7주 어디로 잘라도 0.740~0.741로 동일(경계 비의존). BISTRO 출처: github.com/bis-med-it/bistro (Apache 2.0).")
 notes(s, "별첨 취지: 본문 결론(트랜스포머류 = 조건부 보완재)을 바꾸지 않는 보강 자료. 한은 측의 'Chronos-2 vs BISTRO 차이' 질문에 대응. 회의에서 다룰지는 현장 판단 — 본문 7장까지로 마쳐도 완결됨. BISTRO 관련 서술은 사실·수치 중심으로 유지(공개 체크포인트, 논문 표준 사용법 명시).")
 
 out = "/Users/user/vibe/bistro-lstm/docs/GDP_Nowcasting_종합리포트_한은_2026-08-10.pptx"

@@ -107,7 +107,7 @@ runs(X + 0.2, 6.47, W - 0.4, 0.65, [
 # 각주
 runs(0.6, 7.22, 11.5, 0.25, [
     [("주: 실시간 빈티지 · 속보치 · w[-19,-1] 평균 RMSE · 2018Q1~2025Q4(32개 분기) · schema v2 · 낮을수록 정확. "
-      "슬롯 교체 = 조기(발표 19~14주 전)=(GBM+부품)÷2, 이후 XGBoost. BISTRO 출처: github.com/bis-med-it/bistro (Apache 2.0).", False, GREY, 7.5)]])
+      "슬롯 교체 = 조기(발표 19~14주 전)=(GBM+부품)÷2, 이후 XGBoost. 조기 경계(-14주)는 예측구간 보정에서 선정의된 값 — 조기 4~7주 어디로 잘라도 0.740~0.741로 동일(경계 비의존). BISTRO 출처: github.com/bis-med-it/bistro (Apache 2.0).", False, GREY, 7.5)]])
 runs(12.35, 7.2, 0.5, 0.25, [[("1", False, GREY, 9)]], align=PP_ALIGN.RIGHT)
 
 out = "/Users/user/vibe/bistro-lstm/docs/부품비교_FM동일프로토콜_1p_2026-08-13.pptx"
