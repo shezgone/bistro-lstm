@@ -330,5 +330,59 @@ runs(s, 0.6, y + 0.25, 12.1, 0.4, [
 footnote(s, RULE)
 notes(s, "다음 회의 의사결정 요청 사항: ① 공동 논문 구도(제목 프레임·역할 분담·발표 경로) 협의 착수 여부 ② 주차별 결합 병행 산출 여부(선택). 나머지는 보고 사항.")
 
+# ============ 9. 별첨: 시계열 FM 부품 비교 ============
+s = new_slide()
+header(s, "별첨  |  시계열 FM 부품 비교",
+       "부품으로서의 시계열 FM(ICL) 비교 — 조기 슬롯 자격은 Chronos-2만 충족")
+runs(s, 0.6, 1.4, 12.1, 0.6, [
+    [("실험 설계  ", True, NAVY, 10),
+     ("검증된 주차별 결합의 조기 슬롯에 시계열 FM을 부품으로 장착해 비교. 두 모델 모두 파라미터 갱신 없이 과거 데이터를 문맥으로 사용(ICL·zero-shot), "
+      "입력·과제·평가 완전 동일 — DFM 스냅샷 + 공변량 10종 + 빠른신호 4종, 분기말 외삽, 32분기 실시간 그리드.", False, INK, 10)],
+    [("비교 대상  ", True, NAVY, 9.3),
+     ("Chronos-2(아마존, 120M) vs BISTRO(BIS WP 1337, Moirai-base 91M을 BIS 거시 4,925계열로 미세조정 — 공개 체크포인트) · 참고: 직접학습 LSTM · LLM 기반 ICL은 학습데이터 오염으로 채점 제외.", False, GREY, 9.3)],
+])
+s.shapes.add_picture(f"{SC}/fm_parts.png", Inches(0.5), Inches(2.15), width=Inches(7.3))
+runs(s, 0.6, 5.72, 7.1, 0.3, [[("결과 요약", True, NAVY, 11)]])
+hline(s, 0.6, 6.02, 7.1, LINE, 0.75)
+runs(s, 0.6, 6.1, 7.1, 0.85, [
+    [("· 단독 성능: Chronos-2f 0.808 < BISTRO 0.871 ≈ 기반 Moirai-small 0.873 — BIS 거시 미세조정의 효과는 소폭(조기 구간 1.021→1.005)", False, INK, 9)],
+    [("· 슬롯 장착: Chronos-2f만 개선(0.750→0.740). BISTRO는 동률(0.750), 두 FM 병용(0.744)도 C2f 단독에 미달", False, INK, 9)],
+    [("· 참고: 직접학습 LSTM은 동일 입력에도 1.019(조기 1.286) — 소표본 직접학습 한계 재확인", False, INK, 9)],
+], sp=2)
+AX, AW = 8.15, 4.6
+sidebar(s, AX, 2.15, 1.45, GREEN)
+runs(s, AX + 0.2, 2.15, AW - 0.2, 1.5, [
+    [("슬롯 자격 — 조기 구간에서 GBM과 대등할 것", True, NAVY, 11)],
+    [("· 조기 구간 단독: Chronos-2f 0.924 ≈ GBM 0.924 (충족) /", False, INK, 9.3)],
+    [("  BISTRO 1.005 · LSTM 1.286 (미충족)", False, INK, 9.3)],
+    [("· 슬롯 결과가 자격 판정과 일치: C2f 0.740(개선) / BISTRO", False, INK, 9.3)],
+    [("  0.750(동률) / 병용 0.744 — C2f 단독 미달 (오차 상관 0.926)", False, INK, 9.3)],
+], sp=2)
+sidebar(s, AX, 3.75, 2.45, NAVY)
+runs(s, AX + 0.2, 3.75, AW - 0.2, 2.5, [
+    [("성능 차이의 원인 — 공변량 절제 실험", True, NAVY, 11)],
+    [("· 같은 빠른신호(주가·환율) 추가 시: ", False, INK, 8.8),
+     ("C2 -3.4%", True, GREEN, 8.8), (" (0.836→0.808)", False, GREY, 8.3)],
+    [("  vs ", False, INK, 8.8), ("BISTRO +0.1% 무이득", True, WARM, 8.8), (" (0.870→0.871)", False, GREY, 8.3)],
+    [("· 공식지표 10종 추가: BISTRO -0.5% — 미미", False, INK, 8.8)],
+    [("· 원인은 사전학습의 채점 범위 차이:", False, INK, 8.8)],
+    [("  - Moirai/BISTRO: (공변량, 타깃)과거 → ", False, INK, 8.8),
+     ("(공변량, 타깃)미래 전부 채점", True, INK, 8.8)],
+    [("    = 공변량도 예측 대상(이웃). 거시 미세조정 후에도 구조 동일", False, INK, 8.8)],
+    [("  - Chronos-2: (공변량, 타깃)과거 → ", False, INK, 8.8),
+     ("타깃만 채점", True, INK, 8.8)],
+    [("    = 공변량은 힌트. 힌트 없이는 손실을 줄일 수 없는 사례로 훈련", False, INK, 8.8)],
+    [("· 체급 유사(91M vs 120M) → 격차 원인은 체급이 아닌 훈련 방식", False, INK, 8.8)],
+], sp=1.6)
+rect(s, AX, 6.35, AW, 0.7, BGGREY, None)
+sidebar(s, AX, 6.35, 0.7, GREY)
+runs(s, AX + 0.2, 6.4, AW - 0.4, 0.6, [
+    [("유의  개선폭은 모두 통계적 유의성 미달(DM p>0.18) — 비열등·개선 방향 수위.", False, GREY, 8.3)],
+    [("BISTRO는 공개 체크포인트를 논문 표준 사용법(zero-shot) 그대로 적용, 한국 GDP", False, GREY, 8.3)],
+    [("과제용 추가 미세조정 없음. 저자: Koyuncu·Kwon·Lombardi·Perez-Cruz·Shin.", False, GREY, 8.3)],
+], sp=1.3)
+footnote(s, RULE + " 슬롯 교체 = 조기(발표 19~14주 전)=(GBM+부품)÷2, 이후 XGBoost. BISTRO 출처: github.com/bis-med-it/bistro (Apache 2.0).")
+notes(s, "별첨 취지: 본문 결론(트랜스포머류 = 조건부 보완재)을 바꾸지 않는 보강 자료. 한은 측의 'Chronos-2 vs BISTRO 차이' 질문에 대응. 회의에서 다룰지는 현장 판단 — 본문 7장까지로 마쳐도 완결됨. BISTRO 관련 서술은 사실·수치 중심으로 유지(공개 체크포인트, 논문 표준 사용법 명시).")
+
 out = "/Users/user/vibe/bistro-lstm/docs/GDP_Nowcasting_종합리포트_한은_2026-08-10.pptx"
 prs.save(out); print("saved:", out)
