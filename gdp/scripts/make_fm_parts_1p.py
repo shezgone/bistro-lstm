@@ -54,7 +54,7 @@ runs(0.6, 1.38, 12.1, 0.6, [
     [("실험 설계: BISTRO 프레임워크의 세 암(Task-Specific 소형 모델 · Foundation Model · LLM ICL) 중 채점 가능한 부품들을 ", False, INK, 10.5),
      ("전부 동일 프로토콜", True, INK, 10.5),
      ("(DFM 스냅샷 + 공변량 10종 + 빠른신호 4종, 분기말 N_gdp 외삽, 32분기 실시간 그리드)로 실행하고, 검증된 주차별 결합의 조기 슬롯에 교체 장착.", False, INK, 10.5)],
-    [("FM 부품 = Chronos-2f(zero-shot) vs Moirai-small(zero-shot) · 참고 = 직접학습 LSTM(분기별 확장창 학습) · LLM ICL 암은 오염 문제로 채점 불성립(제외).", False, GREY, 9.5)],
+    [("FM 부품 = Chronos-2f(zero-shot) vs Moirai-small(zero-shot — BISTRO의 기반 모델 계열, 공개 체크포인트 프록시) · 참고 = 직접학습 LSTM · LLM ICL 암은 오염 문제로 채점 불성립(제외).", False, GREY, 9.5)],
 ])
 # 좌: 차트
 s.shapes.add_picture(f"{SC}/fm_parts.png", Inches(0.5), Inches(2.15), width=Inches(7.3))
@@ -70,32 +70,36 @@ runs(0.6, 6.16, 7.1, 0.9, [
 
 # 우측
 X, W = 8.15, 4.6
-rect(X, 2.15, 0.045, 1.95, GREEN)
-runs(X + 0.2, 2.15, W - 0.2, 2.0, [
+rect(X, 2.15, 0.045, 1.5, GREEN)
+runs(X + 0.2, 2.15, W - 0.2, 1.55, [
     [("슬롯 자격 요건은 여전히 하나입니다", True, NAVY, 11.5)],
-    [("“조기 구간(지표 공백기)에서 GBM과 대등한 단독 성능”", False, INK, 10)],
-    [("— Chronos-2f 0.924 ≈ GBM 0.924 (통과) /", False, INK, 10)],
-    [("Moirai 1.021 (미달) / LSTM 1.286 (미달).", False, INK, 10)],
-    [("슬롯 결과가 그대로 따라옵니다: C2f만 개선(0.740),", False, INK, 10)],
-    [("Moirai(0.754)·LSTM(0.777)은 기준선(0.750)보다 악화.", False, INK, 10)],
-    [("두 FM을 함께 넣어도(C2f+Moirai 듀오 0.745) C2f", False, INK, 10)],
-    [("단독 슬롯을 못 넘습니다 — 오차 상관 0.926로 중복.", False, INK, 10)],
+    [("“조기 구간(지표 공백기)에서 GBM과 대등한 단독 성능”", False, INK, 9.5)],
+    [("— Chronos-2f 0.924 ≈ GBM 0.924 (통과) / Moirai 1.021 ·", False, INK, 9.5)],
+    [("LSTM 1.286 (미달). 슬롯 결과가 그대로 따라오며, 두 FM을", False, INK, 9.5)],
+    [("함께 넣어도(듀오 0.745) C2f 단독 슬롯(0.740)을 못 넘습니다", False, INK, 9.5)],
+    [("(오차 상관 0.926 — 정보 중복).", False, INK, 9.5)],
 ], sp=2)
-rect(X, 4.3, 0.045, 1.6, NAVY)
-runs(X + 0.2, 4.3, W - 0.2, 1.65, [
-    [("왜 같은 사전학습 FM인데 갈리는가", True, NAVY, 11.5)],
-    [("세대와 공변량 처리의 차이로 해석됩니다 — Chronos-2", False, INK, 10)],
-    [("(2025, 공변량 네이티브 지원)는 빠른신호를 예측에 실제", False, INK, 10)],
-    [("반영하는 반면, Moirai-1.0-small(2024, 91M)은 공변량", False, INK, 10)],
-    [("활용이 얕아 조기 구간의 정보 이득을 살리지 못합니다.", False, INK, 10)],
-    [("→ “사전학습이면 된다”가 아니라 부품별 실측이 필수.", True, INK, 10)],
-], sp=2)
-rect(X, 6.1, W, 0.85, BGGREY, None)
-rect(X, 6.1, 0.045, 0.85, GREY)
-runs(X + 0.2, 6.17, W - 0.4, 0.75, [
-    [("유의: BISTRO는 3-암 비교 프레임워크이며 본 실험은 그중 채점 가능한", False, GREY, 8.5)],
-    [("부품(FM 2종, 소형 모델 1종)의 GDP 과제 이식 실측입니다. LLM ICL 암은", False, GREY, 8.5)],
-    [("사전학습 오염으로 실시간 채점이 성립하지 않아 제외 (종합리포트 4장).", False, GREY, 8.5)],
+rect(X, 3.8, 0.045, 2.5, NAVY)
+runs(X + 0.2, 3.8, W - 0.2, 2.55, [
+    [("Chronos-2와 Moirai 계열, 무엇이 다른가", True, NAVY, 11.5)],
+    [("둘 다 공변량을 입력받습니다 — 차이는 입력 지원 여부가", False, INK, 9.5)],
+    [("아니라 ", False, INK, 9.5), ("“사전학습에서 공변량 쓰는 법을 배웠는가”", True, INK, 9.5), ("입니다.", False, INK, 9.5)],
+    [("· Chronos-2(2025.10): 공변량과 타깃의 의존관계가 설계된", False, INK, 9.5)],
+    [("  코퍼스로 “공변량 조건부 예측” 과제 자체를 사전학습 —", False, INK, 9.5)],
+    [("  처음 보는 신호(주가·환율)도 관계를 추론해 반영", False, INK, 9.5)],
+    [("· Moirai(2024.03, ICML): 모든 변량을 한 시퀀스로 함께", False, INK, 9.5)],
+    [("  모델링(any-variate) — 공변량 조건화를 별도 과제로", False, INK, 9.5)],
+    [("  학습하지는 않아, 새 신호의 이득 전달이 상대적으로 약함", False, INK, 9.5)],
+    [("· 체급도 다름: 본 실험은 small 변형(약 14M) vs C2 120M —", False, INK, 9.5)],
+    [("  격차의 일부는 세대(과제 설계), 일부는 체급일 수 있음", False, INK, 9.5)],
+], sp=1.8)
+rect(X, 6.42, W, 0.72, BGGREY, None)
+rect(X, 6.42, 0.045, 0.72, GREY)
+runs(X + 0.2, 6.47, W - 0.4, 0.65, [
+    [("유의: 본 실험의 Moirai는 공개 체크포인트 zero-shot ", False, GREY, 8.5), ("프록시", True, GREY, 8.5),
+     ("입니다. BISTRO", False, GREY, 8.5)],
+    [("원본(개량·미세조정 반영 가능)에 대한 판정이 아니며, 원본을 동일 규약으로", False, GREY, 8.5)],
+    [("채점하면 직접 비교가 가능합니다. LLM ICL 암은 오염으로 채점 불성립(제외).", False, GREY, 8.5)],
 ], sp=1.5)
 
 # 각주
