@@ -14,7 +14,7 @@ INK = "#262626"; GREY = "#6b6b6b"; LINE = "#c9c9c9"; GREEN = "#008a3e"
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.4, 3.4), dpi=200)
 
 # (a) 조기 구간 단독 — 슬롯 자격 진단
-labels1 = ["GBM\n(파트너)", "Chronos-2f", "XGBoost\n(기준)", "BISTRO\n(BIS 원본)", "직접학습\nLSTM"]
+labels1 = ["GBM\n(파트너)", "Chronos-2f", "XGBoost\n(기준)", "BISTRO\n(BIS, 91M)", "직접학습\nLSTM"]
 vals1 = [0.9243, 0.9238, 0.9460, 1.0049, 1.2861]
 cols1 = [BLUE_M, GREEN, BLUE, WARM, GREY_C]
 x = np.arange(5)
