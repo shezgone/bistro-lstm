@@ -35,6 +35,7 @@ FASTC = ["kospi_mret", "krw_mret", "esi_raw", "esi_mom"]
 PLEN_MAX = 6
 CTX_MAX = int(os.environ.get("CTX_MAX", "200"))
 NSAMP = int(os.environ.get("NSAMP", "100"))
+PATCH_ENV = os.environ.get("PATCH", "auto")   # auto 또는 정수(예: 8) — LoRA 대조용
 COVMODE = os.environ.get("COVMODE", "full")   # full=10종+빠른신호 | base=10종만 | uni=공변량 없음
 MODEL_ID = os.environ.get("MODEL", "Salesforce/moirai-1.0-R-small")   # 로컬 경로 가능 (예: BISTRO 체크포인트)
 TAG = os.environ.get("TAG", {"full": "our_moirai_c2p", "base": "our_moirai_base", "uni": "our_moirai_uni"}[COVMODE])
@@ -71,7 +72,7 @@ def moirai_predict(hist, h):
     covcols = [c for c in hist.columns if c != "N_gdp"]
     if not covcols:
         model = MoiraiForecast(module=module, prediction_length=h, context_length=T,
-                               patch_size="auto", num_samples=NSAMP, target_dim=1,
+                               patch_size=("auto" if PATCH_ENV == "auto" else int(PATCH_ENV)), num_samples=NSAMP, target_dim=1,
                                feat_dynamic_real_dim=0, past_feat_dynamic_real_dim=0)
         pred = model.create_predictor(batch_size=1, device="cpu")
         ds = ListDataset([{"target": hist["N_gdp"].values.astype(np.float32),
@@ -79,7 +80,7 @@ def moirai_predict(hist, h):
         fc = list(pred.predict(ds))[0]
         return float(np.median(fc.samples[:, h - 1]))
     model = MoiraiForecast(module=module, prediction_length=h, context_length=T,
-                           patch_size="auto", num_samples=NSAMP, target_dim=1,
+                           patch_size=("auto" if PATCH_ENV == "auto" else int(PATCH_ENV)), num_samples=NSAMP, target_dim=1,
                            feat_dynamic_real_dim=0, past_feat_dynamic_real_dim=len(covcols))
     pred = model.create_predictor(batch_size=1, device="cpu")
     start = pd.Period(hist.index[0], freq="M")
