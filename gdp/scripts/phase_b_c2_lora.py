@@ -12,6 +12,12 @@
 
 평가: phase_b_chronos2.py와 동일 프로토콜/그리드, TAG=our_c2f_lora.
 env: YEARS=2024 (부분) / NUM_STEPS / SEED / TAG
+v2(weekly 절단 경로) 결과 (2026-08-26): 0.5836 — v1(0.5712)보다 열세, 흡수율 +7.3%(악화).
+  '정보 축적 경험' 신호화 가설 기각: 절단 경로 추가는 흡수를 가르치지 못하고 레벨만 희석.
+  회고 편중도 심화(2021-22 개선 / 2024-25 악화) → v1 유지, v2 재시도 없음 (킬 기준 적용).
+seed 주입 사고 기록: torch.manual_seed는 HF Trainer(내부 seed 42)에 미전파 — s7=s11 완전 동일 사고.
+  fit(..., seed=SEED)로 TrainingArguments에 직접 전달해야 실제 반복이 됨.
+
 실행: .venv-gdp/bin/python phase_b_c2_lora.py
 """
 import os, sys, glob, warnings; warnings.filterwarnings("ignore"); sys.path.insert(0, ".")
@@ -148,7 +154,8 @@ for year in YEARS:
     base = Chronos2Pipeline.from_pretrained("amazon/chronos-2", device_map="cpu")
     tuned = base.fit(inputs, prediction_length=PLEN, finetune_mode="lora",
                      learning_rate=LR, num_steps=NUM_STEPS, batch_size=16,
-                     output_dir=f"output/model/c2_lora/{TAG}_{year}")
+                     output_dir=f"output/model/c2_lora/{TAG}_{year}",
+                     seed=SEED)          # HF TrainingArguments로 전달 — 외부 manual_seed는 미전파(s7=s11 동일 사고)
     tuned.inner_model.eval()                          # Step 0 교훈: 드롭아웃 차단
     predict_year(tuned, year, rows)
     del base, tuned
