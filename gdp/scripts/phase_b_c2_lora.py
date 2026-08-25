@@ -12,15 +12,6 @@
 
 평가: phase_b_chronos2.py와 동일 프로토콜/그리드, TAG=our_c2f_lora.
 env: YEARS=2024 (부분) / NUM_STEPS / SEED / TAG
-결과 (2026-08-26, 평가창 2021~2025 20분기, seed 7 단일 — seed 확장 예정):
-  C2f-LoRA 0.5712 vs C2f-zs 0.6192 (-7.8%) — 레벨 전 주차 개선, 조기 0.651→0.576 (GBM 0.583 통과)
-  흡수율: +4.5% (zs +4.3%와 동일 수준 — 흡수는 미학습, 레벨만 개선. primary 지표 기준 미달성)
-  연도별: 2021 -15% / 2022 -19% / 2023 -2% / 2024 +1% / 2025(준청정) -1.5% — 개선이 회고 구간 편중,
-    사전학습 오염(≤2024)과 적응의 상호작용 가능성. 2025 단독으론 사실상 zs와 동급.
-  슬롯: (XGB+LoRA)/2 0.5113 vs XGB 단독 0.5178 (-1.3%) — 수치상 개선이나 오차상관 0.844로 이득 얕음.
-판정 보류 지점: 흡수율 미개선 + 개선의 회고 편중 → "레벨 개선은 오염 의심, 흡수는 못 가르침"이
-  현재 정직한 해석. seed 2개 추가 + 2025 확대 관측 필요.
-
 실행: .venv-gdp/bin/python phase_b_c2_lora.py
 """
 import os, sys, glob, warnings; warnings.filterwarnings("ignore"); sys.path.insert(0, ".")
@@ -36,6 +27,8 @@ NUM_STEPS = int(os.environ.get("NUM_STEPS", "500"))
 LR = float(os.environ.get("LR", "1e-4"))
 SEED = int(os.environ.get("SEED", "7"))
 TAG = os.environ.get("TAG", "our_c2f_lora")
+PATH_MODE = os.environ.get("PATH_MODE", "final")   # final=분기당 완성 경로 1개(v1) | weekly=주차별 절단 경로(v2)
+WEEK_STRIDE = int(os.environ.get("WEEK_STRIDE", "3"))  # v2: 주차 샘플 간격 (19주 → ~7개 절단)
 YEARS = [int(y) for y in os.environ.get("YEARS", "2021,2022,2023,2024,2025").split(",")]
 
 grid, _ = H.load_grid()
@@ -76,7 +69,12 @@ def anchor_flashes(panel, upto_tq):
     return panel
 
 def build_training_inputs(first_vintage_of_year):
-    """해당 시점 이전에 flash가 발표 완료된 분기들의 경로 시리즈."""
+    """해당 시점 이전에 flash가 발표 완료된 분기들의 경로 시리즈.
+    PATH_MODE=final: 분기당 마지막 빈티지 1개 (v1)
+    PATH_MODE=weekly: 주차별 빈티지 절단 다수 (v2) — 같은 분기의 서로 다른 정보량 상태를
+      전부 보여줘 '정보 축적→예측 갱신' 경험 자체를 학습 신호로 만든다.
+      절단 경로는 분기말 월이 컨텍스트에 없으므로 fit이 마지막 PLEN 구간을 라벨로 쓰도록
+      flash 앵커된 분기말 월까지 이어붙인다(라벨 월 = 실제 flash)."""
     inputs = []
     fv = pd.Timestamp(first_vintage_of_year)
     for q in ALL_Q:
@@ -84,15 +82,30 @@ def build_training_inputs(first_vintage_of_year):
         if qend_of(q) + pd.Timedelta(weeks=6) >= fv: continue
         sub = g[g.tq == q].sort_values("week_idx")
         if sub.empty: continue
-        v_last = sub.vintage.iloc[-1]
-        p = load_panel(q, v_last)
-        if p is None: continue
-        p = with_fast_and_mask(p, v_last)
-        p = p[p.index <= qend_of(q)]
-        p = anchor_flashes(p, q)
-        if len(p) < 80: continue
-        inputs.append({"target": p["N_gdp"].to_numpy(np.float32),
-                       "past_covariates": {c: p[c].to_numpy(np.float32) for c in p.columns if c != "N_gdp"}})
+        qe = qend_of(q)
+        if PATH_MODE == "final":
+            vlist = [sub.vintage.iloc[-1]]
+        else:
+            vv = sub.vintage.tolist()
+            vlist = vv[::WEEK_STRIDE] + ([vv[-1]] if vv[-1] not in vv[::WEEK_STRIDE] else [])
+        p_full = load_panel(q, sub.vintage.iloc[-1])
+        if p_full is None: continue
+        for v in vlist:
+            p = load_panel(q, v)
+            if p is None: continue
+            p = with_fast_and_mask(p, v)
+            edge = pd.Timestamp(v) + pd.offsets.MonthEnd(0)
+            p = p[p.index <= min(edge, qe)]
+            # 절단 이후~분기말은 당시 스냅샷의 DFM 외삽으로 채우되 분기말 월은 flash 앵커
+            if p.index[-1] < qe:
+                tail = with_fast_and_mask(p_full, v)
+                tail = tail[(tail.index > p.index[-1]) & (tail.index <= qe)]
+                tail["est_flag"] = 1.0
+                p = pd.concat([p, tail])
+            p = anchor_flashes(p, q)
+            if len(p) < 80: continue
+            inputs.append({"target": p["N_gdp"].to_numpy(np.float32),
+                           "past_covariates": {c: p[c].to_numpy(np.float32) for c in p.columns if c != "N_gdp"}})
     return inputs
 
 def predict_year(pipe, year, rows):
