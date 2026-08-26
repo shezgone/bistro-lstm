@@ -11,6 +11,18 @@ patch_size는 train/predict 모두 8로 고정 (auto는 학습과 불일치 위�
 zero-shot patch=8 재채점은 phase_b_moirai_c2p.py PATCH=8로 별도 산출.
 
 env: YEARS / NUM_STEPS / LR / SEED / TAG / RANK
+결과 (2026-08-26, 평가창 2021~2025 20분기, seed 7):
+  BISTRO-LoRA 0.5490 — zs(p8) 0.5957 대비 -7.8%, zs(auto) 0.6072 대비 -9.6%
+  **C2f-LoRA(0.571, 3-seed)를 역전 — LoRA 후 두 체크포인트 순위가 뒤집힘**
+  흡수율 +10.1%(zs-p8) → +1.4%: 역행이 거의 사라짐 (C2-LoRA는 흡수 불변과 대조)
+  연도별: 2021 -3% / 2022 -14% / 2023 -5% / 2024 -7% / **2025(준청정) 0.546 — XGB(0.567)를 앞섬**
+    → C2-LoRA의 회고 편중과 달리 개선이 전 연도 고름 + 깨끗한 구간에서 최강
+  슬롯: 조기=BLo 단독 0.5093 / (CLo+BLo)/2 0.5071 vs XGB 단독 0.5178
+  단서: patch 고정(8) 효과가 일부 포함(zs auto→p8만으로 -1.9%), 오차상관 0.914로 슬롯 이득 얕음,
+    seed 1개(확장 필요), DM 미검정.
+해석(잠정): any-variate 계열은 '고칠 것'(흡수 부재)이 명확해 LoRA의 개선 여지가 컸고,
+  C2는 이미 흡수하는 상태라 개선 여지가 작았다 — "적응 이득은 출발점의 결함 크기에 비례".
+
 실행: /Users/user/vibe/bistro-lstm/.venv-moirai/bin/python phase_b_bistro_lora.py
 """
 import os, sys, glob, warnings; warnings.filterwarnings("ignore"); sys.path.insert(0, ".")
