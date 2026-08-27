@@ -23,6 +23,14 @@ env: YEARS / NUM_STEPS / LR / SEED / TAG / RANK
 해석(잠정): any-variate 계열은 '고칠 것'(흡수 부재)이 명확해 LoRA의 개선 여지가 컸고,
   C2는 이미 흡수하는 상태라 개선 여지가 작았다 — "적응 이득은 출발점의 결함 크기에 비례".
 
+seed 확장 (2026-08-27, s11 0.5597 / s23 0.6021):
+  3-seed 평균 0.5703 ± 0.0281 — C2f-LoRA(0.5711 ± 0.0016)와 평균 동률, 분산 17배.
+  → 8/26의 "역전" 주장 철회: seed 7이 행운의 추첨이었음. 흡수율도 seed별 +1.4~+5.7% 산포.
+  단, 3-seed 예측 평균(seed 앙상블): BISTRO-LoRA 0.5599(흡수 +3.2%, 2025 0.556) —
+  분산을 평균으로 흡수하면 C2f-LoRA 앙상블(0.5641)보다 근소 우위 + 2025 XGB(0.567) 상회 유지.
+교훈: 수동 LoRA(kaiming 초기화 + 소표본)는 seed 분산이 크다 — 단일 seed 결과 절대 금지,
+  실무 형태는 "3-seed 예측 평균"이 정직한 대표값.
+
 실행: /Users/user/vibe/bistro-lstm/.venv-moirai/bin/python phase_b_bistro_lora.py
 """
 import os, sys, glob, warnings; warnings.filterwarnings("ignore"); sys.path.insert(0, ".")
