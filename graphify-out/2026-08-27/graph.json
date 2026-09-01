@@ -4,324 +4,14 @@
   "graph": {},
   "nodes": [
     {
-      "label": "make_bok_lora_report.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report",
-      "community": 161,
-      "norm_label": "make_bok_lora_report.py"
-    },
-    {
-      "label": "new_slide()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_new_slide",
-      "community": 161,
-      "norm_label": "new_slide()"
-    },
-    {
-      "label": "runs()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_runs",
-      "community": 161,
-      "norm_label": "runs()"
-    },
-    {
-      "label": "hline()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_hline",
-      "community": 161,
-      "norm_label": "hline()"
-    },
-    {
-      "label": "rect()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_rect",
-      "community": 161,
-      "norm_label": "rect()"
-    },
-    {
-      "label": "header()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_header",
-      "community": 161,
-      "norm_label": "header()"
-    },
-    {
-      "label": "footnote()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L57",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_footnote",
-      "community": 161,
-      "norm_label": "footnote()"
-    },
-    {
-      "label": "sidebar()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L61",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_sidebar",
-      "community": 161,
-      "norm_label": "sidebar()"
-    },
-    {
-      "label": "notes()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L64",
-      "_origin": "ast",
-      "id": "gdp_scripts_make_bok_lora_report_notes",
-      "community": 161,
-      "norm_label": "notes()"
-    },
-    {
-      "label": "bok_final_charts.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/bok_final_charts.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 71,
-      "norm_label": "bok_final_charts.py",
-      "id": "gdp_scripts_bok_final_charts"
-    },
-    {
-      "label": "ceo_final_chart.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/ceo_final_chart.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 159,
-      "norm_label": "ceo_final_chart.py",
-      "id": "gdp_scripts_ceo_final_chart"
-    },
-    {
-      "label": "lora_share_chart.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/lora_share_chart.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 144,
-      "norm_label": "lora_share_chart.py",
-      "id": "gdp_scripts_lora_share_chart"
-    },
-    {
-      "label": "make_ceo_journey_deck.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "make_ceo_journey_deck.py",
-      "id": "gdp_scripts_make_ceo_journey_deck"
-    },
-    {
-      "label": "new_slide()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "new_slide()",
-      "id": "gdp_scripts_make_ceo_journey_deck_new_slide"
-    },
-    {
-      "label": "runs()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "runs()",
-      "id": "gdp_scripts_make_ceo_journey_deck_runs"
-    },
-    {
-      "label": "hline()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L40",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "hline()",
-      "id": "gdp_scripts_make_ceo_journey_deck_hline"
-    },
-    {
-      "label": "rect()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L44",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "rect()",
-      "id": "gdp_scripts_make_ceo_journey_deck_rect"
-    },
-    {
-      "label": "header()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L52",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "header()",
-      "id": "gdp_scripts_make_ceo_journey_deck_header"
-    },
-    {
-      "label": "footnote()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L57",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "footnote()",
-      "id": "gdp_scripts_make_ceo_journey_deck_footnote"
-    },
-    {
-      "label": "sidebar()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L61",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "sidebar()",
-      "id": "gdp_scripts_make_ceo_journey_deck_sidebar"
-    },
-    {
-      "label": "notes()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L64",
-      "_origin": "ast",
-      "community": 158,
-      "norm_label": "notes()",
-      "id": "gdp_scripts_make_ceo_journey_deck_notes"
-    },
-    {
-      "label": "weekly_absorb_chart.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/weekly_absorb_chart.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 95,
-      "norm_label": "weekly_absorb_chart.py",
-      "id": "gdp_scripts_weekly_absorb_chart"
-    },
-    {
-      "label": "phase_b_lora_slot.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 160,
-      "norm_label": "phase_b_lora_slot.py",
-      "id": "gdp_scripts_phase_b_lora_slot"
-    },
-    {
-      "label": "norm()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 160,
-      "norm_label": "norm()",
-      "id": "gdp_scripts_phase_b_lora_slot_norm"
-    },
-    {
-      "label": "pick()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L46",
-      "_origin": "ast",
-      "community": 160,
-      "norm_label": "pick()",
-      "id": "gdp_scripts_phase_b_lora_slot_pick"
-    },
-    {
-      "label": "sc()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L67",
-      "_origin": "ast",
-      "community": 160,
-      "norm_label": "sc()",
-      "id": "gdp_scripts_phase_b_lora_slot_sc"
-    },
-    {
-      "label": "LoRA \ubd80\ud488\uc758 \uc870\uae30 \uc2ac\ub86f \uc7a5\ucc29 \u2014 \"\u2461(\uc5f0\uad6c)\ub97c \u2460(\uc6b4\uc601)\uc5d0 \uaf42\uae30\" \uac80\uc99d (2026-08-28, \uc0ac\uc6a9\uc790 \uc544\uc774\ub514\uc5b4).  \uc9c8\ubb38: FM ICL(ze",
-      "file_type": "rationale",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 160,
-      "norm_label": "lora \u1107\u116e\u1111\u116e\u11b7\u110b\u1174 \u110c\u1169\u1100\u1175 \u1109\u1173\u11af\u1105\u1169\u11ba \u110c\u1161\u11bc\u110e\u1161\u11a8 \u2014 \"2(\u110b\u1167\u11ab\u1100\u116e)\u1105\u1173\u11af 1(\u110b\u116e\u11ab\u110b\u1167\u11bc)\u110b\u1166 \u1101\u1169\u11bd\u1100\u1175\" \u1100\u1165\u11b7\u110c\u1173\u11bc (2026-08-28, \u1109\u1161\u110b\u116d\u11bc\u110c\u1161 \u110b\u1161\u110b\u1175\u1103\u1175\u110b\u1165).  \u110c\u1175\u11af\u1106\u116e\u11ab: fm icl(ze",
-      "id": "gdp_scripts_phase_b_lora_slot_rationale_1"
-    },
-    {
-      "label": "make_lora_share_1p.py",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 141,
-      "norm_label": "make_lora_share_1p.py",
-      "id": "gdp_scripts_make_lora_share_1p"
-    },
-    {
-      "label": "runs()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L20",
-      "_origin": "ast",
-      "community": 141,
-      "norm_label": "runs()",
-      "id": "gdp_scripts_make_lora_share_1p_runs"
-    },
-    {
-      "label": "hline()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L35",
-      "_origin": "ast",
-      "community": 141,
-      "norm_label": "hline()",
-      "id": "gdp_scripts_make_lora_share_1p_hline"
-    },
-    {
-      "label": "rect()",
-      "file_type": "code",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 141,
-      "norm_label": "rect()",
-      "id": "gdp_scripts_make_lora_share_1p_rect"
-    },
-    {
       "label": "phase_b_bistro_lora.py",
       "file_type": "code",
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora",
       "community": 104,
-      "norm_label": "phase_b_bistro_lora.py",
-      "id": "gdp_scripts_phase_b_bistro_lora"
+      "norm_label": "phase_b_bistro_lora.py"
     },
     {
       "label": "load_panel()",
@@ -329,9 +19,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L64",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_load_panel",
       "community": 104,
-      "norm_label": "load_panel()",
-      "id": "gdp_scripts_phase_b_bistro_lora_load_panel"
+      "norm_label": "load_panel()"
     },
     {
       "label": "with_fast_and_mask()",
@@ -339,9 +29,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L73",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_with_fast_and_mask",
       "community": 104,
-      "norm_label": "with_fast_and_mask()",
-      "id": "gdp_scripts_phase_b_bistro_lora_with_fast_and_mask"
+      "norm_label": "with_fast_and_mask()"
     },
     {
       "label": "qend_of()",
@@ -349,9 +39,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L83",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_qend_of",
       "community": 104,
-      "norm_label": "qend_of()",
-      "id": "gdp_scripts_phase_b_bistro_lora_qend_of"
+      "norm_label": "qend_of()"
     },
     {
       "label": "anchor_flashes()",
@@ -359,9 +49,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L86",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_anchor_flashes",
       "community": 104,
-      "norm_label": "anchor_flashes()",
-      "id": "gdp_scripts_phase_b_bistro_lora_anchor_flashes"
+      "norm_label": "anchor_flashes()"
     },
     {
       "label": "build_training_paths()",
@@ -369,9 +59,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L95",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
       "community": 104,
-      "norm_label": "build_training_paths()",
-      "id": "gdp_scripts_phase_b_bistro_lora_build_training_paths"
+      "norm_label": "build_training_paths()"
     },
     {
       "label": "path_to_tensors()",
@@ -379,9 +69,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L114",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_path_to_tensors",
       "community": 104,
-      "norm_label": "path_to_tensors()",
-      "id": "gdp_scripts_phase_b_bistro_lora_path_to_tensors"
+      "norm_label": "path_to_tensors()"
     },
     {
       "label": "make_forecaster()",
@@ -389,9 +79,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L133",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_make_forecaster",
       "community": 104,
-      "norm_label": "make_forecaster()",
-      "id": "gdp_scripts_phase_b_bistro_lora_make_forecaster"
+      "norm_label": "make_forecaster()"
     },
     {
       "label": "LoRALinear",
@@ -399,9 +89,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L139",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_loralinear",
       "community": 104,
-      "norm_label": "loralinear",
-      "id": "gdp_scripts_phase_b_bistro_lora_loralinear"
+      "norm_label": "loralinear"
     },
     {
       "label": ".__init__()",
@@ -409,9 +99,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L141",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_loralinear_init",
       "community": 104,
-      "norm_label": ".__init__()",
-      "id": "gdp_scripts_phase_b_bistro_lora_loralinear_init"
+      "norm_label": ".__init__()"
     },
     {
       "label": "Linear",
@@ -419,9 +109,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "linear",
       "community": 104,
-      "norm_label": "linear",
-      "id": "linear"
+      "norm_label": "linear"
     },
     {
       "label": ".forward()",
@@ -429,9 +119,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L150",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_loralinear_forward",
       "community": 104,
-      "norm_label": ".forward()",
-      "id": "gdp_scripts_phase_b_bistro_lora_loralinear_forward"
+      "norm_label": ".forward()"
     },
     {
       "label": "inject_lora()",
@@ -439,9 +129,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L153",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_inject_lora",
       "community": 104,
-      "norm_label": "inject_lora()",
-      "id": "gdp_scripts_phase_b_bistro_lora_inject_lora"
+      "norm_label": "inject_lora()"
     },
     {
       "label": "train_lora()",
@@ -449,9 +139,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L161",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_train_lora",
       "community": 104,
-      "norm_label": "train_lora()",
-      "id": "gdp_scripts_phase_b_bistro_lora_train_lora"
+      "norm_label": "train_lora()"
     },
     {
       "label": "moirai_predict()",
@@ -459,9 +149,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L197",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_moirai_predict",
       "community": 104,
-      "norm_label": "moirai_predict()",
-      "id": "gdp_scripts_phase_b_bistro_lora_moirai_predict"
+      "norm_label": "moirai_predict()"
     },
     {
       "label": "\uc2e4\ud5d8 B: BISTRO LoRA \uc801\uc751 \u2014 C2-LoRA(v1)\uc640 \ub3d9\uc77c \ub808\uc2dc\ud53c, walk-forward \ud3c9\uac00 (2026-08-26).  C2 \ub300\uc870",
@@ -469,9 +159,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_rationale_1",
       "community": 104,
-      "norm_label": "\u1109\u1175\u11af\u1112\u1165\u11b7 b: bistro lora \u110c\u1165\u11a8\u110b\u1173\u11bc \u2014 c2-lora(v1)\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af \u1105\u1166\u1109\u1175\u1111\u1175, walk-forward \u1111\u1167\u11bc\u1100\u1161 (2026-08-26).  c2 \u1103\u1162\u110c\u1169",
-      "id": "gdp_scripts_phase_b_bistro_lora_rationale_1"
+      "norm_label": "\u1109\u1175\u11af\u1112\u1165\u11b7 b: bistro lora \u110c\u1165\u11a8\u110b\u1173\u11bc \u2014 c2-lora(v1)\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af \u1105\u1166\u1109\u1175\u1111\u1175, walk-forward \u1111\u1167\u11bc\u1100\u1161 (2026-08-26).  c2 \u1103\u1162\u110c\u1169"
     },
     {
       "label": "v1 \ub808\uc2dc\ud53c: \ubd84\uae30\ub2f9 \uc644\uc131 \uacbd\ub85c 1\uac1c (C2\uc640 \ub3d9\uc77c).",
@@ -479,9 +169,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L96",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_rationale_96",
       "community": 104,
-      "norm_label": "v1 \u1105\u1166\u1109\u1175\u1111\u1175: \u1107\u116e\u11ab\u1100\u1175\u1103\u1161\u11bc \u110b\u116a\u11ab\u1109\u1165\u11bc \u1100\u1167\u11bc\u1105\u1169 1\u1100\u1162 (c2\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af).",
-      "id": "gdp_scripts_phase_b_bistro_lora_rationale_96"
+      "norm_label": "v1 \u1105\u1166\u1109\u1175\u1111\u1175: \u1107\u116e\u11ab\u1100\u1175\u1103\u1161\u11bc \u110b\u116a\u11ab\u1109\u1165\u11bc \u1100\u1167\u11bc\u1105\u1169 1\u1100\u1162 (c2\u110b\u116a \u1103\u1169\u11bc\u110b\u1175\u11af)."
     },
     {
       "label": "\uacbd\ub85c \u2192 (past_target, past_feat, future_target). past\ub294 CTX\ub85c \uc88c\uce21 \ud328\ub529/\uc808\ub2e8.",
@@ -489,9 +179,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L115",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_rationale_115",
       "community": 104,
-      "norm_label": "\u1100\u1167\u11bc\u1105\u1169 \u2192 (past_target, past_feat, future_target). past\u1102\u1173\u11ab ctx\u1105\u1169 \u110c\u116a\u110e\u1173\u11a8 \u1111\u1162\u1103\u1175\u11bc/\u110c\u1165\u11af\u1103\u1161\u11ab.",
-      "id": "gdp_scripts_phase_b_bistro_lora_rationale_115"
+      "norm_label": "\u1100\u1167\u11bc\u1105\u1169 \u2192 (past_target, past_feat, future_target). past\u1102\u1173\u11ab ctx\u1105\u1169 \u110c\u116a\u110e\u1173\u11a8 \u1111\u1162\u1103\u1175\u11bc/\u110c\u1165\u11af\u1103\u1161\u11ab."
     },
     {
       "label": "\uc218\ub3d9 LoRA: y = Wx + (alpha/r)\u00b7B(Ax). \uc6d0 \uac00\uc911\uce58 \ub3d9\uacb0.",
@@ -499,9 +189,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L140",
       "_origin": "ast",
+      "id": "gdp_scripts_phase_b_bistro_lora_rationale_140",
       "community": 104,
-      "norm_label": "\u1109\u116e\u1103\u1169\u11bc lora: y = wx + (alpha/r)\u00b7b(ax). \u110b\u116f\u11ab \u1100\u1161\u110c\u116e\u11bc\u110e\u1175 \u1103\u1169\u11bc\u1100\u1167\u11af.",
-      "id": "gdp_scripts_phase_b_bistro_lora_rationale_140"
+      "norm_label": "\u1109\u116e\u1103\u1169\u11bc lora: y = wx + (alpha/r)\u00b7b(ax). \u110b\u116f\u11ab \u1100\u1161\u110c\u116e\u11bc\u110e\u1175 \u1103\u1169\u11bc\u1100\u1167\u11af."
     },
     {
       "label": "phase_b_moirai_c2p.py",
@@ -742,6 +432,16 @@
       "community": 98,
       "norm_label": "rect()",
       "id": "gdp_scripts_make_absorb_1p_rect"
+    },
+    {
+      "label": "weekly_absorb_chart.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/weekly_absorb_chart.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 95,
+      "norm_label": "weekly_absorb_chart.py",
+      "id": "gdp_scripts_weekly_absorb_chart"
     },
     {
       "label": "info_gap_diagram.py",
@@ -1252,6 +952,16 @@
       "community": 75,
       "norm_label": "\u1107\u116e\u1111\u116e\u11b7 \u1100\u116d\u110e\u1166 \u1109\u1175\u11af\u1112\u1165\u11b7 \u2014 \u110c\u116e\u110e\u1161\u1107\u1167\u11af \u1100\u1167\u11af\u1112\u1161\u11b8\u110b\u1174 \u110c\u1169\u1100\u1175 \u1109\u1173\u11af\u1105\u1169\u11ba\u110b\u1166\u1109\u1165 chronos-2f \u2194 bistro \u1100\u116d\u110e\u1166 \u1107\u1175\u1100\u116d (2026-08-12).  \u1109\u1165\u11af\u1100\u1168: \u1100\u1165\u11b7\u110c\u1173\u11bc\u1103\u116c\u11ab \u110c\u116e\u110e\u1161\u1107\u1167\u11af",
       "id": "gdp_scripts_phase_b_slot_swap_rationale_1"
+    },
+    {
+      "label": "bok_final_charts.py",
+      "file_type": "code",
+      "source_file": "gdp/scripts/bok_final_charts.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 71,
+      "norm_label": "bok_final_charts.py",
+      "id": "gdp_scripts_bok_final_charts"
     },
     {
       "label": "make_bok_final_report.py",
@@ -5109,7 +4819,7 @@
       "source_file": "core/lstm_core.py",
       "source_location": "L165",
       "_origin": "ast",
-      "community": 99,
+      "community": 97,
       "norm_label": ".from_dict()",
       "id": "core_lstm_core_lstmconfig_from_dict"
     },
@@ -5229,7 +4939,7 @@
       "source_file": "core/lstm_core.py",
       "source_location": "L281",
       "_origin": "ast",
-      "community": 100,
+      "community": 51,
       "norm_label": "load_stage1_screening()",
       "id": "core_lstm_core_load_stage1_screening"
     },
@@ -5319,7 +5029,7 @@
       "source_file": "core/lstm_core.py",
       "source_location": "L282",
       "_origin": "ast",
-      "community": 100,
+      "community": 51,
       "norm_label": "stage 1 \u110c\u1165\u11ab\u110e\u1166 \u1107\u1167\u11ab\u1109\u116e \u1109\u1173\u110f\u1173\u1105\u1175\u1102\u1175\u11bc \u1100\u1167\u11af\u1100\u116a \u1105\u1169\u1103\u1175\u11bc.",
       "id": "core_lstm_core_rationale_282"
     },
@@ -5459,7 +5169,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L204",
       "_origin": "ast",
-      "community": 97,
+      "community": 96,
       "norm_label": "attentionlstmforecaster",
       "id": "core_lstm_model_attentionlstmforecaster"
     },
@@ -5499,7 +5209,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L366",
       "_origin": "ast",
-      "community": 97,
+      "community": 96,
       "norm_label": ".count_parameters()",
       "id": "core_lstm_model_attentionlstmforecaster_count_parameters"
     },
@@ -5509,7 +5219,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L370",
       "_origin": "ast",
-      "community": 97,
+      "community": 51,
       "norm_label": ".from_config()",
       "id": "core_lstm_model_attentionlstmforecaster_from_config"
     },
@@ -5579,7 +5289,7 @@
       "source_file": "core/lstm_model.py",
       "source_location": "L205",
       "_origin": "ast",
-      "community": 97,
+      "community": 96,
       "norm_label": "attention-augmented stacked lstm for macroeconomic forecasting.      architectur",
       "id": "core_lstm_model_rationale_205"
     },
@@ -5619,7 +5329,7 @@
       "source_file": "core/lstm_trainer.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 94,
+      "community": 141,
       "norm_label": "set_seed()",
       "id": "core_lstm_trainer_set_seed"
     },
@@ -5849,7 +5559,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 72,
+      "community": 51,
       "norm_label": "preprocessing_util.py",
       "id": "core_preprocessing_util"
     },
@@ -5989,7 +5699,7 @@
       "source_file": "core/preprocessing_util.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 72,
+      "community": 51,
       "norm_label": "preprocessing utility for bistro-lstm ===================================== \u110b\u116f\u11af\u1107\u1167\u11af \u1106\u1162",
       "id": "core_preprocessing_util_rationale_1"
     },
@@ -8819,7 +8529,7 @@
       "source_file": "rolling2025/rolling_2025_torch.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 72,
+      "community": 141,
       "norm_label": "rolling_2025_torch.py",
       "id": "rolling2025_rolling_2025_torch"
     },
@@ -8829,7 +8539,7 @@
       "source_file": "rolling2025/rolling_2025_torch.py",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 94,
+      "community": 141,
       "norm_label": "train_and_save()",
       "id": "rolling2025_rolling_2025_torch_train_and_save"
     },
@@ -8839,7 +8549,7 @@
       "source_file": "rolling2025/rolling_2025_torch.py",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 72,
+      "community": 141,
       "norm_label": "rolling_inference()",
       "id": "rolling2025_rolling_2025_torch_rolling_inference"
     },
@@ -8849,7 +8559,7 @@
       "source_file": "rolling2025/rolling_2025_torch.py",
       "source_location": "L119",
       "_origin": "ast",
-      "community": 72,
+      "community": 141,
       "norm_label": "summarize()",
       "id": "rolling2025_rolling_2025_torch_summarize"
     },
@@ -8859,7 +8569,7 @@
       "source_file": "rolling2025/rolling_2025_torch.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 72,
+      "community": 141,
       "norm_label": "rolling 1-step-ahead forecast with lstm and transformer (same arch as report).",
       "id": "rolling2025_rolling_2025_torch_rationale_1"
     },
@@ -8869,7 +8579,7 @@
       "source_file": "rolling2025/rolling_2025_torch.py",
       "source_location": "L82",
       "_origin": "ast",
-      "community": 72,
+      "community": 141,
       "norm_label": "rolling 1-step-ahead inference for origins 2025-04 to 2025-11.",
       "id": "rolling2025_rolling_2025_torch_rationale_82"
     },
@@ -9349,7 +9059,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 94,
+      "community": 118,
       "norm_label": "train_and_evaluate.py",
       "id": "training_train_and_evaluate"
     },
@@ -9359,7 +9069,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 94,
+      "community": 118,
       "norm_label": "run_training()",
       "id": "training_train_and_evaluate_run_training"
     },
@@ -9369,7 +9079,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 94,
+      "community": 118,
       "norm_label": "device",
       "id": "training_train_and_evaluate_py_device"
     },
@@ -9379,7 +9089,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L242",
       "_origin": "ast",
-      "community": 99,
+      "community": 118,
       "norm_label": "save_results()",
       "id": "training_train_and_evaluate_save_results"
     },
@@ -9389,7 +9099,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L282",
       "_origin": "ast",
-      "community": 100,
+      "community": 118,
       "norm_label": "main()",
       "id": "training_train_and_evaluate_main"
     },
@@ -9399,7 +9109,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 94,
+      "community": 118,
       "norm_label": "bistro-lstm: main entry point ============================== \u1112\u1161\u11a8\u1109\u1173\u11b8 \u2192 \u1111\u1167\u11bc\u1100\u1161 \u2192 \u1100\u1167\u11af\u1100\u116a \u110c\u1165\u110c\u1161\u11bc \u1111\u1161\u110b\u1175\u1111\u1173",
       "id": "training_train_and_evaluate_rationale_1"
     },
@@ -9409,7 +9119,7 @@
       "source_file": "training/train_and_evaluate.py",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 94,
+      "community": 118,
       "norm_label": "\u110c\u1165\u11ab\u110e\u1166 \u1112\u1161\u11a8\u1109\u1173\u11b8 + \u1111\u1167\u11bc\u1100\u1161 \u1111\u1161\u110b\u1175\u1111\u1173\u1105\u1161\u110b\u1175\u11ab.      parameters     ----------     selected_vars : \u1109\u1161\u110b\u116d\u11bc\u1112\u1161\u11af \u1107\u1167\u11ab\u1109\u116e \u1105\u1175\u1109\u1173\u1110\u1173",
       "id": "training_train_and_evaluate_rationale_42"
     },
@@ -17447,333 +17157,15 @@
   ],
   "links": [
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_footnote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L52",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_header",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_hline",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_new_slide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_notes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L44",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_rect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_runs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report",
-      "target": "gdp_scripts_make_bok_lora_report_sidebar",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L58",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report_footnote",
-      "target": "gdp_scripts_make_bok_lora_report_runs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report_header",
-      "target": "gdp_scripts_make_bok_lora_report_runs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L55",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report_header",
-      "target": "gdp_scripts_make_bok_lora_report_hline",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_bok_lora_report.py",
-      "source_location": "L62",
-      "weight": 1.0,
-      "source": "gdp_scripts_make_bok_lora_report_sidebar",
-      "target": "gdp_scripts_make_bok_lora_report_rect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_footnote"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_header"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_hline"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_new_slide"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_notes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_rect"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_runs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck",
-      "target": "gdp_scripts_make_ceo_journey_deck_sidebar"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck_footnote",
-      "target": "gdp_scripts_make_ceo_journey_deck_runs"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck_header",
-      "target": "gdp_scripts_make_ceo_journey_deck_runs"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L55",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck_header",
-      "target": "gdp_scripts_make_ceo_journey_deck_hline"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_ceo_journey_deck.py",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_ceo_journey_deck_sidebar",
-      "target": "gdp_scripts_make_ceo_journey_deck_rect"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_lora_slot",
-      "target": "gdp_scripts_phase_b_lora_slot_norm"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_lora_slot",
-      "target": "gdp_scripts_phase_b_lora_slot_pick"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_lora_slot",
-      "target": "gdp_scripts_phase_b_lora_slot_sc"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/phase_b_lora_slot.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_phase_b_lora_slot_rationale_1",
-      "target": "gdp_scripts_phase_b_lora_slot"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_lora_share_1p",
-      "target": "gdp_scripts_make_lora_share_1p_hline"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_lora_share_1p",
-      "target": "gdp_scripts_make_lora_share_1p_rect"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "gdp/scripts/make_lora_share_1p.py",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gdp_scripts_make_lora_share_1p",
-      "target": "gdp_scripts_make_lora_share_1p_runs"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L42",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_fast_signals"
+      "target": "gdp_scripts_fast_signals",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17781,9 +17173,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L86",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_anchor_flashes"
+      "target": "gdp_scripts_phase_b_bistro_lora_anchor_flashes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17791,9 +17183,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L95",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_build_training_paths"
+      "target": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17801,9 +17193,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L153",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_inject_lora"
+      "target": "gdp_scripts_phase_b_bistro_lora_inject_lora",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17811,9 +17203,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L64",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_load_panel"
+      "target": "gdp_scripts_phase_b_bistro_lora_load_panel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17821,9 +17213,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L139",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_loralinear"
+      "target": "gdp_scripts_phase_b_bistro_lora_loralinear",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17831,9 +17223,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L133",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_make_forecaster"
+      "target": "gdp_scripts_phase_b_bistro_lora_make_forecaster",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17841,9 +17233,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L197",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_moirai_predict"
+      "target": "gdp_scripts_phase_b_bistro_lora_moirai_predict",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17851,9 +17243,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L114",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_path_to_tensors"
+      "target": "gdp_scripts_phase_b_bistro_lora_path_to_tensors",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17861,9 +17253,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L83",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_qend_of"
+      "target": "gdp_scripts_phase_b_bistro_lora_qend_of",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17871,9 +17263,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L161",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_train_lora"
+      "target": "gdp_scripts_phase_b_bistro_lora_train_lora",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17881,9 +17273,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L73",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_with_fast_and_mask"
+      "target": "gdp_scripts_phase_b_bistro_lora_with_fast_and_mask",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -17891,9 +17283,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_rationale_1",
-      "target": "gdp_scripts_phase_b_bistro_lora"
+      "target": "gdp_scripts_phase_b_bistro_lora",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17902,9 +17294,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L104",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
-      "target": "gdp_scripts_phase_b_bistro_lora_load_panel"
+      "target": "gdp_scripts_phase_b_bistro_lora_load_panel",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17913,9 +17305,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L106",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
-      "target": "gdp_scripts_phase_b_bistro_lora_with_fast_and_mask"
+      "target": "gdp_scripts_phase_b_bistro_lora_with_fast_and_mask",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17924,9 +17316,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L90",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_anchor_flashes",
-      "target": "gdp_scripts_phase_b_bistro_lora_qend_of"
+      "target": "gdp_scripts_phase_b_bistro_lora_qend_of",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17935,9 +17327,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L100",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
-      "target": "gdp_scripts_phase_b_bistro_lora_qend_of"
+      "target": "gdp_scripts_phase_b_bistro_lora_qend_of",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17946,9 +17338,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L108",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
-      "target": "gdp_scripts_phase_b_bistro_lora_anchor_flashes"
+      "target": "gdp_scripts_phase_b_bistro_lora_anchor_flashes",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -17956,9 +17348,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L96",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_rationale_96",
-      "target": "gdp_scripts_phase_b_bistro_lora_build_training_paths"
+      "target": "gdp_scripts_phase_b_bistro_lora_build_training_paths",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -17966,9 +17358,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L115",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_rationale_115",
-      "target": "gdp_scripts_phase_b_bistro_lora_path_to_tensors"
+      "target": "gdp_scripts_phase_b_bistro_lora_path_to_tensors",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17977,9 +17369,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L169",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_train_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_path_to_tensors"
+      "target": "gdp_scripts_phase_b_bistro_lora_path_to_tensors",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17988,9 +17380,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L167",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_train_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_make_forecaster"
+      "target": "gdp_scripts_phase_b_bistro_lora_make_forecaster",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17999,9 +17391,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L156",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_inject_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_loralinear"
+      "target": "gdp_scripts_phase_b_bistro_lora_loralinear",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -18009,9 +17401,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L150",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_loralinear",
-      "target": "gdp_scripts_phase_b_bistro_lora_loralinear_forward"
+      "target": "gdp_scripts_phase_b_bistro_lora_loralinear_forward",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -18019,9 +17411,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L141",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_loralinear",
-      "target": "gdp_scripts_phase_b_bistro_lora_loralinear_init"
+      "target": "gdp_scripts_phase_b_bistro_lora_loralinear_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -18029,9 +17421,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L140",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_rationale_140",
-      "target": "gdp_scripts_phase_b_bistro_lora_loralinear"
+      "target": "gdp_scripts_phase_b_bistro_lora_loralinear",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -18040,9 +17432,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L141",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_loralinear_init",
-      "target": "linear"
+      "target": "linear",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -18051,9 +17443,9 @@
       "source_file": "gdp/scripts/phase_b_bistro_lora.py",
       "source_location": "L165",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "gdp_scripts_phase_b_bistro_lora_train_lora",
-      "target": "gdp_scripts_phase_b_bistro_lora_inject_lora"
+      "target": "gdp_scripts_phase_b_bistro_lora_inject_lora",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -41409,5 +40801,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4d7b0259b913ca0c33c483cf78bb98a27001ff76"
+  "built_at_commit": "99f1f5a2179ad2f8feea4f215e1031fc09e1e35e"
 }

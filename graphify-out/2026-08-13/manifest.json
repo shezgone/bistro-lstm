@@ -715,8 +715,8 @@
     "semantic_hash": ""
   },
   "gdp/scripts/bok_final_charts.py": {
-    "mtime": 1788233373.7066255,
-    "ast_hash": "56e1dce1c48cb6f9d1d82156d5daf897",
+    "mtime": 1786350128.0068886,
+    "ast_hash": "62ff93bc900a0ae48802d626120b9412",
     "semantic_hash": ""
   },
   "gdp/scripts/make_bok_final_report.py": {
@@ -770,108 +770,13 @@
     "semantic_hash": ""
   },
   "gdp/scripts/phase_b_moirai_c2p.py": {
-    "mtime": 1787702220.2805078,
-    "ast_hash": "d9c73098949f73690cdc99bcbcc8950d",
+    "mtime": 1786589705.589659,
+    "ast_hash": "ee164a7ae00437df32029ebb90f380a4",
     "semantic_hash": ""
   },
   "docs/\u1107\u116e\u1111\u116e\u11b7\u1107\u1175\u1100\u116d_FM\u1103\u1169\u11bc\u110b\u1175\u11af\u1111\u1173\u1105\u1169\u1110\u1169\u110f\u1169\u11af_1p_2026-08-13.pdf": {
     "mtime": 1786591100.790823,
     "ast_hash": "cbd355a01235863cb488afb964480643",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/info_gap_diagram.py": {
-    "mtime": 1786593464.974135,
-    "ast_hash": "1c7f737a21926e2c0caec9abdf036614",
-    "semantic_hash": ""
-  },
-  "docs/\uc815\ubcf4\uacf5\ubc31_\uac1c\ub150\ub3c4_2026-08-13.png": {
-    "mtime": 1786593464.970726,
-    "ast_hash": "0774dab9cca27d29805c38cd68e035b5",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/weekly_absorb_chart.py": {
-    "mtime": 1788233373.7069623,
-    "ast_hash": "1fdfb22158b9c63459e4d1c09824e328",
-    "semantic_hash": ""
-  },
-  "docs/\uc8fc\ucc28\ubcc4\uc815\ubcf4\ud761\uc218_C2f_vs_BISTRO_2026-08-26.png": {
-    "mtime": 1787696352.3993826,
-    "ast_hash": "7b06a0ea3364ac5339bc276f544964c5",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/make_absorb_1p.py": {
-    "mtime": 1787696683.160269,
-    "ast_hash": "c38f536a9b5f0e9fabc7ccbfc8603c6f",
-    "semantic_hash": ""
-  },
-  "docs/\u1112\u116c\u110b\u1174\u1103\u1162\u110b\u1173\u11bc_\u1107\u1175\u11ab\u1110\u1175\u110c\u1175\u1112\u1173\u11b8\u1109\u116e_1p_2026-08-26.pdf": {
-    "mtime": 1787696662.0031867,
-    "ast_hash": "9f44652d4ba5318d94990678cd4073b8",
-    "semantic_hash": ""
-  },
-  "docs/GDP_LoRA\uc801\uc751_\uc2e4\ud5d8\ud50c\ub79c_2026-08-26.md": {
-    "mtime": 1787697089.3498242,
-    "ast_hash": "bdcce364274612d4200f91c6ab1eab78",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_c2_lora.py": {
-    "mtime": 1787700714.5116065,
-    "ast_hash": "f4cb6085f7bc35f8fad5680f9b817807",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_lora_smoke.py": {
-    "mtime": 1787698448.1167905,
-    "ast_hash": "a52b8c42b1b6befcd93b4955d85f6b17",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_bistro_lora.py": {
-    "mtime": 1787789830.1968622,
-    "ast_hash": "f7e9f86e285f29542b08c6777643f6c9",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/lora_share_chart.py": {
-    "mtime": 1788233373.7073033,
-    "ast_hash": "c2439cecba0e19835c7e110f53bdd7e7",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/make_lora_share_1p.py": {
-    "mtime": 1787809247.986385,
-    "ast_hash": "acfc8c7e979a50800418d5785db4ea44",
-    "semantic_hash": ""
-  },
-  "docs/LoRA\u110c\u1165\u11a8\u110b\u1173\u11bc_\u1109\u1175\u11af\u110c\u1173\u11bc\u1100\u1169\u11bc\u110b\u1172_1p_2026-08-27.pdf": {
-    "mtime": 1787809247.940872,
-    "ast_hash": "3e72fc5dddfdf2ce60cb7a0a17c4c4fd",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/phase_b_lora_slot.py": {
-    "mtime": 1787891592.5125802,
-    "ast_hash": "754a0ce7a861f0b4ce41d8fa795e6e4c",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/ceo_final_chart.py": {
-    "mtime": 1788233373.7061377,
-    "ast_hash": "7d7c2a6a9dc784b92ed7a8c7239b9d7e",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/make_ceo_journey_deck.py": {
-    "mtime": 1788233373.7056732,
-    "ast_hash": "8156d6ddb3825e822fcc154267018666",
-    "semantic_hash": ""
-  },
-  "gdp/scripts/make_bok_lora_report.py": {
-    "mtime": 1788234876.4627373,
-    "ast_hash": "0a490707ae80c92355114818f1a27242",
-    "semantic_hash": ""
-  },
-  "docs/\u1112\u1161\u11ab\u110b\u1173\u11ab\u1106\u1175\u1110\u1175\u11bc_\u110c\u1165\u11a8\u110b\u1173\u11bc\u1112\u1161\u11a8\u1109\u1173\u11b8\u1100\u1167\u11bc\u1100\u116a_2026-09-04.pdf": {
-    "mtime": 1788234847.0524583,
-    "ast_hash": "a7434f4517da7864a07565ac4df5251e",
-    "semantic_hash": ""
-  },
-  "docs/\u1112\u1161\u11ab\u110b\u1173\u11ab\u1112\u1167\u11b8\u110b\u1165\u11b8_\u110b\u1167\u110c\u1165\u11bc\u1107\u1169\u1100\u1169_\u1103\u1162\u1111\u116d_2026-09-01.pdf": {
-    "mtime": 1788234441.1758685,
-    "ast_hash": "fa9436cbffea3c83f0b3f10042869b0e",
     "semantic_hash": ""
   }
 }

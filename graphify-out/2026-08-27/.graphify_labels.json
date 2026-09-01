@@ -143,7 +143,6 @@
   "141": "rolling_2025_torch.py",
   "142": "ensemble_decomposition.py",
   "143": "hcx_forecast_clean.py",
-  "144": "lora_share_chart.py",
   "145": "build_augmented_panel.py",
   "146": "fetch_ecos_csi.py",
   "147": "메일_한은_regime-gated_v2_2026-07-09.md",
@@ -156,9 +155,5 @@
   "154": "__init__.py",
   "155": "__init__.py",
   "156": "__init__.py",
-  "157": "__init__.py",
-  "158": "lstm_model.py",
-  "159": "phase_b_transformer.py",
-  "160": "phase_b_lora_slot.py",
-  "161": "make_bok_lora_report.py"
+  "157": "__init__.py"
 }

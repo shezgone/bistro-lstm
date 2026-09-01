@@ -858,20 +858,5 @@
     "mtime": 1788233373.7056732,
     "ast_hash": "8156d6ddb3825e822fcc154267018666",
     "semantic_hash": ""
-  },
-  "gdp/scripts/make_bok_lora_report.py": {
-    "mtime": 1788234876.4627373,
-    "ast_hash": "0a490707ae80c92355114818f1a27242",
-    "semantic_hash": ""
-  },
-  "docs/\u1112\u1161\u11ab\u110b\u1173\u11ab\u1106\u1175\u1110\u1175\u11bc_\u110c\u1165\u11a8\u110b\u1173\u11bc\u1112\u1161\u11a8\u1109\u1173\u11b8\u1100\u1167\u11bc\u1100\u116a_2026-09-04.pdf": {
-    "mtime": 1788234847.0524583,
-    "ast_hash": "a7434f4517da7864a07565ac4df5251e",
-    "semantic_hash": ""
-  },
-  "docs/\u1112\u1161\u11ab\u110b\u1173\u11ab\u1112\u1167\u11b8\u110b\u1165\u11b8_\u110b\u1167\u110c\u1165\u11bc\u1107\u1169\u1100\u1169_\u1103\u1162\u1111\u116d_2026-09-01.pdf": {
-    "mtime": 1788234441.1758685,
-    "ast_hash": "fa9436cbffea3c83f0b3f10042869b0e",
-    "semantic_hash": ""
   }
 }

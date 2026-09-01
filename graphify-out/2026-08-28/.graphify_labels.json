@@ -159,6 +159,5 @@
   "157": "__init__.py",
   "158": "lstm_model.py",
   "159": "phase_b_transformer.py",
-  "160": "phase_b_lora_slot.py",
-  "161": "make_bok_lora_report.py"
+  "160": "phase_b_lora_slot.py"
 }
