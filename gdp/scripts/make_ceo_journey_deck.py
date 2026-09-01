@@ -7,7 +7,8 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
 
-F = "Apple SD Gothic Neo"
+F = "NanumSquare"
+SCALE = 1.15   # 전역 글자 확대
 INK = RGBColor(0x26,0x26,0x26); GREY = RGBColor(0x6B,0x6B,0x6B)
 LINE = RGBColor(0xC9,0xC9,0xC9); NAVY = RGBColor(0x24,0x34,0x47)
 GREEN = RGBColor(0x00,0x8A,0x3E); BGGREY = RGBColor(0xF5,0xF5,0xF4)
@@ -31,7 +32,7 @@ def runs(s, x, y, w, h, lines, size=10, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.T
         p.alignment = align; p.space_after = Pt(sp)
         for t, b, c, z in rs:
             r = p.add_run(); r.text = t
-            r.font.name = F; r.font.size = Pt(z if z else size)
+            r.font.name = F; r.font.size = Pt(round((z if z else size) * SCALE, 1))
             r.font.bold = b; r.font.color.rgb = c if c else INK
             rp = r._r.get_or_add_rPr(); rp.append(rp.makeelement(qn('a:ea'), {'typeface': F}))
     return tf

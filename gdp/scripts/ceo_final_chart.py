@@ -5,7 +5,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np, os
 
-plt.rcParams["font.family"] = ["Apple SD Gothic Neo", "AppleGothic"]
+plt.rcParams["font.family"] = ["NanumSquare", "Apple SD Gothic Neo", "AppleGothic"]
 plt.rcParams["axes.unicode_minus"] = False
 OUT = os.path.dirname(os.path.abspath(__file__))
 BLUE = "#1c5cab"; BLUE_M = "#9ec5f4"; GREEN = "#008a3e"; WARM = "#b0532f"; GREY_C = "#9aa0a6"
